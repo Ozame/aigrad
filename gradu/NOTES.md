@@ -12,18 +12,23 @@ This is a memo for all the things I’ll need to save for the master’s thesis,
 3. Produce a demo or pilot of some kind, for example an application of an existing model, or try a proven solution in a somehow different application (generalization).
 Advancing in order, these levels are based on the previous ones, and each step (with the previous one) could work as a topic of the thesis. The higher levels will prove more difficult, and just staying in levels 1-2 would be maybe preferred. However, if something interesting comes up during the research, I’ll also consider focusing on that. For now, I’ll proceed on the first step.
 
+Method-wise this would mean:
+1. Systematic literature mapping: overview
+2. Systematic literature review: focused literature review
+3. Design research(?): application on the area
+
 ### Possible research Questions (?)
-1. What is the current state of AGI?
-2. What are the current techniques used and researched?
-3. What have been the most successful attempts?
-4. How the research is focused on the field?
+1. What is the current state of AGI? **Could this be specified more?** / How much research is done?
+2. What are the current techniques used and researched? / How the research is focused on the field?
+3. What have been the most successful attempts? **Could this be specified more?**
+4. Where and when were the studies published?
 
 5. How has the generalization of specific techniques advanced recently? (Should this be the main focus, or left out? Based on my opponent, more focused topic would be better. This one also doesn't fit in with the others.)
 
 
 ## Current Goals:
 ---> Next: Research possible databases, sources for articles
-Find the journals and other good sources
+---> Study the methods more.
 
 ## Notes
 
@@ -120,7 +125,7 @@ This can and should be further visualized using for example **bubblegraphs** (Mo
 
 #### Some references on the litrev methods:
 - Webster, J. & Watson, R.T. (2002). Analyzing the past to prepare for the future: Writing a literature review. MIS Quarterly 26(2), 13-23.
-Salminen, Ari. Mikä kirjallisuuskatsaus? Johdatus kirjallisuuskatsauksen tyyppeihin ja hallintotieteellisiin sovelluksiin. Vaasan yliopiston julkaisuja. Opetusjulkaisuja 62, Julkisjohtaminen 4. (2011). www.uva.fi/materiaali/pdf/isbn_978-952-476-349-3.pdf
+- Salminen, Ari. Mikä kirjallisuuskatsaus? Johdatus kirjallisuuskatsauksen tyyppeihin ja hallintotieteellisiin sovelluksiin. Vaasan yliopiston julkaisuja. Opetusjulkaisuja 62, Julkisjohtaminen 4. (2011). www.uva.fi/materiaali/pdf/isbn_978-952-476-349-3.pdf
 - Brereton, P., Kitchenham, B., Budgen, D., Turner, M. & Khalil, M. (2007). Lessons from applying the systematic literature review process within the software engineering domain. The Journal of Systems and Software 80, 571-583.
 - Kitchenham et al. (2010). Systematic literature reviews in software engineering – A tertiary study. Information and Software Technology 52(8), 792–805.
 - Bandara, W., Fuertmueller, E., Gorbacheva, E., Miskon, S. & Beekhuyzen, J. (2015). Achieving Rigor in Literature Reviews: Insights from Qualitative Data Analysis and Tool-Support. Communications of the Association for Information Systems 37(1), 154 - 204. Available at: http://aisel.aisnet.org/cais/vol37/iss1/8
@@ -139,8 +144,7 @@ tuskontekstissa”. Master’s thesis. http://urn.fi/URN:NBN:fi:jyu-201801281
 - Ryynänen, Sari. 2017. ”Immateriaalioikeuksien esiintyminen SIGCSE-konferenssien julka-
 isuissa”. Master’s thesis. http://urn.fi/URN:NBN:fi:jyu-201705112298.
 
-- Salminen, Ari. 2011. Mikä kirjallisuuskatsaus?: Johdatus kirjallisuuskatsauksen tyyppeihin
-ja hallintotieteellisiin sovelluksiin
+
 
 
 ## Thesis structure
@@ -175,3 +179,34 @@ ja hallintotieteellisiin sovelluksiin
 - Mononen used sqlite db to save data about articles and their criteria info
 - Excel?
 - Python: matplotlib?
+
+
+
+## Criteria
+
+- publication range 5+ years, 2015-2019, to limit material?
+- free to access
+- no books
+- english
+
+
+
+#############################################################
+
+## Paper notes
+
+### Guideline update - petersen
+
+- [Wieringa's classification](https://link.springer.com/article/10.1007/s00766-005-0021-6)
+- combined with petersons guidelines
+- Multiple sources for differences have been discussed, e.g.
+research question phrasing (open versus specific), scoping (where
+to draw the boundaries for the research area), restrictions on
+research types and methods (e.g. only including empirical work),
+time span, and exclusion of specific publication types (e.g. gray
+literature)
+- PICO (Population, Intervention, Comparison and Outcomes) suggested by Kitchenham and Charters [1] was developed to identify keywords and formulate search strings from research questions.
+- Backward snowball sampling
+- Three new dimensions not highlighted by Petersen et al. [2] have been identified, namely **venue, study focus, and research method**. The study focus refers to the context being studied. Examples are distinctions between academic, industrial, government, project, and organization context. The venue is the type of publication venue (e.g. journal, conference, and workshop) as well as the concrete venues being targeted. The research method refers to the scientific method used, e.g. case study, experiment, or survey
+- Existing categories or new ones that emerge from papers?
+- validity threats reported?
