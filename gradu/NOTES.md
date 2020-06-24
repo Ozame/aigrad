@@ -19,7 +19,7 @@ Method-wise this would mean:
 
 ### Possible research Questions (?)
 1. What is the current state of AGI? **Could this be specified more?** / How much research is done?
-2. What are the current techniques used and researched? / How the research is focused on the field?
+2. What are the current techniques used and researched? / How the research is focused on the field? How it has changed over time?
 3. What have been the most successful attempts? **Could this be specified more?**
 4. Where and when were the studies published?
 
@@ -29,6 +29,8 @@ Method-wise this would mean:
 ## Current Goals:
 ---> Next: Research possible databases, sources for articles
 ---> Study the methods more.
+    - petersen update done
+    - 
 
 ## Notes
 
@@ -120,7 +122,7 @@ There is also other styles of litrev mentioned in the lecture slides, qualitativ
 (also Fink model; Salminen 2011, s11. Fig 2: process model)
 
 Each phase produces a subresult to be used in the next one. This process results in a **systematic map of the area.** 
-This can and should be further visualized using for example **bubblegraphs** (Mononen 2018 and Petersen et al. 2008). This helps to more easily spot the **focus points and gaps** in the research.
+This can and should be further visualized using for example **bubblegraphs or heatmaps** (Mononen 2018 and Petersen et al. 2008). This helps to more easily spot the **focus points and gaps** in the research.
 
 
 #### Some references on the litrev methods:
@@ -132,7 +134,6 @@ This can and should be further visualized using for example **bubblegraphs** (Mo
 
 These ones are the ones recommended by Isomöttönen:
 - Petersen, K., Feldt, R., Mujtaba, S., & Mattsson, M. (2008, June). Systematic mapping studies in software engineering. In Ease (Vol. 8, pp. 68-77).
-- Wieringa et al. 2006 -> classification schema??
 - Petersen, K., Vakkalanka, S., & Kuzniarz, L. (2015). Guidelines for conducting systematic mapping studies in software engineering: An update. Information and Software Technology, 64, 1-18.
 
 Also check on the thesis’ of Niko Mononen, Sari Ryynänen and Mari Kasanen from JYX:
@@ -144,7 +145,7 @@ tuskontekstissa”. Master’s thesis. http://urn.fi/URN:NBN:fi:jyu-201801281
 - Ryynänen, Sari. 2017. ”Immateriaalioikeuksien esiintyminen SIGCSE-konferenssien julka-
 isuissa”. Master’s thesis. http://urn.fi/URN:NBN:fi:jyu-201705112298.
 
-
+- Wieringa et al. 2006 -> classification schema??
 
 
 ## Thesis structure
@@ -210,3 +211,24 @@ literature)
 - Three new dimensions not highlighted by Petersen et al. [2] have been identified, namely **venue, study focus, and research method**. The study focus refers to the context being studied. Examples are distinctions between academic, industrial, government, project, and organization context. The venue is the type of publication venue (e.g. journal, conference, and workshop) as well as the concrete venues being targeted. The research method refers to the scientific method used, e.g. case study, experiment, or survey
 - Existing categories or new ones that emerge from papers?
 - validity threats reported?
+- [58] good RQs:
+    - what RQs in X are being addressed?
+    - what original research exists in intersection of x and y?
+    - what areas in x require more research?
+- usually questions about the meta-level is included, like venues, methods etc.
+- Wohlin et al, 7, population representation over paper quantity <-> population not known beforehand
+- Questions to think about regarding population:
+    - **Are different a priori known sub-areas of the field covered?**
+    - **Are the main publication forums specific to this area (e.g. conferences), or general software engineering forums (e.g. journals), represented when identifying relevant articles?**
+    - **Are there explanations for major changes in the number of studies published per year?** 
+        For example, this may point to new areas that should be
+         added to classifications established earlier.
+- Standards like SWEBOK, IEE, ISO useful in categorization
+- The approaches identified (consult experts, iteratively improve the search, identify keywords from known papers, and use standards, encyclopedias, and thesaurus, see Table 5 and Fig. 7) are not highly time intensive and may greatly improve the quality of the search. Overall, such early quality assurance may save effort due to rework when mistakes were made in the early search activ- ity. They may also help in focusing the search and hence reduce the noise, making the study selection process more time efficient.
+- Incl/excl. criteria are important: Venue, language, focus etc. p11
+- Finnish publication types: useful for classification and study selection.
+- **Research types** and **research methods**
+- Topic specific classification? Should be decided which would be more useful, emergent or an existing one?See petersen's keywords->classification scheme->categorize (not clear? portillo-rodriguez 20)
+- 5.3 Mapping reporting guide
+- rubrics: table 9-13 and table 8 activity ratio should be utilized on evaluation of process.
+
