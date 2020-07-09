@@ -28,9 +28,6 @@ Method-wise this would mean:
 
 ## Current Goals:
 ---> Next: Research possible databases, sources for articles
----> Study the methods more.
-    - petersen update done
-    - 
 
 ## Notes
 
@@ -187,8 +184,10 @@ isuissa”. Master’s thesis. http://urn.fi/URN:NBN:fi:jyu-201705112298.
 
 - publication range 5+ years, 2015-2019, to limit material?
 - free to access
+- digital
 - no books
 - english
+- abstract (or quick skimming) shows the article is about AGI
 
 
 
@@ -233,3 +232,24 @@ literature)
 - rubrics: table 9-13 and table 8 activity ratio should be utilized on evaluation of process.
 
 
+
+
+
+
+
+
+## Search terms
+
+### See excel for search terms trials
+### Possible keywords
+- AGI
+- AI
+- artificial intelligence
+- general artificial intelligence & artificial general intelligence
+- superintelligence?
+- computer science
+- strong ai
+- success, advances, development, breakthrough
+
+
+--> Improve search  phrases next
