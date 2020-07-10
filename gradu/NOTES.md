@@ -250,6 +250,7 @@ literature)
 - computer science
 - strong ai
 - success, advances, development, breakthrough
+- turing test
 
 
 --> Improve search  phrases next
