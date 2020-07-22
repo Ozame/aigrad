@@ -17,17 +17,35 @@ Method-wise this would mean:
 2. Systematic literature review: focused literature review
 3. Design research(?): application on the area
 
+## Current Goals:
+1.  Decide on final research questions, and form search phrase proposal
+2.  Also research the journal based option, which journals would it be, how would they be ranked, number of material
+3.  Send proposition for councelor --> feedback
+
+4.  Also find sources for the background chapters
+
+
 ### Possible research Questions (?)
-1. What is the current state of AGI? **Could this be specified more?** / How much research is done?
-2. What are the current techniques used and researched? / How the research is focused on the field? How it has changed over time?
-3. What have been the most successful attempts? **Could this be specified more?**
-4. Where and when were the studies published?
+1. **How much, and what type of research is done in the field of AGI?**
+      - What is the current state of AGI research? -> How much research is done in recent years? What is the overall trend (interest growth/decline)? 
+      - What type of research it is (research methods, types)
+2.  **Where is the AGI research focused on?**
+    - This includes
+       - topics
+       - techniques
+       - technology
+    - What are the current techniques (and topics) used and researched?
+    - How the research is focused on the field? 
+    - *(How it has changed over time? Can this be observed on such short time)*
+3. **Has there been any major breakthroughs?**
+    - What have been the most successful attempts?
+4. **Where and when were the studies published?**
+    - Time
+    - Journal
 
 5. How has the generalization of specific techniques advanced recently? (Should this be the main focus, or left out? Based on my opponent, more focused topic would be better. This one also doesn't fit in with the others.)
 
-
-## Current Goals:
----> Next: Research possible databases, sources for articles
+RQ->PICO->keywords->search terms->dataset->inclusion/exclusion->...
 
 ## Notes
 
