@@ -6,6 +6,9 @@ Here's some background info and questions I've been thinking about. I've marked 
 > QUESTION: Are these research questions good? Or should they be narrowed more? The task is difficult as the goal is to achieve general overview of the field.
 
 ## Possible research Questions
+
+Here are the research questions I've been thinking about. #3 is a bit hard to answer, but if an answer is found, would be nice. #4 is a common one to have in litMaps.
+
 1. **How much, and what type of research is done in the field of AGI?**
       - What is the current state of AGI research? -> How much research is done in recent years? What is the overall trend (interest growth/decline)? 
       - What type of research it is (research methods, types)
@@ -24,7 +27,7 @@ Here's some background info and questions I've been thinking about. I've marked 
     - Journal
 
 
-> QUESTION: What about the keywords? Are there some terms that I should also consider here?
+> QUESTION: What about the keywords below? Are there some terms that I should also consider here?
 
 ## Keywords picked from the research questions
 
@@ -49,6 +52,7 @@ Here's some background info and questions I've been thinking about. I've marked 
 
 ## Database search plan
 - Search is performed using phrases derived from the aforementioned keywords.
+- Handling material and keeping it relevant is more of a challenge.
 - Possible databases and search engines: IEEE Explore, ACM Digital Library, Science Direct, Springer link and Google Scholar. 
   - Scholar searches other databases, and produces very different kinds of results. However it is very effective option.
 
@@ -77,7 +81,7 @@ Publication Forum, Julkaisufoorumi, ranks the journals, with 1-3, 3 being the to
 
 There is pretty much only 2 of level 3 journals on any AI field.
 
-> QUESTION: Furthermore, should conference papers such as this be included?
+> QUESTION: Furthermore, should conference papers such as this (below) be included?
  
   - **International conference on AGI**:
       - https://link.springer.com/conference/agi
@@ -98,17 +102,18 @@ Here's my possible thesis structure. Some of my main method sources are:
 3. Method explanation
     - Process
     - Differences from other secondary studies
-    - In IT-field
+    - Short background of method usage In CompSci
 4. The implementation/process
     - Background
     - Research questions
     - Sources (search terms, databases, search engines)
-    - Criteria 
-    - Source Control
+    - Criteria, paper inclusion and exclusion
+    - Source Control description
 5. Results & Analysis
     - What was found
     - Graphs, numbers, most used, least used keywords
-6. Thoughts
+    - Answers to RQs
+6. Conclusion
     - About the results
     - Possible future research topics based on findings
 
