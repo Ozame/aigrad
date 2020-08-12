@@ -18,11 +18,12 @@ Method-wise this would mean:
 3. Design research(?): application on the area
 
 ## Current Goals:
-1.  Decide on final research questions, and form search phrase proposal
-2.  Also research the journal based option, which journals would it be, how would they be ranked, number of material
-3.  Send proposition for councelor --> feedback
+-> Proposal ok, journal option #1 goal, conference papers included!
 
-4.  Also find sources for the background chapters
+1.  Dive deeper on the journal based option, which journals would it be, how would they be ranked, number of material, date range etc.
+2.  Also find sources for the background chapters
+   - AGI & its history, definition
+   - Method
 
 
 ### Possible research Questions (?)
@@ -250,8 +251,29 @@ literature)
 - rubrics: table 9-13 and table 8 activity ratio should be utilized on evaluation of process.
 
 
+### AI History - Haenlein, Kaplan
 
-
+- 1950s into academia
+- When ai hits mainstream, it's usually not considered as such anymore (magic disappears)
+- AGI systems speculated here and there
+- Spring
+    - Asimov's stories in 40s inspired others
+    - Turing's machine, turing test
+    - Minsky, McCarthy hosted *DSRPAI* summit in darthmouth
+- Summer
+  - ELIZA, General Problem Solver (turing tested)
+    - Hanoi -> funding
+  - Minsky's interview -> 3-8 years
+- Winter
+  - Criticism about spending, questioning outlook -> defunded
+- Fall
+  - Expert systems -> Deep Blue
+    - ES requires formalization of problem
+  - Learning is necessary
+  - Neural networks
+- Present
+  - 2015 Alphago
+  - NNs and deep learning form most of industrial AI today
 
 
 
