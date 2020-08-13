@@ -59,12 +59,12 @@ Publication Forum, Julkaisufoorumi, ranks the journals, with 1-3, 3 being the to
 (https://www.tsv.fi/julkaisufoorumi/haku.php?lang=en)
 
 - Artificial Intelligence (3) https://www.journals.elsevier.com/artificial-intelligence
-Best AI journal, whole field of AI. Useful, but not specific
+    - Best AI journal, whole field of AI. Useful, but not specific
 - Journal of Artificial Intelligence Research (3) https://www.jair.org/index.php/
-All areas of AI. Open Access. Not Specific
+    - All areas of AI. Open Access. Not Specific
 - Journal of Artificial General Intelligence (1) https://content.sciendo.com/configurable/contentpage/journals$002fjagi$002fjagi-overview.xml
-Owned by AGIS
-Only level 1, which prolly has to do with the fact it’s really specific
+    - Owned by AGIS
+    - Only level 1, which prolly has to do with the fact it’s really specific
 
 Which journals are good? Only 2 of level 3 journals on any AI field
 
