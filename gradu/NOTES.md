@@ -21,7 +21,9 @@ Method-wise this would mean:
 -> Proposal ok, journal option #1 goal, conference papers included!
 
 1.  Dive deeper on the journal based option, which journals would it be, how would they be ranked, number of material, date range etc.
-2.  Also find sources for the background chapters
+    - 3 journals plus 1 conference collection -> ~1000 articles, should provide enought material
+2. How to proceed? Figure out the process better.  
+3.  Also find sources for the background chapters
    - AGI & its history, definition
    - Method
 

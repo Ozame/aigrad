@@ -13,9 +13,25 @@ Some irrelevant ones were just deleted.
 
 High level and/or topical relevance make these the ideal candidates for the review.
 
-- 3 ARTIFICIAL INTELLIGENCE
-- 3 JOURNAL OF ARTIFICIAL INTELLIGENCE RESEARCH
+Issues are looked only on years 2015-2019
+
+- 3 ARTIFICIAL INTELLIGENCE | citescore 7.7 | Impact factor 6.628
+  - Issues 218-277 = 59, articles in issue ~ 10,
+- 3 JOURNAL OF ARTIFICIAL INTELLIGENCE RESEARCH | IF 1.8
+  - Issues 52-66 = 14, articles in issue ~20
 - 1 JOURNAL OF ARTIFICIAL GENERAL INTELLIGENCE
+  - Issues = 6, articles in issue ~ 2
+
+### Conference proceedings
+- INTERNATIONAL CONFERENCE ON ARTIFICIAL GENERAL INTELLIGENCE
+  - Issues = 5, articles in issue ~ 30
+  - This conference seems to be suprisingly active and on topic
+  
+- (1 EUROPEAN SYMPOSIUM ON ARTIFICIAL NEURAL NETWORKS, COMPUTATIONAL INTELLIGENCE AND MACHINE LEARNING)
+  - This would increase article load with 500+ articles, with a low number of relevant papers. So maybe?
+
+
+==> In total, around 1000 articles concerning AI. Quick sampling shows the number of actually relevant articles may still be very low.
 
 
 ## Not sure
