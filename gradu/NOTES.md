@@ -278,6 +278,19 @@ literature)
   - NNs and deep learning form most of industrial AI today
 
 
+### Mappping the landscape of human level agi
+Adams et al, 2012
+
+- Builds on the previous literature on AI evaluation
+- Builds a roadmap on the goals of AI, with milestones and example scenarios
+  - Prior work e.g. Laird and Wray 2010 architecture requirements
+- Presents modified set of environmental and architectural requirements for AGI.
+  - Starting point for the community to build on.
+- Different ways of defining human intelligence, piaget, vygotsky
+- Effect of human sensory input and other competencies
+- Scenarios offer way to keep all approaches open by not taking specifying the order in which the competences and capabilities are developed.
+  - Video games, preschool, reading comprehension, story comprehension, school learning, the wozniak test
+- Scenarios and the tasks, and how the agent is able to complete them, serves as a general way of measurement regarding the AGI development progress. E.g. is the system able to complete 25% or 80% of the given tasks tells immediately about the level of competence.
 
 
 ## Search terms
