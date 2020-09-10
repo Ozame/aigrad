@@ -214,6 +214,39 @@ isuissa”. Master’s thesis. http://urn.fi/URN:NBN:fi:jyu-201705112298.
 
 #############################################################
 
+## Analysis
+
+### History of AI
+
+
+- Asimov's stories in 40s inspired others
+- 1950s into academia
+  - Alan Turing's test to measure machine intelligence
+  - Minsky, McCarthy hosted *DSRPAI* summit in darthmouth in 56 => AI coined
+  - Arthus Samuel's first checkers program, amateur challenged
+- Summer
+  - ELIZA, General Problem Solver (turing tested) -59
+  - MIT AI lab founded by mccarthy and minsky
+    - Hanoi -> funding
+  - Minsky's interview -> 3-8 years
+- Winter
+  - Lighthill report 1973
+    - Criticism about spending, questioning outlook -> defunded
+    - UK all but few Unis' AI research 
+- Fall
+- Expert systems -> Deep Blue, chess 
+    - ES requires formalization of problem
+  - Learning is necessary
+  - Neural networks
+- Present
+  - 2015 Alphago
+  - NNs and deep learning form most of industrial AI today
+
+
+
+
+#############################################################
+
 ## Paper notes
 
 ### Guideline update - petersen
@@ -277,6 +310,59 @@ literature)
   - 2015 Alphago
   - NNs and deep learning form most of industrial AI today
 
+### AI History - Russell & Norvig Book
+
+- Alan Turing
+  - turing test
+  - machine learning
+  - Child Programme - simulate child's, not adult's mind
+- Mccarthy's workshop in 1956
+  - Logic Theorist program by Newell and Simon
+  - The most prominent people met
+- 1952-1969 early years
+  - Proving machine capabilities
+  - GPS by Newell, Simon
+  - Arthur Samuel's checker programs
+  - 1958 Mccharthy's accomplishments
+    - Lisp
+    - Time sharing
+    - Advice Taker - hypothetical but complete AI system - GENERAL
+  - Followed years of research into formal reasoning and logic
+  - Work on neural networks also flourished
+    - Building on McCulloch, Pitts and Hebb
+      - Winograd & Cowan, Widrow, Block
+- 1966-1973 realitys strikes back
+  - 1954 Herbert Simon confident quote
+  - Lighthill report
+    - combinatorial explosion
+  - Problems:
+    - limiting basic structures
+    - difficulty of difficult problems
+    - system not knowing what it was doing
+  - Expert systems research 
+    - Corporations involved
+  - Fifth Gen project in Japan, MCC in USA 
+  - AI winter hit because promises were not fulfilled
+    - before this was a billion dollar boom
+- Return of neural networks 1986-present
+  - Back-propagation reinvented (og. 1969 Bryson and Ho)
+- AI & Scientific method 1987-present
+  - Experiment, analysis
+  - Building on existing theories, less intuition, real world applications
+  - NNs etc. used with other techniques
+  - Judea Pearl & Bayesian networks, uncertain reasoning
+    - normative expert systems, Horwitz and Heckerman 
+  - Emerging of Agents
+    - Newell, Laird, Rosenbloom => SOAR, intelligent agent architecture
+    - Founders have been returning to roots
+      - mccarthy: Human-Level AI
+      - goertzel, pennachin: AGI
+      - Yudkowsky, omohundro: Friendly AI?
+  - Data beats algorithm:
+    - Banko and Brill 2001
+    - Hays and Efros 2007
+    - ! Halevy er all 2009
+- Ai in use everywhere, but like earlier, when it start to being used, maybe not thought to be AI anymore?
 
 ### Mappping the landscape of human level agi
 Adams et al, 2012
