@@ -333,7 +333,7 @@ literature)
       - Winograd & Cowan, Widrow, Block
 - 1966-1973 realitys strikes back
   - 1954 Herbert Simon confident quote
-  - Lighthill report
+  - Lighthill report 1973
     - combinatorial explosion
   - Problems:
     - limiting basic structures
