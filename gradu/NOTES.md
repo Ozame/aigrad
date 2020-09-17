@@ -211,6 +211,22 @@ isuissa”. Master’s thesis. http://urn.fi/URN:NBN:fi:jyu-201705112298.
 - abstract (or quick skimming) shows the article is about AGI
 
 
+## Search terms
+
+### See excel for search terms trials
+### Possible keywords
+- AGI
+- AI
+- artificial intelligence
+- general artificial intelligence & artificial general intelligence
+- superintelligence?
+- computer science
+- strong ai
+- success, advances, development, breakthrough
+- turing test
+
+
+--> Improve search  phrases next
 
 #############################################################
 
@@ -379,19 +395,32 @@ Adams et al, 2012
 - Scenarios and the tasks, and how the agent is able to complete them, serves as a general way of measurement regarding the AGI development progress. E.g. is the system able to complete 25% or 80% of the given tasks tells immediately about the level of competence.
 
 
-## Search terms
 
-### See excel for search terms trials
-### Possible keywords
-- AGI
-- AI
-- artificial intelligence
-- general artificial intelligence & artificial general intelligence
-- superintelligence?
-- computer science
-- strong ai
-- success, advances, development, breakthrough
-- turing test
+### From here to human-level AI
+John McCarthy
 
+- Two approaches to machine intelligence:
+  - simulating mind
+  - intelligent programs
+- Bounded informatic situation vs common sense informatic situation
+  - cs: approximate concepts, theories, nonmonotonic reasoning. What is relevant to situation?
+- Limits of mathematical logic in expressing uncertainty and imprecision of humans
+- Mt. Everest and welfare of a chicken
+  - Trying to precisely define approximate concept is futile
+- Elaboration tolerance
+- Formalization of context, outer level concept 
+- Event & action reasoning
+- Introspection
 
---> Improve search  phrases next
+McCarthy's article presents some challenges on the way of reaching HLAI. Some have research and work to build upon, some are just in the beginning. Argues that logical approach would be more useful than the one achieved via computerized evolution.
+
+### Human-Level Artificial Intelligence? Be Serious
+Nils J. Nilsson
+
+- Focus should be on building general AI that can learn.
+  - Employment test
+    - Opposition:
+      - Physical tasks
+      - hlai impossible, weak instead
+      - political/economical opposition
+  tbc 
