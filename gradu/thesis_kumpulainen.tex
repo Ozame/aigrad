@@ -50,24 +50,6 @@ The thesis will be a systematic research mapping on the field of Artificial Gene
 
 \chapter{Artificial General Intelligence} 
 
-
-
-\section{Definition}
-
-% Definition of intelligence?
-In order to be able to define AGI, or artificial intelligence in general, one must first consider the definitions of intelligence in general. The exists many different definitions, in many different branches of science. Legg and Hutter (\cite*{legg2007}) list over 60 definitions collected from various academic sources. These include, for example, \emph{"the general mental ability involved in calculating, reasoning, perceiving relationships and analogies, learning quickly, storing and retrieving information,using language fluently, classifying, generalizing, and adjusting to new situations."} (Columbia Encyclopedia, sixth edition, 2006), \emph{"that facet of mind underlying our capacity to think, to solve novel problems, to reason and to have knowledge of the world"} (\cite{anderson2006}), and \emph{"Intelligence is the ability for an information processing system to adapt to its environment with insufficient knowledge and resources."} (\cite{wang1995}).
-Based on the aforementioned collection of definitions, Legg and Hutter (\cite*{legg2007}) have formed the following definition: \emph{"Intelligence measures an agent's ability to achieve goals in a wide range of environments"}. This gives us a single definition which encompasses the common traits in intelligence definitions. 
-% Measurement? or just later when roadmap is discussed?
-% in any case, needs something more here, now just quotes :(
-
-%Intelligence is a trait that manifests itself in countless ways, making a single common definition a challenge. B 
-
-Artificial General Intelligence, sometimes referred as "strong ai", according to Goertzel and Pennachin (\cite*{goertzel2007}) means \emph{"AI systems that possess a reasonable degree of self-understanding and autonomous self-control, and have the ability to solve a variety of complex problems in a variety of contexts, and to learn to solve new problems that they didn't know about at the time of their creation."}. It is abbreviated as AGI. The reason general intelligence is specified instead of plain intelligence is that there is a need to differentiate it from the domain specific artificial intelligence, also known as "narrow AI" or "weak AI". Terms strong AI and weak AI were coined by John Searle in 1980 (\cite{searle1980}). Narrow AI means smart solutions that may learn and improve their performance through training, but they are only focused on specific type of problems in a specific context. Examples of such AI include chess engines, autonomous vehicles, and natural language processing. These solutions may outperform human capabilities, but only in their limited tasks.
-As above definition by Goertzel and Pennachin describe, AGI is able to function on different context and tasks without separate human intervention and reconfiguration.
-
-% unclear, discussion about the meaning? some other sources here
-% here about the landscape and efforts of trying to find common ground
-
 \section{History of Artificial Intelligence} 
 % More about the origins of AI here. 
 % 
@@ -91,14 +73,34 @@ According to Russell and Norvig (\cite*{norvig2002}), around this time the AI fi
 This newly discovered open-mindedness then lead to a complete new ways of looking at the AI research. AI solutions based on existing theories, such as speech recognition based on hidden Markov models, enables the researchers to build on the rigorous mathematical theory behind it (\cite{norvig2002}).
 Work of Judea Pearl (\cite*{pearl1988}) and Peter Cheeceman (\cite*{cheeseman1985}) on the probabilistic reasoning lead to it being accepted back into the AI field. Later Pearl's Bayesian networks have been used to handle uncertainty in AI problems. They are graphical models that join probabilistic information and dependencies to events, enabling inference using probabilistic methods (\cite{goertzel2007}).
 
-%TODO: agents and datasets
+%Large datasets? maybe just mention somewhere else if needed
+
+%TODO: agents ? 
+
+In the 21st century artificial intelligence research has been steadily growing. According to (\cite{liu2018}), not only has the amount of publications in the field been increasing, but the also the collaboration between researchers. The study also deduces that that AI has become more open-minded and popular, as the rate of self-references is reducing. One reason for the rising popularity on the field is the success that narrow AI solutions have presented in multitude of problems. For example, in classical game of Go, program called AlphaGo developed by Google-owned DeepMind, defeated the world champion Lee Sedol in 2015 (\cite{silver2016}). Due to Go's computationally complex nature this was a impressive feat previously thought impossible. Later DeepMind developed even more advanced versions of AlphaGo, called AlphaGo Zero, and generalized AlphaZero, which could even play Shogi and Chess on superhuman level (\cite{silver2018}).
 
 
-Ever since the Artificial Intelligence research entered the academia, speculation about an AI that would reach the human level intelligence has been surfacing every few years. For example, American AI scientist Marvin Minsky suggested in 1970 that a machine with human level general intelligence could be developed in the next few years (\cite{kaplan2019}). This never happened, and soon after that whole AI research lost its interest in the eyes of the financial backers. The time period following this is known as the first "AI winter" (\cite{kaplan2019}).
+Recent years majority of the field has been focusing on the narrow AI approaches (\cite{goertzel2007}). However, the interest in the classical, strong AI has also been increasing. This can be seen in the publications from many influential AI researchers. Authors like John McCarthy (\cite*{mccarthy2007}), Nils Nilsson (\cite*{nilsson2005}) and Marvin Minsky (\cite*{minsky2007}) have voiced their opinions that efforts to create a more general AI should be pursued. There are many terms used regarding these efforts. \textbf{Human-level Artificial Intelligence} (HLAI) aims to reach "human-level intelligence" and common sense, a goal that can be reached by not using any single method, but a combination of different resources and methods (\cite{minsky2004}).
+Similar term is \textbf{Artificial General Intelligence} (AGI) presented by Ben Goertzel and Casio Pennachin (\cite*{goertzel2007}). The goal of AGI is similar to HLAI, to create an AI system that can express general intelligence instead of being locked into a single domain. On the next chapter these general approaches are presented in more detail, as they are the focus of this thesis.
+
+% ^ These approaches are the ones this thesis focuses. 
+
+\section{Definition}
+
+% Definition of intelligence?
+In order to be able to define AGI, or artificial intelligence in general, one must first consider the definitions of intelligence in general. The exists many different definitions, in many different branches of science. Legg and Hutter (\cite*{legg2007}) list over 60 definitions collected from various academic sources. These include, for example, \emph{"the general mental ability involved in calculating, reasoning, perceiving relationships and analogies, learning quickly, storing and retrieving information,using language fluently, classifying, generalizing, and adjusting to new situations."} (Columbia Encyclopedia, sixth edition, 2006), \emph{"that facet of mind underlying our capacity to think, to solve novel problems, to reason and to have knowledge of the world"} (\cite{anderson2006}), and \emph{"Intelligence is the ability for an information processing system to adapt to its environment with insufficient knowledge and resources."} (\cite{wang1995}).
+Based on the aforementioned collection of definitions, Legg and Hutter (\cite*{legg2007}) have formed the following definition: \emph{"Intelligence measures an agent's ability to achieve goals in a wide range of environments"}. This gives us a single definition which encompasses the common traits in intelligence definitions. 
+% Measurement? or just later when roadmap is discussed?
+% in any case, needs something more here, now just quotes :(
+
+%Intelligence is a trait that manifests itself in countless ways, making a single common definition a challenge. B 
 
 
+Artificial General Intelligence, sometimes referred as "strong ai", according to Goertzel and Pennachin (\cite*{goertzel2007}) means \emph{"AI systems that possess a reasonable degree of self-understanding and autonomous self-control, and have the ability to solve a variety of complex problems in a variety of contexts, and to learn to solve new problems that they didn't know about at the time of their creation."}. It is abbreviated as AGI. The reason general intelligence is specified instead of plain intelligence is that there is a need to differentiate it from the domain specific artificial intelligence, also known as "narrow AI" or "weak AI". Terms strong AI and weak AI were coined by John Searle in 1980 (\cite{searle1980}). Narrow AI means smart solutions that may learn and improve their performance through training, but they are only focused on specific type of problems in a specific context. Examples of such AI include chess engines, autonomous vehicles, and natural language processing. These solutions may outperform human capabilities, but only in their limited tasks.
+As above definition by Goertzel and Pennachin describe, AGI is able to function on different context and tasks without separate human intervention and reconfiguration.
 
-
+% unclear, discussion about the meaning? some other sources here
+% here about the landscape and efforts of trying to find common ground
 \chapter{Systematic literature mapping process}
 
 \section{Research method and reasoning}

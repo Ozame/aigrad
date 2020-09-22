@@ -423,4 +423,14 @@ Nils J. Nilsson
       - Physical tasks
       - hlai impossible, weak instead
       - political/economical opposition
-  tbc 
+- "Habile systems"
+  - Instead of thousands of specialized systems, build ones that can be taught
+- Child machines
+  - Turing's "the child project" 1950
+  - Core + outer layers
+- Perception, reps, action hierarchies
+- Prediction, planning
+- Reinforcement learning (pos, neg responses)
+- Language
+  - trumps reinf. learning
+- Which level to start? Infant, High School, College? Building on top of these might make the initial foundation easier to reach.
