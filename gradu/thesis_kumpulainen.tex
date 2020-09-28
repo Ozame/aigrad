@@ -51,8 +51,7 @@ The thesis will be a systematic research mapping on the field of Artificial Gene
 \chapter{Artificial General Intelligence} 
 
 \section{History of Artificial Intelligence} 
-% More about the origins of AI here. 
-% 
+
 Even though the idea of autonomous machinery has been around since the ancient Greek (\cite{}), AI's origins are set around in the 1940s. At the time, American science fiction author Isaac Asimov wrote numerous novels and short stories about conscious robots and technology's relation to humankind. His work has inspired countless people in the field's of AI and computer science since then (\cite{kaplan2019}).
 Also in the 1940s, mathematician Alan Turing's work on Britain's code breaking efforts lead to the creation of first electromechanical computer, The Bombe (\cite{kaplan2019}). Turing later gave lectures and wrote an article titled \emph{"Computing Machinery and Intelligence"} (\cite*{turing1950}), in which he presented several ideas later prevalent in AI field, including the "Imitation game", a test to measure the intelligence of a machine (\cite{norvig2002}). This later became well known as the Turing test.
 
@@ -75,15 +74,16 @@ Work of Judea Pearl (\cite*{pearl1988}) and Peter Cheeceman (\cite*{cheeseman198
 
 %Large datasets? maybe just mention somewhere else if needed
 
+%TODO: Is the history too much? Feels like it could/should be more topic focused, now it might seem a bit overkill...
+
 %TODO: agents ? 
 
 In the 21st century artificial intelligence research has been steadily growing. According to (\cite{liu2018}), not only has the amount of publications in the field been increasing, but also the collaboration between researchers. The study also deduces that that AI has become more open-minded and popular, as the rate of self-references is reducing. One reason for the rising popularity on the field is the success that narrow AI solutions have presented in multitude of problems. For example, in classical game of Go, program called AlphaGo developed by Google-owned DeepMind, defeated the world champion Lee Sedol in 2015 (\cite{silver2016}). Due to Go's computationally complex nature this was a impressive feat previously thought impossible. Later DeepMind developed even more advanced versions of AlphaGo, called AlphaGo Zero, and generalized AlphaZero, which could even play Shogi and Chess on superhuman level (\cite{silver2018}).
 
 
-Recent years majority of the field has been focusing on the narrow AI approaches (\cite{goertzel2007}). However, the interest in the classical, strong AI has also been increasing. This can be seen in the publications from many influential AI researchers. Authors like John McCarthy (\cite*{mccarthy2007}), Nils Nilsson (\cite*{nilsson2005}) and Marvin Minsky (\cite*{minsky2007}) have voiced their opinions that efforts to create a more general AI should be pursued. There are many terms used regarding these efforts. \textbf{Human-level Artificial Intelligence} (HLAI) aims to reach "human-level intelligence" and common sense, a goal that can be reached by not using any single method, but a combination of different resources and methods (\cite{minsky2004}).
-Similar term is \textbf{Artificial General Intelligence} (AGI) presented by Ben Goertzel and Casio Pennachin (\cite*{goertzel2007}). The goal of AGI is similar to HLAI, to create an AI system that can express general intelligence instead of being locked into a single domain. On the next chapter these general approaches are presented in more detail, as they are the focus of this thesis.
+Recent years majority of the field has been focusing on the narrow AI approaches (\cite{goertzel2007}). However, the interest in the classical, strong AI has also been increasing. This can be seen in the publications from many influential AI researchers. Authors like John McCarthy (\cite*{mccarthy2007}), Nils Nilsson (\cite*{nilsson2005}) and Marvin Minsky (\cite*{minsky2007}) have voiced their opinions that efforts to create a more general AI should be pursued. There are several terms used regarding these efforts. \textbf{Human-level Artificial Intelligence} (HLAI) aims to reach "human-level intelligence" and common sense, a goal that according to Marvin Minsky (\cite*{minsky2004}) can be reached by not using any single method, but a combination of different resources and methods.
+Similar term is \textbf{Artificial General Intelligence} (AGI) presented by Ben Goertzel and Casio Pennachin (\cite*{goertzel2007}). The goal of AGI is similar to HLAI, to create an AI system that can express general intelligence instead of being locked into a single domain. On the next chapter this general approach is presented in more detail, as it is the focus of this thesis.
 
-% ^ These approaches are the ones this thesis focuses. 
 
 \section{Definition}
 
@@ -93,25 +93,22 @@ Based on the aforementioned collection of definitions, Legg and Hutter (\cite*{l
 
 %Intelligence is a trait that manifests itself in multitude of ways, making its definition but also its measurement a challenge. 
 % gardner, piaget, vygotsky
-% Measurement? or just later when roadmap is discussed?
+% Measurement? or later when roadmap is discussed?
 % in any case, needs something more here, now just quotes :(
 
+Artificial General Intelligence, sometimes referred as "strong ai", according to Goertzel and Pennachin (\cite*{goertzel2007}) means \emph{"AI systems that possess a reasonable degree of self-understanding and autonomous self-control, and have the ability to solve a variety of complex problems in a variety of contexts, and to learn to solve new problems that they didn't know about at the time of their creation."}. It can be seen that an agent fulfilling this definition also possesses the intelligence defined in the previous chapter. In this thesis terms artificial general intelligence and human-level artificial intelligence are treated as synonyms, as they pursue more or less the same goal of general intelligence. Goertzel and Pennachin (\cite*{goertzel2007}) suggest that the term AGI is more fitting to the area than HLAI as it human-like approaches are not necessarily used. 
+
+ The reason general intelligence is specified instead of plain intelligence is that there is a need to differentiate it from the domain specific artificial intelligence, also known as "narrow AI" or "weak AI", that has become prevalent in AI research in recent past. Terms strong AI and weak AI were coined by John Searle in 1980 (\cite{searle1980}). Narrow AI means smart solutions that may learn and improve their performance through training, but they are only focused on specific type of problems in a specific context. Examples of such AI include chess engines, autonomous vehicles, and natural language processing. These solutions may outperform human capabilities, but only in their limited tasks. When presented a problem outside their domain, they usually perform poorly.
+As the above definition by Goertzel and Pennachin describes, AGI is able to function on different context and tasks without separate human intervention and reconfiguration.
 
 
-
-Artificial General Intelligence, sometimes referred as "strong ai", according to Goertzel and Pennachin (\cite*{goertzel2007}) means \emph{"AI systems that possess a reasonable degree of self-understanding and autonomous self-control, and have the ability to solve a variety of complex problems in a variety of contexts, and to learn to solve new problems that they didn't know about at the time of their creation."}. It can be seen that an agent fulfilling this definition also possesses the intelligence defined in the previous chapter.
-
- The reason general intelligence is specified instead of plain intelligence is that there is a need to differentiate it from the domain specific artificial intelligence, also known as "narrow AI" or "weak AI". Terms strong AI and weak AI were coined by John Searle in 1980 (\cite{searle1980}). Narrow AI means smart solutions that may learn and improve their performance through training, but they are only focused on specific type of problems in a specific context. Examples of such AI include chess engines, autonomous vehicles, and natural language processing. These solutions may outperform human capabilities, but only in their limited tasks. When presented a problem outside their domain, they usually perform poorly.
-As above definition by Goertzel and Pennachin describe, AGI is able to function on different context and tasks without separate human intervention and reconfiguration.
-
-% HERE: HLAI vs AGI, how they differ or do they, and how this is handled in the thesis
-
+%TODO: should this roadmap be placed somewhere else? now seems a bit disconnected
 As The AGI community is diverse and there are multitude of opinions on the best approaches and the goals that should be pursued in the research, several possible roadmaps have been presented in an attempt to create a common basis for the discussion and research of human-level artificial general intelligence. In (\cite{adams2012}) a high level roadmap with AGI's initial required capabilities and scenario-based milestones is suggested, building on previous work and workshops organized in 2008 and 2009. Presented scenarios can be used to measure the progress and capabilities of AGI restricting the progress of different approaches to a single test situation (\cite{adams2012}).
-More concrete example is provided by Ben Goertzel and Gino Yu, who outline creation of a AGI-oriented cognitive architecture based on existing CogPrime architecture (\cite{goertzel2014map}). CogPrime is implemented with OpenCog framework, developed by OpenCog Foundation and AI researcher Ben Goertzel, is an attempt to create an open source framework for artificial general intelligence (\cite{opencogwiki,goertzel2012cog}).
+More concrete example is provided by Ben Goertzel and Gino Yu, who outline creation of a AGI-oriented cognitive architecture based on existing CogPrime architecture (\cite{goertzel2014map}). A simultaneous development of multiple AGI-style applications is suggested to maintain the generality of intelligence. CogPrime is implemented with OpenCog framework, developed by OpenCog Foundation and AI researcher Ben Goertzel. OpenCog is an attempt to create an open source framework for artificial general intelligence (\cite{opencogwiki,goertzel2012cog}).
+
+TODO: Add something like: One motivation behind this thesis is to find out if these roadmaps and "common ground" have actually lead to anything concrete, or has their effort been for nothing.
 
 
-% unclear, discussion about the meaning? some other sources here
-% here about the landscape and efforts of trying to find common ground
 \chapter{Systematic literature mapping process}
 
 \section{Research method and reasoning}
@@ -140,18 +137,10 @@ There exists many good papers on the research method. There are some example the
 \chapter{The literature mapping}
 
 \section{Background/why this method and topic}
-The research questions are not too specific yet, but some ideas are:
-\begin{itemize}
-    \item What is the current state of AGI?
-    \item What are the current techniques used and researched?
-    \item What have been the most successful attempts recent years?
-    \item How has the generalization of specific techniques advanced recently?
-\end{itemize}
 
 \section{Research questions}
 
 The following research questions...
-
 
 \begin{enumerate}
   \item How much, and what type of research is done in the field of AGI?
