@@ -256,6 +256,10 @@ JYX:
     - Table of sources: year, name, authors, type, keywords
 
 
+Some Information (in finnish): 
+  http://users.jyu.fi/~santanen/info/kirjoittamisesta.html
+
+
 ## Data Management
 - Mononen used sqlite db to save data about articles and their criteria info
 - Excel?
@@ -350,20 +354,20 @@ JYX:
   scientific method used, e.g. case study, experiment, or survey
 - Existing categories or new ones that emerge from papers?
 - validity threats reported?
+- Search evaluation via test sets of papers (most common) etc.
 - [58] good RQs:
     - what RQs in X are being addressed?
     - what original research exists in intersection of x and y?
     - what areas in x require more research?
 - usually questions about the meta-level is included, like venues, methods etc.
-- Wohlin et al, 7, population representation over paper quantity <-> population
-  not known beforehand
-- Questions to think about regarding population:
-    - **Are different a priori known sub-areas of the field covered?**
-    - **Are the main publication forums specific to this area (e.g.
+- **Wohlin et al, 7, population representation over paper quantity <-> population not known beforehand**
+- **Questions to think about regarding population:**
+    - Are different a priori known sub-areas of the field covered?
+    - Are the main publication forums specific to this area (e.g.
       conferences), or general software engineering forums (e.g. journals),
-      represented when identifying relevant articles?**
-    - **Are there explanations for major changes in the number of studies
-        published per year?** For example, this may point to new areas that
+      represented when identifying relevant articles?
+    - Are there explanations for major changes in the number of studies
+        published per year? For example, this may point to new areas that
         should be added to classifications established earlier.
 - Standards like SWEBOK, IEE, ISO useful in categorization
 - The approaches identified (consult experts, iteratively improve the search,
@@ -371,7 +375,7 @@ JYX:
   thesaurus, see Table 5 and Fig. 7) are not highly time intensive and may
   greatly improve the quality of the search. Overall, such early quality
   assurance may save effort due to rework when mistakes were made in the early
-  search activ- ity. They may also help in focusing the search and hence reduce
+  search activity. They may also help in focusing the search and hence reduce
   the noise, making the study selection process more time efficient.
 - Incl/excl. criteria are important: Venue, language, focus etc. p11
 - Finnish publication types: useful for classification and study selection.
@@ -383,6 +387,34 @@ JYX:
 - rubrics: table 9-13 and table 8 activity ratio should be utilized on
   evaluation of process.
 
+#### Guideline updates
+
+##### Planning
+  - All decisions about conduct are decided
+  - Need identification and scoping
+    - examine existing research activity
+    - determine the value of full SLR
+    - to summarize and disseminate research findings
+    - to identify research gaps
+  - Study identification (wohlin questions ^)
+    - search strategy (manual, db, snowballing included?)
+      - PICO,  standards
+      - evaluation
+      - inclusion/exclusion criteria
+      - quality assesment(not common, but might be useful in some situations
+  - Data extraction and classification
+    - General vs topic dependant classification schemes
+      - majority topic specific (emerging, existing)
+        - usage of swebok and other standards?
+        - emergent: categories -> categorization of papers
+    - Venue, research type, research method facets
+      - JUFO, wieringa's types
+    - ??? is combining this possible?
+
+##### Conducting
+  - Implement planned mapping
+  - Report all information on all stages
+##### Reporting
 
 ### AI History - Haenlein, Kaplan
 
