@@ -26,6 +26,7 @@ Issues are looked only on years 2015-2019
 - INTERNATIONAL CONFERENCE ON ARTIFICIAL GENERAL INTELLIGENCE
   - Issues = 5, articles in issue ~ 30
   - This conference seems to be suprisingly active and on topic
+  - Not in JUFO rankings
   
 - (1 EUROPEAN SYMPOSIUM ON ARTIFICIAL NEURAL NETWORKS, COMPUTATIONAL INTELLIGENCE AND MACHINE LEARNING)
   - This would increase article load with 500+ articles, with a low number of relevant papers. So maybe?

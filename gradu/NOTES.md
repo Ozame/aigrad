@@ -561,3 +561,17 @@ Nils J. Nilsson
   - trumps reinf. learning
 - Which level to start? Infant, High School, College? Building on top of these
   might make the initial foundation easier to reach.
+
+
+### Requirements engineering paper classification and evaluation criteria
+Wieringa et al. 2006
+
+- Need for criteria for different types of papers
+- Engineering cycle: list of activities
+  1. Problem investigation
+  2. Solution design
+  3. Solution validation
+  4. Solution selection
+  5. Solution implementation
+  6. Implementation evaluation
+   tbc
