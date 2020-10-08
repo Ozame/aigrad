@@ -566,6 +566,8 @@ Nils J. Nilsson
 ### Requirements engineering paper classification and evaluation criteria
 Wieringa et al. 2006
 
+**Useful as a classification facet**
+
 - Need for criteria for different types of papers
 - Engineering cycle: list of activities
   1. Problem investigation
@@ -574,4 +576,15 @@ Wieringa et al. 2006
   4. Solution selection
   5. Solution implementation
   6. Implementation evaluation
-   tbc
+->
+- Proposed classification scheme 
+  - Evaluation research
+  - Validation research
+  - Proposal of a solution
+  - Philosophical papers
+  - Opinion paperss
+  - Experience papers
+- Papers may belong to multiple classes, but point is to prevent wrong type of 
+    evaluation based on wrong criteria.
+
+
