@@ -291,8 +291,36 @@ Some Information (in finnish):
 - success, advances, development, breakthrough
 - turing test
 
+## Guidance sessions
 
---> Improve search  phrases next
+### Gohjaus 13.10.2020 (SK,VT)
+- Having a comprehensive history chapter is good.
+- Having a separate section about method's usage in IT might be ok, but rather
+    combine it with other sections.
+  - Combine it with reasoning section and place in chapter 3.
+    - In the end discussion see how the method choice worked out
+- Being "a journalist" looking into AGI. Own vision?
+- How AGI research is related to current trends?
+  - Quantative DL is not the solution 
+  - Self-inputting neural networks
+  - GANs and fast learning, evolving
+- Historical comparison
+  - AGI papers now vs. 20 years ago would be nice, but in thesis scope not
+    feasible.
+  - trends over time
+  - critics and suggestions
+- Business potential in the AGI research?
+- **International joint conference on AI** would be good to include.
+- Using citation count, popularity etc. in search? Might not be good in this
+  method, as overview is the goal. 
+
+- TODO: Check usage of term _strong ai_, might require more precise definition
+
+
+
+
+
+
 
 #############################################################
 

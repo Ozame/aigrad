@@ -15,15 +15,15 @@ High level and/or topical relevance make these the ideal candidates for the revi
 
 Issues are looked only on years 2015-2019
 
-- 3 ARTIFICIAL INTELLIGENCE | citescore 7.7 | Impact factor 6.628
+- 3 **ARTIFICIAL INTELLIGENCE** | citescore 7.7 | Impact factor 6.628
   - Issues 218-277 = 59, articles in issue ~ 10,
-- 3 JOURNAL OF ARTIFICIAL INTELLIGENCE RESEARCH | IF 1.8
+- 3 **JOURNAL OF ARTIFICIAL INTELLIGENCE RESEARCH** | IF 1.8
   - Issues 52-66 = 14, articles in issue ~20
-- 1 JOURNAL OF ARTIFICIAL GENERAL INTELLIGENCE
+- 1 **JOURNAL OF ARTIFICIAL GENERAL INTELLIGENCE**
   - Issues = 6, articles in issue ~ 2
 
 ### Conference proceedings
-- INTERNATIONAL CONFERENCE ON ARTIFICIAL GENERAL INTELLIGENCE
+- **INTERNATIONAL CONFERENCE ON ARTIFICIAL GENERAL INTELLIGENCE**
   - Issues = 5, articles in issue ~ 30
   - This conference seems to be suprisingly active and on topic
   - Not in JUFO rankings
@@ -33,6 +33,9 @@ Issues are looked only on years 2015-2019
 
 
 ==> In total, around 1000 articles concerning AI. Quick sampling shows the number of actually relevant articles may still be very low.
+
+- 2 **International joint conference on AI** would be good to include.
+  - Massive amount of papers, manual search not feasible with this included.
 
 
 ## Not sure
