@@ -11,3 +11,39 @@ descriptions etc. will be stored here during the study.
 ## Research questions
 - Derived from the research goal: Overview of the field.
 - Using PICO here might help? 
+
+## Search 
+
+- Might have to use combination of manual and automatic search, 
+  as searching through all material by hand is not feasible, but also might not be possible to find everything by automatic searches.
+
+### How to search different venues
+
+#### Artificial Intelligence
+- https://www.journals.elsevier.com/artificial-intelligence/
+- https://www-sciencedirect-com.ezproxy.jyu.fi/journal/artificial-intelligence
+
+- Either use search on above link, or limit scopus there:
+  - https://www-scopus-com.ezproxy.jyu.fi/results/results.uri?sort=plf-f&src=s&sid=78a1e4aad6129dbbfc0637aac2a153d3&sot=a&sdt=a&sl=17&s=SOURCE-ID+%2823675%29&origin=sourceinfo&zone=CSCYpreview&txGid=01b55a3970e28fca6eb2d830cef0d130
+  
+- Automatic search should be performed, is viable
+
+#### Journal of artificial intelligence research
+- https://www.jair.org/index.php/jair
+- scopus: https://www-scopus-com.ezproxy.jyu.fi/sourceid/24330?origin=resultslist
+
+- Scopus search possible, doable manually but would be easier
+
+#### Journal of artificial general intelligence
+- https://content.sciendo.com/view/journals/jagi/jagi-overview.xml?language=en
+
+- Very little material, manual search preferred
+
+#### International conference on artificial general intelligence
+- https://link-springer-com.ezproxy.jyu.fi/conference/agi 
+- Many papers, manual search viable, automatic good as well (springer)
+
+#### International joint conference on artificial intelligence
+- scopus https://www-scopus-com.ezproxy.jyu.fi/results/results.uri?sort=plf-f&src=s&st1=International+joint+conference+on+artificial+intelligence&nlo=&nlr=&nls=&sid=a09ad57cfa20f5f9c12f2be1afbe370a&sot=b&sdt=cl&cluster=scoexactsrctitle%2c%22Ijcai+International+Joint+Conference+On+Artificial+Intelligence%22%2ct&sl=67&s=SRCTITLE%28International+joint+conference+on+artificial+intelligence%29&origin=resultslist&zone=leftSideBar&editSaveSearch=&txGid=b1a476ec5cf5e0fa8ebb000d88c5fe3b
+
+- automatic search via scopus. Very little articles of interest
