@@ -24,8 +24,7 @@ descriptions etc. will be stored here during the study.
 - https://www-sciencedirect-com.ezproxy.jyu.fi/journal/artificial-intelligence
 
 - Either use search on above link, or limit scopus there:
-  - https://www-scopus-com.ezproxy.jyu.fi/results/results.uri?sort=plf-f&src=s&sid=78a1e4aad6129dbbfc0637aac2a153d3&sot=a&sdt=a&sl=17&s=SOURCE-ID+%2823675%29&origin=sourceinfo&zone=CSCYpreview&txGid=01b55a3970e28fca6eb2d830cef0d130
-  
+  - https://www-scopus-com.ezproxy.jyu.fi/results/results.uri?sort=plf-f&src=s&nlo=&nlr=&nls=&sid=2924507b14c32f4fb64d46114d17cf1a&sot=a&sdt=cl&cluster=scoexactsrctitle%2c%22Artificial+Intelligence%22%2ct&sl=17&s=SOURCE-ID+%2823675%29&origin=resultslist&zone=leftSideBar&editSaveSearch=&txGid=e389835a97e9acafe2c9e8543eaa4fe1
 - Automatic search should be performed, is viable
 
 #### Journal of artificial intelligence research
@@ -47,3 +46,7 @@ descriptions etc. will be stored here during the study.
 - scopus https://www-scopus-com.ezproxy.jyu.fi/results/results.uri?sort=plf-f&src=s&st1=International+joint+conference+on+artificial+intelligence&nlo=&nlr=&nls=&sid=a09ad57cfa20f5f9c12f2be1afbe370a&sot=b&sdt=cl&cluster=scoexactsrctitle%2c%22Ijcai+International+Joint+Conference+On+Artificial+Intelligence%22%2ct&sl=67&s=SRCTITLE%28International+joint+conference+on+artificial+intelligence%29&origin=resultslist&zone=leftSideBar&editSaveSearch=&txGid=b1a476ec5cf5e0fa8ebb000d88c5fe3b
 
 - automatic search via scopus. Very little articles of interest
+
+##### See search results in the excel files
+
+- Need to justify the journal choice in general, why not just do the general search?

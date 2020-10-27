@@ -74,6 +74,8 @@ RQ->PICO->keywords->search terms->dataset->inclusion/exclusion->...
 - Googles bubble chart?
   https://developers.google.com/chart/interactive/docs/gallery/bubblechart 
 
+- RQX: AGI testing - which tests (wozniak, nilsson) are popular?
+
 ### Journals
 Publication Forum, Julkaisufoorumi, ranks the journals, with 1-3, 3 being the
 top quality journal. (https://www.tsv.fi/julkaisufoorumi/haku.php?lang=en)
