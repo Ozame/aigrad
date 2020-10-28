@@ -50,3 +50,9 @@ descriptions etc. will be stored here during the study.
 ##### See search results in the excel files
 
 - Need to justify the journal choice in general, why not just do the general search?
+- Focusing only on the most relevant journals, as the goal is to map the AGI not
+  it's relation to the other ai research (altho this is a plus)
+- Target papers are topically relevant and high ranking.
+- AIJ, JAIR, IJCAI were possible to search through via scopus, JAGI manually,
+  ICAGI with springer 
+    - TODO: Get exact internal search strings (at least from scopus)
