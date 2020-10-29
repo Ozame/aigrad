@@ -75,6 +75,10 @@ RQ->PICO->keywords->search terms->dataset->inclusion/exclusion->...
   https://developers.google.com/chart/interactive/docs/gallery/bubblechart 
 
 - RQX: AGI testing - which tests (wozniak, nilsson) are popular?
+- TODO: GS citation count, easy with python script (search name, take count)
+  - On the other hand :/, citation counts variability betweeen search engines
+    differs, is this something that could be just stated, justifying e.g. GS's
+    wide usage, or something similar? Or just count means or something :D
 
 ### Journals
 Publication Forum, Julkaisufoorumi, ranks the journals, with 1-3, 3 being the
