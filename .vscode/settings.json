@@ -14,5 +14,7 @@
         "roadmaps",
         "subresult",
         "wieringa"
-    ]
+    ],
+    "restructuredtext.confPath": "",
+    "python.pythonPath": "code\\env\\Scripts\\python.exe"
 }

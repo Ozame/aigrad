@@ -39,14 +39,15 @@ def get_paper_info(url):
     results['keywords'] = keywords
     return results
 
-def add_abstracts_and_keywords(path='../gradu/material/ICAGI.xlsx', target="../gradu/material/test.xlsx"):
+def add_abstracts_and_keywords(path='../gradu/material/ICAGI.xlsx', target="../gradu/material/articles_combined.xlsx"):
     """Add info from given articles to material_search file"""
     wb = load_workbook(path)
     ws = wb.active
     wb_new = load_workbook("../gradu/material_search.xlsx")
-    wsn = wb_new.active
+    new_sheet = wb_new.active
     number_of_articles_to_be_added = 152
-    start_row = 39
+    source_start_row = 2
+    target_row = 39
     number_col = 1
     title_col = 2
     author_col = 3
@@ -62,8 +63,7 @@ def add_abstracts_and_keywords(path='../gradu/material/ICAGI.xlsx', target="../g
     source_col = 13
     volume_col = 14
 
-    for row in range(start_row, start_row + number_of_articles_to_be_added - 1):
-        # TODO: Rows don't match!!! start row etc
+    for row in range(source_start_row, source_start_row + number_of_articles_to_be_added):
         title = ws.cell(row=row, column=1).value
         doi = ws.cell(row=row, column=6).value
         authors = ws.cell(row=row, column=7).value
@@ -73,17 +73,18 @@ def add_abstracts_and_keywords(path='../gradu/material/ICAGI.xlsx', target="../g
         abstract = get_paper_info(url)['abstract']
         keywords = get_paper_info(url)['keywords']
 
-        wsn.cell(row=row, column=abstract_col).value = abstract
-        wsn.cell(row=row, column=keywords_col).value = keywords
-        wsn.cell(row=row, column=title_col).value = title
-        wsn.cell(row=row, column=doi_col).value = doi
-        wsn.cell(row=row, column=author_col).value = authors
-        wsn.cell(row=row, column=year_col).value = year
-
-        wsn.cell(row=row, column=type_col).value = "Conference Paper"
-        wsn.cell(row=row, column=venue_col).value = "ICAGI"
-        wsn.cell(row=row, column=link_col).value = url
-        wsn.cell(row=row, column=source_col).value = "Springer-Link"
+        new_sheet.cell(row=target_row, column=abstract_col).value = abstract
+        new_sheet.cell(row=target_row, column=keywords_col).value = keywords
+        new_sheet.cell(row=target_row, column=title_col).value = title
+        new_sheet.cell(row=target_row, column=doi_col).value = doi
+        new_sheet.cell(row=target_row, column=author_col).value = authors
+        new_sheet.cell(row=target_row, column=year_col).value = year
+        
+        new_sheet.cell(row=target_row, column=type_col).value = "Conference Paper"
+        new_sheet.cell(row=target_row, column=venue_col).value = "ICAGI"
+        new_sheet.cell(row=target_row, column=link_col).value = url
+        new_sheet.cell(row=target_row, column=source_col).value = "Springer-Link"
+        target_row += 1
         
     wb_new.save(target)
 
