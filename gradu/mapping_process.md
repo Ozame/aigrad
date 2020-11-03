@@ -56,3 +56,15 @@ descriptions etc. will be stored here during the study.
 - AIJ, JAIR, IJCAI were possible to search through via scopus, JAGI manually,
   ICAGI with springer 
     - TODO: Get exact internal search strings (at least from scopus)
+
+  **Excel files:**
+  - search_terms = preliminary search term testing on different databases.
+  - material_search = Scopus and sciendo papers.
+  - ICAGI = ICAGI conference papers exported via proquest, only names and links
+  - scopus_ai_jair_ijcai = Aforementioned articles, exported from scopus, good info
+  - articles_combined = results from the scraping script, which gets more info
+    on the papers from their springer-link pages. Also other papers 
+    **!PRONE TO CHANGE!**
+  - final_results = the working file, should be kept clean and safe. Has all the
+    articles and will be used in the mapping process.
+
