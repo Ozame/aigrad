@@ -47,7 +47,7 @@ descriptions etc. will be stored here during the study.
 
 - automatic search via scopus. Very little articles of interest
 
-##### See search results in the excel files
+##### See search results in the excel files 
 
 - Need to justify the journal choice in general, why not just do the general search?
 - Focusing only on the most relevant journals, as the goal is to map the AGI not
