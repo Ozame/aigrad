@@ -68,3 +68,14 @@ descriptions etc. will be stored here during the study.
   - final_results = the working file, should be kept clean and safe. Has all the
     articles and will be used in the mapping process.
 
+
+- **Should cognitive architechture related papers be alway included?**
+  - Many such papers don't directly mention AGI or HLAI, but are still related in a way... E.g. Micropsi, and especially OpenCog. 
+
+###### Terms mentioned often, possible keywords
+- Symbolic/subsymbolic 
+- Cognitive architectures
+- NARS
+- OpenCog
+- AGI safety
+- AIXI?
