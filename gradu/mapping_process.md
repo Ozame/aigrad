@@ -70,7 +70,7 @@ descriptions etc. will be stored here during the study.
 
 
 - **Should cognitive architechture related papers be alway included?**
-  - Many such papers don't directly mention AGI or HLAI, but are still related in a way... E.g. Micropsi, and especially OpenCog. 
+  - Many such papers don't always directly mention AGI or HLAI, but are still related in a way... E.g. Micropsi, and especially OpenCog. 
 
 ###### Terms mentioned often, possible keywords
 - Symbolic/subsymbolic 
@@ -79,3 +79,7 @@ descriptions etc. will be stored here during the study.
 - OpenCog
 - AGI safety
 - AIXI?
+- Universal induction & Solomonoff induction 
+
+
+Initial search yielded total of 187 papers. After first phase of inspection, 122 were considered potential. They were further examined in the second phase, where the inclusion criteria was further considered.  
