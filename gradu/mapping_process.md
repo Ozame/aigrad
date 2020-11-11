@@ -83,3 +83,8 @@ descriptions etc. will be stored here during the study.
 
 
 Initial search yielded total of 187 papers. After first phase of inspection, 122 were considered potential. They were further examined in the second phase, where the inclusion criteria was further considered.  
+
+TODO: WHy "Yampolskiy,  R.V.:  On  the  limits  of  recursively  self-improving  AGI.  In:  The  Eighth    Conference on Artificial General Intelligence, Berlin, Germany, July 22–25, 2015" was not found?
+
+
+In the second phase, 96 papers were directly accepted, and x further excluded.
