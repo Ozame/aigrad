@@ -82,9 +82,74 @@ descriptions etc. will be stored here during the study.
 - Universal induction & Solomonoff induction 
 
 
-Initial search yielded total of 187 papers. After first phase of inspection, 122 were considered potential. They were further examined in the second phase, where the inclusion criteria was further considered.  
+Initial search yielded total of 187 papers. After first phase of inspection, 122
+were considered potential. They were further examined in the second phase, where
+the inclusion criteria was further considered.  
 
-TODO: WHy "Yampolskiy,  R.V.:  On  the  limits  of  recursively  self-improving  AGI.  In:  The  Eighth    Conference on Artificial General Intelligence, Berlin, Germany, July 22–25, 2015" was not found?
+
+In the second phase, 104 papers were directly accepted, and 18 further excluded.
+Out of the inspected 122 potential papers, 17 were borderline cases that had to
+be carefully decided. Out of those, 9 were excluded and 8 included. In total
+more thorough inspection in addition to title and abstract were required in 82
+cases. Often AGI or similar concept was briefly mentioned in the abstract, but
+inspection was necessary to assert if the contents actually related to the
+topic.
 
 
-In the second phase, 96 papers were directly accepted, and x further excluded.
+### Example papers and some questions
+
+>The search results can be seen in the spreadsheet file "final_results.xlsx"
+>found in the material-directory. Here examples are each presented  with
+>spreadsheet number, title, link, and reasoning behind decision.
+
+**|#| Title | Link | Reasoning |**
+
+#### **Accepted papers**
+
+|6|*AGI safety literature review*|[Scopus](https://www.scopus.com/inward/record.uri?eid=2-s2.0-85055692095&doi=10.24963%2fijcai.2018%2f768&partnerID=40&md5=49cfad723b47562b085cc806e7337cc3)| Clearly relates to AGI|
+
+|24|*Towards General Evaluation of Intelligent Systems: Lessons Learned from Reproducing AIQ Test Results*
+|[Sciendo]([Sciendo](https://doi.org/10.2478/jagi-2018-0001))| Clearly relates to AGI agents|
+
+|100|*A Formal Model of Cognitive Synergy*|[Springer Link](http://link.springer.com/chapter/10.1007/978-3-319-63703-7_2)|Presented Cognitive Architecture is related to general intelligences, AGI design|
+
+#### **Not accepted papers**
+
+|84|*Instrumental Properties of Social Testbeds*|[Springer Link](http://link.springer.com/chapter/10.1007/978-3-319-21365-1_11)|Focuses on social intelligence, and even though AGI is mentioned (once), the subject isn't related to it later on.|
+
+|152|*Lifelong Learning Starting from Zero*|[Springer Link](http://link.springer.com/chapter/10.1007/978-3-030-27005-6_19)|Even though lifelong learning and neuroplasticity are important subjects, the paper doesn't directly relate its results to general intelligence, but is more related to DNN design|
+
+|9|*A common-sense conceptual categorization system integrating heterogeneous proxytypes and the dual process of reasoning*|[Scopus](https://www.scopus.com/inward/record.uri?eid=2-s2.0-84949788233&partnerID=40&md5=38fbbfe06200ec391b5e23501c8ba1ba)|While knowledge representation is also important part of AGI, this work only relates itself to cognitive architectures without explicitly mentioning general intelligences.|
+
+#### **Borderline papers**
+
+|10|*The off-switch game*|[Scopus](https://www.scopus.com/inward/record.uri?eid=2-s2.0-85031899623&doi=10.24963%2fijcai.2017%2f32&partnerID=40&md5=f857e16f5d257fb5ef83d2aa969af1ac)|This paper focuses on the safety measures of AI not wanting itself to be shutdown. While it could be implicitly understood that this kind of self-preserving rational agent could also be a general agent, it is once again not specified, so I'm inclined to **exclude** this paper as too not-focused one.|
+
+|12|*Should robots be obedient?*|[Scopus](https://www.scopus.com/inward/record.uri?eid=2-s2.0-85031901993&doi=10.24963%2fijcai.2017%2f662&partnerID=40&md5=c4d1b4c90b2481342324af23892fc336)|Again, this is something that can be focused either on general or narrow agents, and as such is **excluded**. Intuitively robot obedience is more prominent problem in general AI, but the general approach of this paper is not focused enough.|
+
+|22|*Computable Variants of AIXI which are More Powerful than AIXItl*|[Sciendo](https://www.doi.org/10.2478/jagi-2019-0001)|Specifically focuses on AIXI and its computability, doesn't relate to AGI -> **excluded**|
+
+|131|*Reflective Variants of Solomonoff Induction and AIXI*|[Springer Link](http://link.springer.com/chapter/10.1007/978-3-319-21365-1_7)|Relation between agent and environment is mentioned, and generality is somewhat brought forward -> **included**|
+
+
+#### **Summary**
+
+As can be seen from previous examples, some papers can be clearly seen as part
+of the general intelligence research, but some are hard to distinguish from more
+commonplace AI papers. On the other hand some very theoretical and specific
+papers that might be deeply inherent part of the area are easily dismissed on
+the basis that they don't mention certain umbrella terms and concepts. These
+kind of papers are usually about Universal Induction, AIXI, or some Cognitive
+Architecture. But including every paper relating to let's say, cognitive
+architectures like OpenCog or NARS whether they mention goal of general
+intelligence, raises the amount of papers too high for me to handle.
+
+>My question is, **how could I limit the amount of relevant papers without accidentally excluding something important?**
+
+I would suggest deliberately excluding papers unless they clearly relate
+themselves to general intelligence/general agents in the
+abstract/introduction/conclusion sections. This would lead to some possible
+relevant papers to be excluded but as can be seen in the last 2 borderline
+examples, some papers focusing on same topics would still remain, keeping the
+sample relatively representative.
+
