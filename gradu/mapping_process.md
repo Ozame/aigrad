@@ -86,15 +86,27 @@ Initial search yielded total of 187 papers. After first phase of inspection, 122
 were considered potential. They were further examined in the second phase, where
 the inclusion criteria was further considered.  
 
+Remember to note how many were excluded for being duplicates or reporting same
+thing (2).
 
-In the second phase, 104 papers were directly accepted, and 18 further excluded.
-Out of the inspected 122 potential papers, 17 were borderline cases that had to
-be carefully decided. Out of those, 9 were excluded and 8 included. In total
-more thorough inspection in addition to title and abstract were required in 82
-cases. Often AGI or similar concept was briefly mentioned in the abstract, but
-inspection was necessary to assert if the contents actually related to the
-topic.
+(Initially on the second phase, 104 papers were directly accepted, and 18 further
+excluded. Out of the inspected 122 potential papers, 17 were borderline cases
+that had to be carefully decided. Out of those, 9 were excluded and 8 included.
+However, everything was looked through more thoroughly to further exclude
+papers.)
 
+In the second phase, 122 potential papers were examined more thoroughly to
+further exclude the less topical papers. Most of the papers could be accepted
+based on the title or abstract alone, but in many cases inspection of
+introduction and conclusion sections was required. After preliminary inspection,
+small set of papers with their inclusion status was sent to the thesis councilor
+to confirm the selection. During the second phase it became apparent that having
+such a broad topic would raise the amount of relevant papers to very high
+number. In the end 93 papers were included, and would be further analysed in the
+next phase.
+
+Also, could be important to mention that some papers relating to mentioned
+systems were excluded because of the criteria.
 
 ### Example papers and some questions
 
@@ -153,3 +165,6 @@ relevant papers to be excluded but as can be seen in the last 2 borderline
 examples, some papers focusing on same topics would still remain, keeping the
 sample relatively representative.
 
+
+>The more intensive inspection was performed, and total number of papers limited
+>to 93.
