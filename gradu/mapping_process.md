@@ -168,3 +168,37 @@ sample relatively representative.
 
 >The more intensive inspection was performed, and total number of papers limited
 >to 93.
+
+## Keywording
+
+### What to do when analyzing a paper?
+
+On the first read through finding papers' keywords and classifying them
+according to Wieringa's class is the main goal. After that, combining keywords
+and creating categories takes place. 
+
+- Keywording:
+  - Keywording is done in two steps. First, the reviewers read abstracts and
+    look for keywords and concepts that reflect the contribution of the paper.
+    While doing so the reviewer also identifies the context of the research.
+    When this is done, the set of keywords from different papers are combined
+    together to develop a high level understanding about the nature and
+    contribution of the research.
+
+- **Wieringa's classification**:
+  This should be shown in a table in the thesis.
+
+  - Validation Research
+    - Novel techniques not implemented in practice.
+  - Evaluation Research
+    - Implementation in practice and its evaluation.
+  - Solution Proposal
+    - Solution is presented and arguments shown.
+  - Philosophical Paper
+    - Present new way to look things via taxonomy or conceptual framework.
+  - Opinion Paper
+    - Personal opinion on existing things. No related work or methods used.
+  - Experience Paper
+    - Explain what has been done in practice, relates to author's work.
+
+  
