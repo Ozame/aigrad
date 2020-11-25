@@ -201,4 +201,8 @@ and creating categories takes place.
   - Experience Paper
     - Explain what has been done in practice, relates to author's work.
 
+-sidenote: It's interesting how the relation of embodiment and more theoretical
+approach differs on many papers. Some say body is required to learn like human,
+others steer clear of it to avoid too complex situations.
+
   
