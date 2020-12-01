@@ -205,4 +205,18 @@ and creating categories takes place.
 approach differs on many papers. Some say body is required to learn like human,
 others steer clear of it to avoid too complex situations.
 
-  
+
+During this keywording phase, one paper (#23) was excluded because upon more
+close inspection it was noticed that it didn't explicitly relate itself to
+general ai.
+
+Couple papers were difficult to give a Wieringa classification to (#6, #45). #6
+was a traditional SLR, a type not separately classified by wieringa (technical
+oriented), so it was decided to be classified as PP, as it in a way summarizes
+existing research which helps the future research considerations. #45 was also
+very much focused on the literature survey, and the results can't really be said
+to be any novel solution as much as a viewpoint, so PP was chosen.
+
+#74 was more of a project description, but it fit the criteria and presented a
+one possible approach to AI evaluation, so it was classified as PP and included.
+
