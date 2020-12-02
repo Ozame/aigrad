@@ -220,3 +220,6 @@ to be any novel solution as much as a viewpoint, so PP was chosen.
 #74 was more of a project description, but it fit the criteria and presented a
 one possible approach to AI evaluation, so it was classified as PP and included.
 
+## Categorization cycle 1
+
+Python script was used to take all the found keywords and calculate the initial frequency distribution (how many instances of each kw was found). These were then written to an spreadsheet where the creating and merging categories took place.
