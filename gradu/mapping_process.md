@@ -223,3 +223,8 @@ one possible approach to AI evaluation, so it was classified as PP and included.
 ## Categorization cycle 1
 
 Python script was used to take all the found keywords and calculate the initial frequency distribution (how many instances of each kw was found). These were then written to an spreadsheet where the creating and merging categories took place.
+
+Initial categories were formed by picking similar and closely relating concepts
+by hand and grouping them together. If the combined number of articles of each
+keyword group was over 4, a category was formed. Number of these initial topic
+categories was 35.
