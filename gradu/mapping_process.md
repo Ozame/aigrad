@@ -225,30 +225,35 @@ one possible approach to AI evaluation, so it was classified as PP and included.
 Python script was used to take all the found keywords and calculate the initial frequency distribution (how many instances of each kw was found). These were then written to an spreadsheet where the creating and merging categories took place.
 
 Initial categories were formed by picking similar and closely relating concepts
-by hand and grouping them together. From these groups, 39 initial categories was formed. After that, further merging and removal of small categories was performed. Here is the categorization that is first tested on the material:
+by hand and grouping them together. From these groups, 39 initial categories was formed. After that, further merging and removal of small categories was performed. Here is the categorization (25) that is first tested on the material:
 
-Cognitive architectures,
-AI safety,
-Universal AI,
-Lifelong learning,
-HCI,
-Agent environment,
-Human-like qualities,
-AGI design,
-Computer vision & perception,
-AI research,
-AI evaluation,
-AI ethics,
-Planning & decision making,
-Philosophical aspects,
-Reasoning and Inference,
-Multi-agent systems,
-Probabilistic approaches,
-Game playing,
-Problem specific research,
-Nature-inspired approaches,
-Neural networks,
-Physical robots,
-Category theory,
-Reinforcement learning,
-Other
+1 Cognitive architectures,
+2 AI safety,
+3 Universal AI,
+4 Lifelong learning,
+5 HCI,
+6 Agent environment,
+7 Human-like qualities,
+8 AGI design,
+9 Computer vision & perception,
+10 AI research,
+11 AI evaluation,
+12 AI ethics,
+13 Planning & decision making,
+14 Philosophical aspects,
+15 Reasoning and Inference,
+16 Multi-agent systems,
+17 Probabilistic approaches,
+18 Game playing,
+19 Problem specific research,
+20 Nature-inspired approaches,
+21 Neural networks,
+22 Physical robots,
+23 Category theory,
+24 Reinforcement learning,
+25 Other
+
+Based on the first categorization of papers, it seems some minor work is needed:
+- Nurture/pedagogy separated from LLL?
+- Deep learning?
+- Imitation learning?

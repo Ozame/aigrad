@@ -1,4 +1,5 @@
 from dataclasses import dataclass, field, fields
+from collections import OrderedDict
 from os import sep
 from typing import Dict, List
 import pprint
@@ -133,7 +134,10 @@ def calculate_category_distribution(path: str = "../gradu/material/final_results
     pp.pprint(empty_papers)
     return dist
 
-def write_category_dist_to_workbook(c_dist: Dict[str, int],  path: str = "../gradu/material/final_results.xlsx"):
+
+def write_category_dist_to_workbook(
+    c_dist: Dict[str, int], path: str = "../gradu/material/final_results.xlsx"
+):
     """Writes the given category distribution to the worksheet"""
 
     row_number = 6
@@ -152,6 +156,38 @@ def write_category_dist_to_workbook(c_dist: Dict[str, int],  path: str = "../gra
     wb.save(path)
 
 
+def calculate_category_count(
+    path: str = "../gradu/material/final_results.xlsx",
+) -> Dict[int, int]:
+    """Calculates the number of papers in each category"""
+    number_col = "A"
+    name_col = "B"
+    keywords_col = "M"
+    w_classes_col = "N"
+    category_column = "O"
+    dist = dict([(x, 0) for x in range(1, 26)])
+
+    def parse_cat_numbers(s):
+        if type(s) == int:
+            return [s]
+        cats = filter(lambda x: len(x.strip()), s.split(sep=",")) 
+        return list(
+            map(int, cats)
+        )
+
+    wb = load_workbook(path)
+    sheet = wb["Accepted Papers"]
+    for i in range(3, 95):
+        row = str(i)
+        cat_string = sheet[category_column + row].value
+        cats = parse_cat_numbers(cat_string)
+        for cat in cats:
+            dist[cat] += 1
+
+    sorted_dist = OrderedDict(sorted(dist.items(), key=lambda x: x[1], reverse=True))
+    return sorted_dist
+
+
 def write_freq_dist_to_workbook(
     f_dist: FreqDist, path: str = "../gradu/material/final_results.xlsx"
 ):
@@ -168,7 +204,6 @@ def write_freq_dist_to_workbook(
     wb.save(path)
 
 
-
 def main():
     # papers = load_papers()
     # all_keywords = []
@@ -179,8 +214,10 @@ def main():
 
     # count_keywords()
 
-    c_dist = calculate_category_distribution()
-    write_category_dist_to_workbook(c_dist)
+    # c_dist = calculate_category_distribution()
+    # write_category_dist_to_workbook(c_dist)
+    cat_count = calculate_category_count()
+    print(cat_count)
 
 
 if __name__ == "__main__":
