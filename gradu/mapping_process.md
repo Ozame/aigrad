@@ -225,6 +225,30 @@ one possible approach to AI evaluation, so it was classified as PP and included.
 Python script was used to take all the found keywords and calculate the initial frequency distribution (how many instances of each kw was found). These were then written to an spreadsheet where the creating and merging categories took place.
 
 Initial categories were formed by picking similar and closely relating concepts
-by hand and grouping them together. If the combined number of articles of each
-keyword group was over 4, a category was formed. Number of these initial topic
-categories was 35.
+by hand and grouping them together. From these groups, 39 initial categories was formed. After that, further merging and removal of small categories was performed. Here is the categorization that is first tested on the material:
+
+Cognitive architectures,
+AI safety,
+Universal AI,
+Lifelong learning,
+HCI,
+Agent environment,
+Human-like qualities,
+AGI design,
+Computer vision & perception,
+AI research,
+AI evaluation,
+AI ethics,
+Planning & decision making,
+Philosophical aspects,
+Reasoning and Inference,
+Multi-agent systems,
+Probabilistic approaches,
+Game playing,
+Problem specific research,
+Nature-inspired approaches,
+Neural networks,
+Physical robots,
+Category theory,
+Reinforcement learning,
+Other
