@@ -222,10 +222,15 @@ one possible approach to AI evaluation, so it was classified as PP and included.
 
 ## Categorization cycle 1
 
-Python script was used to take all the found keywords and calculate the initial frequency distribution (how many instances of each kw was found). These were then written to an spreadsheet where the creating and merging categories took place.
+Python script was used to take all the found keywords and calculate the initial
+frequency distribution (how many instances of each kw was found). These were
+then written to an spreadsheet where the creating and merging categories took
+place.
 
 Initial categories were formed by picking similar and closely relating concepts
-by hand and grouping them together. From these groups, 39 initial categories was formed. After that, further merging and removal of small categories was performed. Here is the categorization (25) that is first tested on the material:
+by hand and grouping them together. From these groups, 39 initial categories was
+formed. After that, further merging and removal of small categories was
+performed. Here is the categorization (25) that is first tested on the material:
 
 1 Cognitive architectures,
 2 AI safety,
@@ -247,13 +252,44 @@ by hand and grouping them together. From these groups, 39 initial categories was
 18 Game playing,
 19 Problem specific research,
 20 Nature-inspired approaches,
-21 Neural networks,
+21 Neural networks,   
 22 Physical robots,
 23 Category theory,
 24 Reinforcement learning,
 25 Other
 
+--> Frequencies: OrderedDict([(1, 27), (2, 16), (3, 14), (24, 11), (4, 8), (8, 8), (11, 8), (20, 8), (5, 7), (6, 7), (7, 7), (14, 7), (15, 7), (9, 5), (12, 5), (13, 5), (16, 5), (17, 5), (18, 4), (19, 4), (10, 3), (22, 3), (23, 3), (21, 2), (25, 1)])
+
 Based on the first categorization of papers, it seems some minor work is needed:
-- Nurture/pedagogy separated from LLL?
-- Deep learning?
-- Imitation learning?
+- Nurture/pedagogy, imitation learning, and cumulative learning combined to Experiental Learning (Renamed from LLL)
+- Neural networks? --> Removed category, only 2 papers with better more descriptive categories (Prolly many related but this is a really general category implementation wise)
+- Separate RSI and AI safety. Can be explained on text to be closely related, but now this makes sense.
+- Remove "Other" category as it is unnecessary and it is better to have proper categories
+- Rename "AI research" to AGI research
+
+--> Phase 3
+
+1 Cognitive architectures,
+2 AI safety,
+3 Universal AI,
+4 Experiential learning,
+5 HCI,
+6 Agent environment,
+7 Human-like qualities,
+8 AGI design,
+9 Computer vision & perception,
+10 AGI research,
+11 AI evaluation,
+12 AI ethics,
+13 Planning & decision making,
+14 Philosophical aspects,
+15 Reasoning and Inference,
+16 Multi-agent systems,
+17 Probabilistic approaches,
+18 Game playing,
+19 Problem specific research,
+20 Nature-inspired approaches,  
+22 Physical robots,
+23 Category theory,
+24 Reinforcement learning,
+26 RSI
