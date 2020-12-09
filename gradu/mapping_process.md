@@ -258,7 +258,10 @@ performed. Here is the categorization (25) that is first tested on the material:
 24 Reinforcement learning,
 25 Other
 
---> Frequencies: OrderedDict([(1, 27), (2, 16), (3, 14), (24, 11), (4, 8), (8, 8), (11, 8), (20, 8), (5, 7), (6, 7), (7, 7), (14, 7), (15, 7), (9, 5), (12, 5), (13, 5), (16, 5), (17, 5), (18, 4), (19, 4), (10, 3), (22, 3), (23, 3), (21, 2), (25, 1)])
+--> Frequencies: OrderedDict([(1, 27), (2, 16), (3, 14), (24, 11), (4, 8), (8,
+8), (11, 8), (20, 8), (5, 7), (6, 7), (7, 7), (14, 7), (15, 7), (9, 5), (12, 5),
+(13, 5), (16, 5), (17, 5), (18, 4), (19, 4), (10, 3), (22, 3), (23, 3), (21, 2),
+(25, 1)])
 
 Based on the first categorization of papers, it seems some minor work is needed:
 - Nurture/pedagogy, imitation learning, and cumulative learning combined to Experiental Learning (Renamed from LLL)
@@ -267,7 +270,7 @@ Based on the first categorization of papers, it seems some minor work is needed:
 - Remove "Other" category as it is unnecessary and it is better to have proper categories
 - Rename "AI research" to AGI research
 
---> Phase 3
+--> Phase 3 (Cycle 2)
 
 1 Cognitive architectures,
 2 AI safety,
@@ -293,3 +296,10 @@ Based on the first categorization of papers, it seems some minor work is needed:
 23 Category theory,
 24 Reinforcement learning,
 26 RSI
+
+-> Frequencies: OrderedDict([(1, 26), (3, 14), (2, 12), (4, 11), (24, 11), (8, 8), (11, 8),
+(15, 8), (20, 8), (5, 7), (6, 7), (7, 7), (14, 7), (9, 5), (12, 5), (13, 5),
+(16, 5), (17, 5), (19, 5), (18, 4), (26, 4), (10, 3), (22, 3), (23, 3), (21, 0),
+(25, 0)])
+
+- Is category 19 needed?

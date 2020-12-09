@@ -164,16 +164,14 @@ def calculate_category_count(
     name_col = "B"
     keywords_col = "M"
     w_classes_col = "N"
-    category_column = "O"
-    dist = dict([(x, 0) for x in range(1, 26)])
+    category_column = "P"
+    dist = dict([(x, 0) for x in range(1, 27)])
 
     def parse_cat_numbers(s):
         if type(s) == int:
             return [s]
-        cats = filter(lambda x: len(x.strip()), s.split(sep=",")) 
-        return list(
-            map(int, cats)
-        )
+        cats = filter(lambda x: len(x.strip()), s.split(sep=","))
+        return list(map(int, cats))
 
     wb = load_workbook(path)
     sheet = wb["Accepted Papers"]
