@@ -21,6 +21,23 @@ class Paper:
     categories: List[str] = field(default_factory=list)
 
 
+def parse_cat_numbers(s):
+    if type(s) == int:
+        return [s]
+    cats = filter(lambda x: len(x.strip()), s.split(sep=","))
+    return list(map(int, cats))
+
+
+def parse_words(s: str):
+    words = s.split(sep=",")
+    return list(
+        filter(
+            lambda x: 1 < len(x),
+            map(lambda x: x.lower().strip().replace("(", "").replace(")", ""), words),
+        )
+    )
+
+
 def load_papers(path: str = "../gradu/material/final_results.xlsx") -> List[Paper]:
     """Loads the papers and returns their relevant information as list of Papers"""
     number_col = "A"
@@ -28,17 +45,6 @@ def load_papers(path: str = "../gradu/material/final_results.xlsx") -> List[Pape
     keywords_col = "M"
     w_classes_col = "N"
     papers = []
-
-    def parse_words(s: str):
-        words = s.split(sep=",")
-        return list(
-            filter(
-                lambda x: 1 < len(x),
-                map(
-                    lambda x: x.lower().strip().replace("(", "").replace(")", ""), words
-                ),
-            )
-        )
 
     wb = load_workbook(path)
     sheet = wb["Accepted Papers"]
@@ -167,12 +173,6 @@ def calculate_category_count(
     category_column = "P"
     dist = dict([(x, 0) for x in range(1, 27)])
 
-    def parse_cat_numbers(s):
-        if type(s) == int:
-            return [s]
-        cats = filter(lambda x: len(x.strip()), s.split(sep=","))
-        return list(map(int, cats))
-
     wb = load_workbook(path)
     sheet = wb["Accepted Papers"]
     for i in range(3, 95):
@@ -184,6 +184,43 @@ def calculate_category_count(
 
     sorted_dist = OrderedDict(sorted(dist.items(), key=lambda x: x[1], reverse=True))
     return sorted_dist
+
+
+def get_category_papers(
+    cat_numbers: List[int],
+    path: str = "../gradu/material/final_results.xlsx",
+) -> Dict[int, int]:
+    """Returns the list of papers in given category"""
+    number_col = "A"
+    name_col = "B"
+    keywords_col = "M"
+    w_classes_col = "N"
+    category_column = "P"
+    papers = []
+
+    wb = load_workbook(path)
+    sheet = wb["Accepted Papers"]
+    for i in range(3, 95):
+        row = str(i)
+        cat_string = sheet[category_column + row].value
+        cats = parse_cat_numbers(cat_string)
+        match_counter = 0
+        for number in cat_numbers:
+            if number in cats:
+                match_counter += 1
+        if match_counter == len(cat_numbers):
+            papers.append(
+                Paper(
+                    number=sheet[number_col + row].value,
+                    name=sheet[name_col + row].value,
+                    keywords=parse_words(sheet[keywords_col + row].value),
+                    w_classes=parse_words(sheet[w_classes_col + row].value),
+                    categories=",".join(map(str, cats))
+                )
+            )
+
+    sorted_list = sorted(papers, key=lambda x: x.number, reverse=True)
+    return sorted_list
 
 
 def write_freq_dist_to_workbook(
@@ -214,8 +251,13 @@ def main():
 
     # c_dist = calculate_category_distribution()
     # write_category_dist_to_workbook(c_dist)
-    cat_count = calculate_category_count()
-    print(cat_count)
+    
+    #cat_count = calculate_category_count()
+    #print(cat_count)
+
+    papers = get_category_papers([1, 8])
+    pp = pprint.PrettyPrinter()
+    pp.pprint(papers)
 
 
 if __name__ == "__main__":
