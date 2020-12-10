@@ -269,8 +269,11 @@ Based on the first categorization of papers, it seems some minor work is needed:
 - Separate RSI and AI safety. Can be explained on text to be closely related, but now this makes sense.
 - Remove "Other" category as it is unnecessary and it is better to have proper categories
 - Rename "AI research" to AGI research
+- Remove "Problem specific research" as unnecessary category. Having a more
+  concrete examples isn't a good enough reason for having a separate category.
+- Merge "AI ethics" into "Philosophical aspects" 
 
---> Phase 3 (Cycle 2)
+## Phase 3 (Cycle 2)
 
 1 Cognitive architectures,
 2 AI safety,
@@ -283,23 +286,46 @@ Based on the first categorization of papers, it seems some minor work is needed:
 9 Computer vision & perception,
 10 AGI research,
 11 AI evaluation,
-12 AI ethics,
 13 Planning & decision making,
 14 Philosophical aspects,
 15 Reasoning and Inference,
 16 Multi-agent systems,
 17 Probabilistic approaches,
 18 Game playing,
-19 Problem specific research,
 20 Nature-inspired approaches,  
 22 Physical robots,
 23 Category theory,
 24 Reinforcement learning,
 26 RSI
 
--> Frequencies: OrderedDict([(1, 26), (3, 14), (2, 12), (4, 11), (24, 11), (8, 8), (11, 8),
-(15, 8), (20, 8), (5, 7), (6, 7), (7, 7), (14, 7), (9, 5), (12, 5), (13, 5),
-(16, 5), (17, 5), (19, 5), (18, 4), (26, 4), (10, 3), (22, 3), (23, 3), (21, 0),
+-> Frequencies: [(1, 26), (3, 14), (2, 12), (4, 11), (14, 11), (24, 11), (11,
+8), (15, 8), (20, 8), (5, 7), (6, 7), (7, 7), (8, 6), (9, 5), (13, 5), (16, 5),
+(17, 5), (10, 4), (18, 4), (26, 4), (22, 3), (23, 3), (12, 0), (19, 0), (21, 0),
 (25, 0)])
 
-- Is category 19 needed?
+## Final categories
+
+1	Cognitive architectures
+2	AGI design
+3	Reasoning and Inference
+4	Planning and decision making
+5	Probabilistic approaches
+6	Category theory
+7	Universal AI
+8	Physical robots
+9	Computer vision and perception
+10	Nature-inspired approaches
+11	Reinforcement learning
+12	Recursive self-Improvement
+13	Experiential learning
+14	Agent environment
+15	Multi-agent systems
+16	Human-computer interaction
+17	AI safety
+18	Philosophical aspects
+19	Human-like qualities
+20	AGI research
+21	AI evaluation
+22	Game playing
+
+

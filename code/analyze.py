@@ -1,11 +1,13 @@
-from dataclasses import dataclass, field, fields
-from collections import OrderedDict
-from os import sep
-from typing import Dict, List
 import pprint
+import sys
+from collections import OrderedDict
+from dataclasses import dataclass, field, fields
 from functools import reduce
-from nltk.probability import FreqDist
+from os import sep
+from sys import argv
+from typing import Dict, List
 
+from nltk.probability import FreqDist
 from openpyxl import load_workbook
 from openpyxl.styles import Font
 
@@ -198,6 +200,9 @@ def get_category_papers(
     category_column = "P"
     papers = []
 
+    if not cat_numbers:
+        return None
+
     wb = load_workbook(path)
     sheet = wb["Accepted Papers"]
     for i in range(3, 95):
@@ -215,7 +220,7 @@ def get_category_papers(
                     name=sheet[name_col + row].value,
                     keywords=parse_words(sheet[keywords_col + row].value),
                     w_classes=parse_words(sheet[w_classes_col + row].value),
-                    categories=",".join(map(str, cats))
+                    categories=list((map(str, cats))),
                 )
             )
 
@@ -239,7 +244,50 @@ def write_freq_dist_to_workbook(
     wb.save(path)
 
 
+def finalize_categories(path: str = "../gradu/material/final_results.xlsx"):
+    """Updates the category numbers and writes them to the workbook"""
+    mapping = {
+        1: 1,
+        8: 2,
+        15: 3,
+        13: 4,
+        17: 5,
+        23: 6,
+        3: 7,
+        22: 8,
+        9: 9,
+        20: 10,
+        24: 11,
+        26: 12,
+        4: 13,
+        6: 14,
+        16: 15,
+        5: 16,
+        2: 17,
+        14: 18,
+        7: 19,
+        10: 20,
+        11: 21,
+        18: 22,
+    }
+
+    old_cats_column = "P"
+    new_cats_column = "Q"
+
+    wb = load_workbook(path)
+    sheet = wb["Accepted Papers"]
+    for i in range(3, 95):
+        row = str(i)
+        cat_string = sheet[old_cats_column + row].value
+        cats = parse_cat_numbers(cat_string)
+        new_cats = (str(mapping[x]) for x in cats)
+        new_cats_str = ", ".join(new_cats)
+        sheet[new_cats_column + row] = new_cats_str
+    wb.save(path)
+
+
 def main():
+    # Initial keyword extraction is done and written to workbook
     # papers = load_papers()
     # all_keywords = []
     # for p in papers:
@@ -247,17 +295,27 @@ def main():
     # fdist = FreqDist(all_keywords)
     # write_freq_dist_to_workbook(fdist)
 
+    # Counts the similar keyword instances on a row and writes it to workbook
     # count_keywords()
 
+    # Category distribution is written to the workbook
     # c_dist = calculate_category_distribution()
     # write_category_dist_to_workbook(c_dist)
-    
-    #cat_count = calculate_category_count()
-    #print(cat_count)
 
-    papers = get_category_papers([1, 8])
-    pp = pprint.PrettyPrinter()
-    pp.pprint(papers)
+    # Amount of articles in categories is printed
+    # cat_count = calculate_category_count()
+    # print(cat_count)
+
+    # Shows the papers that are included in given categories
+    # cat_numbers = sys.argv[1:] if 1 < len(sys.argv) else []
+    # cat_numbers = list(map(int, cat_numbers))
+    # papers = get_category_papers(cat_numbers)
+    # pp = pprint.PrettyPrinter()
+    # pp.pprint(papers)
+
+    # Updates category numbers and writes them into workbook
+    # finalize_categories()
+    pass
 
 
 if __name__ == "__main__":
