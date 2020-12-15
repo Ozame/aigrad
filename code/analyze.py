@@ -1,12 +1,15 @@
 import pprint
 import sys
 from collections import OrderedDict
-from dataclasses import dataclass, field, fields
-from functools import reduce
+from dataclasses import dataclass, field, fields, asdict
 from os import sep
-from sys import argv
+from sys import argv, prefix
 from typing import Dict, List
 
+import pandas as pd
+import matplotlib.pyplot as plt
+from pandas.core.frame import DataFrame
+import seaborn as sns
 from nltk.probability import FreqDist
 from openpyxl import load_workbook
 from openpyxl.styles import Font
@@ -21,6 +24,9 @@ class Paper:
     keywords: List[str]
     w_classes: List[str]
     categories: List[str] = field(default_factory=list)
+    year: int = None
+    venue: str = None
+    abstract: str = None
 
 
 def parse_cat_numbers(s):
@@ -46,6 +52,10 @@ def load_papers(path: str = "../gradu/material/final_results.xlsx") -> List[Pape
     name_col = "B"
     keywords_col = "M"
     w_classes_col = "N"
+    year_col = "D"
+    venue_col = "E"
+    abstract_col = "F"
+    cat_column = "Q"
     papers = []
 
     wb = load_workbook(path)
@@ -57,9 +67,37 @@ def load_papers(path: str = "../gradu/material/final_results.xlsx") -> List[Pape
             name=sheet[name_col + row].value,
             keywords=parse_words(sheet[keywords_col + row].value),
             w_classes=parse_words(sheet[w_classes_col + row].value),
+            categories=parse_cat_numbers(sheet[cat_column + row].value),
+            year=sheet[year_col + row].value,
+            venue=sheet[venue_col + row].value,
+            abstract=sheet[abstract_col + row].value,
         )
         papers.append(paper)
     return papers
+
+
+def load_papers_df(path: str = "../gradu/material/final_results.xlsx"):
+    """Loads the paper data as a pandas dataframe"""
+    papers = load_papers(path)
+    # df = pd.DataFrame.from_records([asdict(x) for x in papers])
+    df = DataFrame(
+        columns=["number", "name", "year", "venue", "er", "vr", "sp", "pp", "op", "pep"]
+        + list(map(lambda x: "c" + str(x), range(1, 23)))
+    )
+    for paper in papers[:2]:
+        p = asdict(paper)
+        w_classes = p["w_classes"]
+        cats = p["categories"]
+        for c in w_classes:
+            p[c] = 1
+        del p["abstract"]
+        del p["keywords"]
+        del p["w_classes"]
+        del p["categories"]
+        print(p)
+        df.append(pd.Series(p))
+        # TODO: Finish this
+    return df
 
 
 def load_categories(
@@ -172,8 +210,8 @@ def calculate_category_count(
     name_col = "B"
     keywords_col = "M"
     w_classes_col = "N"
-    category_column = "P"
-    dist = dict([(x, 0) for x in range(1, 27)])
+    category_column = "Q"
+    dist = dict([(x, 0) for x in range(1, 23)])
 
     wb = load_workbook(path)
     sheet = wb["Accepted Papers"]
@@ -192,7 +230,7 @@ def get_category_papers(
     cat_numbers: List[int],
     path: str = "../gradu/material/final_results.xlsx",
 ) -> Dict[int, int]:
-    """Returns the list of papers in given category"""
+    """Returns the list of papers in given categories. Paper must belong to every given category"""
     number_col = "A"
     name_col = "B"
     keywords_col = "M"
@@ -315,7 +353,11 @@ def main():
 
     # Updates category numbers and writes them into workbook
     # finalize_categories()
-    pass
+
+    papers = load_papers_df()
+
+    pp = pprint.PrettyPrinter()
+    pp.pprint(papers)
 
 
 if __name__ == "__main__":

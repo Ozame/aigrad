@@ -220,7 +220,9 @@ to be any novel solution as much as a viewpoint, so PP was chosen.
 #74 was more of a project description, but it fit the criteria and presented a
 one possible approach to AI evaluation, so it was classified as PP and included.
 
-## Categorization cycle 1
+## Categorization and data extraction
+
+### Cycle 1
 
 Python script was used to take all the found keywords and calculate the initial
 frequency distribution (how many instances of each kw was found). These were
@@ -273,7 +275,7 @@ Based on the first categorization of papers, it seems some minor work is needed:
   concrete examples isn't a good enough reason for having a separate category.
 - Merge "AI ethics" into "Philosophical aspects" 
 
-## Phase 3 (Cycle 2)
+### Phase 3 (Cycle 2)
 
 1 Cognitive architectures,
 2 AI safety,
@@ -303,7 +305,7 @@ Based on the first categorization of papers, it seems some minor work is needed:
 (17, 5), (10, 4), (18, 4), (26, 4), (22, 3), (23, 3), (12, 0), (19, 0), (21, 0),
 (25, 0)])
 
-## Final categories
+### Final categories
 
 1	Cognitive architectures
 2	AGI design
@@ -328,4 +330,34 @@ Based on the first categorization of papers, it seems some minor work is needed:
 21	AI evaluation
 22	Game playing
 
+-> Frequencies: [(1, 26), (7, 14), (17, 12), (11, 11), (13, 11), (18, 11), (3,
+8), (10, 8), (21, 8), (14, 7), (16, 7), (19, 7), (2, 6), (4, 5), (5, 5), (9, 5),
+(15, 5), (12, 4), (20, 4), (22, 4), (6, 3), (8, 3)]
 
+In the end, 22 noticeable categories/topics was found. As each paper could be
+classified to many categories, there is overlap among them. This enables the
+inspection of relation of categories, providing useful data.
+
+## Visualization
+
+### What to search for
+
+Research questions were:
+  - RQ1 How much, and what kind of research is done in the field of AGI?
+  - RQ2 Where and when were the studies published?
+  - RQ3 What are the major research topics in the field and have they changed
+    over time?
+
+What are the useful visualizations, numbers and such that should be found out
+from the data? 
+
+- Major themes can be mentioned on the text, but as they are very vague, not
+  sure if they are useful as graph.
+- Type of research: 
+  - Frequencies (circle size)
+  - Relations between research types and topics (bubble/heatmap)
+- Topics
+  - Yearly most researched
+  - Topics usually met together
+- Table describing each category
+- Publication forum frequency (most are from conference but still)
