@@ -15,6 +15,7 @@ from openpyxl import load_workbook
 from openpyxl.styles import Font
 
 # Wieringa classes: ER, VR, SP, PP, OP, PEP
+W_CLASSES = ["er", "vr", "sp", "pp", "op", "pep"]
 
 
 @dataclass
@@ -79,24 +80,32 @@ def load_papers(path: str = "../gradu/material/final_results.xlsx") -> List[Pape
 def load_papers_df(path: str = "../gradu/material/final_results.xlsx"):
     """Loads the paper data as a pandas dataframe"""
     papers = load_papers(path)
-    # df = pd.DataFrame.from_records([asdict(x) for x in papers])
     df = DataFrame(
         columns=["number", "name", "year", "venue", "er", "vr", "sp", "pp", "op", "pep"]
         + list(map(lambda x: "c" + str(x), range(1, 23)))
     )
-    for paper in papers[:2]:
+    # Encodes classes and categories into separate columns
+    for paper in papers:
         p = asdict(paper)
         w_classes = p["w_classes"]
         cats = p["categories"]
-        for c in w_classes:
-            p[c] = 1
+        for c in W_CLASSES:
+            if c in w_classes:
+                p[c] = 1
+            else:
+                p[c] = 0
+        for cat in range(1, 23):
+            if cat in cats:
+                p["c" + str(cat)] = 1
+            else:
+                p["c" + str(cat)] = 0
+
+        # Deletes unnecessary keys
         del p["abstract"]
         del p["keywords"]
         del p["w_classes"]
         del p["categories"]
-        print(p)
-        df.append(pd.Series(p))
-        # TODO: Finish this
+        df = df.append(pd.Series(p), ignore_index=True)
     return df
 
 

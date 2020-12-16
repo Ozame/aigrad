@@ -361,3 +361,5 @@ from the data?
   - Topics usually met together
 - Table describing each category
 - Publication forum frequency (most are from conference but still)
+- Research groups?
+  - Authors and their paper frequencies
