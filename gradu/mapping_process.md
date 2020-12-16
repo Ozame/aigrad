@@ -354,7 +354,7 @@ from the data?
 - Major themes can be mentioned on the text, but as they are very vague, not
   sure if they are useful as graph.
 - Type of research: 
-  - Frequencies (circle size)
+  - Frequencies (bar plot)
   - Relations between research types and topics (bubble/heatmap)
 - Topics
   - Yearly most researched

@@ -165,6 +165,19 @@ pyparsing = ">=2.0.3,<2.0.4 || >2.0.4,<2.1.2 || >2.1.2,<2.1.6 || >2.1.6"
 python-dateutil = ">=2.1"
 
 [[package]]
+name = "matplotlib-venn"
+version = "0.11.6"
+description = "Functions for plotting area-proportional two- and three-way Venn diagrams in matplotlib."
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+matplotlib = "*"
+numpy = "*"
+scipy = "*"
+
+[[package]]
 name = "more-itertools"
 version = "8.5.0"
 description = "More routines for operating on iterables, beyond itertools"
@@ -460,7 +473,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "2bb52a8fb02c764143bb18d21394677e6ae87ceefe8741fbd55ad03c7ebab54f"
+content-hash = "37652149276fe743d76437ccbae07775756e9a85f23a04214e54f59a79c57d91"
 
 [metadata.files]
 appdirs = [
@@ -578,6 +591,9 @@ matplotlib = [
     {file = "matplotlib-3.3.3-pp37-pypy37_pp73-macosx_10_9_x86_64.whl", hash = "sha256:746897fbd72bd462b888c74ed35d812ca76006b04f717cd44698cdfc99aca70d"},
     {file = "matplotlib-3.3.3-pp37-pypy37_pp73-manylinux2010_x86_64.whl", hash = "sha256:5ed3d3342698c2b1f3651f8ea6c099b0f196d16ee00e33dc3a6fee8cb01d530a"},
     {file = "matplotlib-3.3.3.tar.gz", hash = "sha256:b1b60c6476c4cfe9e5cf8ab0d3127476fd3d5f05de0f343a452badaad0e4bdec"},
+]
+matplotlib-venn = [
+    {file = "matplotlib-venn-0.11.6.tar.gz", hash = "sha256:d209a9845bb3a54c4247f1ef3f745e4819660ecc9208137097d2a51281f2a478"},
 ]
 more-itertools = [
     {file = "more-itertools-8.5.0.tar.gz", hash = "sha256:6f83822ae94818eae2612063a5101a7311e68ae8002005b5e05f03fd74a86a20"},

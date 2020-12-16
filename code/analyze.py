@@ -7,6 +7,7 @@ from sys import argv, prefix
 from typing import Dict, List
 
 import pandas as pd
+import numpy as np
 import matplotlib.pyplot as plt
 from pandas.core.frame import DataFrame
 import seaborn as sns
@@ -16,6 +17,38 @@ from openpyxl.styles import Font
 
 # Wieringa classes: ER, VR, SP, PP, OP, PEP
 W_CLASSES = ["er", "vr", "sp", "pp", "op", "pep"]
+W_CLASSES_FULL = [
+    "Evaluation research",
+    "Validation research",
+    "Solution proposal",
+    "Philosophical paper",
+    "Opinion paper",
+    "Personal experience paper",
+]
+CAT_NAMES = [
+    "Cognitive architectures",
+    "AGI design",
+    "Reasoning and Inference",
+    "Planning and decision making",
+    "Probabilistic approaches",
+    "Category theory",
+    "Universal AI",
+    "Physical robots",
+    "Computer vision and perception",
+    "Nature-inspired approaches",
+    "Reinforcement learning",
+    "Recursive self-Improvement",
+    "Experiential learning",
+    "Agent environment",
+    "Multi-agent systems",
+    "Human-computer interaction",
+    "AI safety",
+    "Philosophical aspects",
+    "Human-like qualities",
+    "AGI research",
+    "AI evaluation",
+    "Game playing",
+]
 
 
 @dataclass
@@ -333,6 +366,35 @@ def finalize_categories(path: str = "../gradu/material/final_results.xlsx"):
     wb.save(path)
 
 
+def draw_wieringa_plot(papers: pd.DataFrame):
+    """"Draws the Wieringa classifications as a bar plot"""
+    data = []
+    for c in W_CLASSES:
+        data.append(sum(papers[c]))
+
+    # ER, VR, SP, PP, OP, PEP
+    types = W_CLASSES_FULL
+    y_pos = np.arange(len(types))
+    plt.bar(y_pos, data)
+    plt.xticks(y_pos, types)
+
+
+def draw_wieringa_topic_bubble(papers: pd.DataFrame):
+    """"Draws the Wieringa classifications and topics as a bubble chart"""
+    data = []
+    for c in W_CLASSES:
+        data.append(sum(papers[c]))
+
+    # ER, VR, SP, PP, OP, PEP
+    p = papers.loc[(papers["sp"] == 1)]
+    print(p)
+    types = W_CLASSES_FULL
+    y_pos = np.arange(len(types))
+    plt.bar(y_pos, data)
+    plt.xticks(y_pos, types)
+    # plt.yticks(data, ["Kissa", "Koira", "salami", "juutso", "kinkku", "ananas"])
+
+
 def main():
     # Initial keyword extraction is done and written to workbook
     # papers = load_papers()
@@ -365,8 +427,14 @@ def main():
 
     papers = load_papers_df()
 
-    pp = pprint.PrettyPrinter()
-    pp.pprint(papers)
+    # pp = pprint.PrettyPrinter()
+    # pp.pprint(papers)
+
+    # Drawing the graphs
+    # draw_wieringa_plot(papers)
+    draw_wieringa_topic_bubble(papers)
+
+    plt.show()
 
 
 if __name__ == "__main__":
