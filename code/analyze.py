@@ -379,20 +379,32 @@ def draw_wieringa_plot(papers: pd.DataFrame):
     plt.xticks(y_pos, types)
 
 
-def draw_wieringa_topic_bubble(papers: pd.DataFrame):
-    """"Draws the Wieringa classifications and topics as a bubble chart"""
-    data = []
-    for c in W_CLASSES:
-        data.append(sum(papers[c]))
+def get_wieringa_topic_bubble_data(papers: List[Paper]):
+    """"Writes the data for Wieringa classifications and topics bubble chart"""
+    data = {}
+    for paper in papers:
+        for cat in paper.categories:
+            for w in paper.w_classes:
+                point = (cat, w)
+                if point in data:
+                    data[point] += 1
+                else:
+                    data[point] = 1
+    data_lines = (
+        f"{key[0]},{key[1]},{count}\n"
+        for key, count in sorted(data.items(), key=lambda x: x[0])
+    )
+    with open("../gradu/material/data/class_topic_bubble.dat", "w") as f:
+        f.write("Category,Class,Count\n")
+        f.writelines(data_lines)
 
     # ER, VR, SP, PP, OP, PEP
-    p = papers.loc[(papers["sp"] == 1)]
-    print(p)
-    types = W_CLASSES_FULL
-    y_pos = np.arange(len(types))
-    plt.bar(y_pos, data)
-    plt.xticks(y_pos, types)
-    # plt.yticks(data, ["Kissa", "Koira", "salami", "juutso", "kinkku", "ananas"])
+    # p = papers.loc[(papers["sp"] == 1)]
+
+    # y_pos = np.arange(len(W_CLASSES_FULL))
+    # plt.bar(y_pos, data)
+    # plt.xticks(y_pos, W_CLASSES_FULL)
+    # plt.yticks(data, CAT_NAMES)
 
 
 def main():
@@ -432,9 +444,9 @@ def main():
 
     # Drawing the graphs
     # draw_wieringa_plot(papers)
-    draw_wieringa_topic_bubble(papers)
+    get_wieringa_topic_bubble_data(load_papers())
 
-    plt.show()
+    # plt.show()
 
 
 if __name__ == "__main__":
