@@ -8,6 +8,8 @@
 
 \usepackage{csquotes} % ensure proper formatting
 
+\usepackage{multirow}
+\usepackage{lscape}
 \usepackage{longtable}
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta,calc,fit,positioning,scopes,matrix,%
@@ -17,6 +19,9 @@
 \pgfplotsset{compat=1.9}
 \usepackage{pgfplotstable}
 \usepackage{pgf-pie}
+\usepackage{float}
+\usepackage{paralist}
+\usepackage{csvsimple}
 
 \usepackage[authordate,backend=biber,noibid]{biblatex-chicago}
 
@@ -40,7 +45,7 @@
                 },
                 scatter/@pre marker code/.code={%
                         \scope[%
-                        mark size=#1*(sqrt(\pgfmathfloatvalueof\pgfplotspointmeta)),
+                        mark size=#1*0.85*(sqrt(\pgfmathfloatvalueof\pgfplotspointmeta)),
                         fill=black,%
                         color=black,%
                         ]
@@ -728,21 +733,22 @@ emergent schema.
 \chapter{Results and analysis}
 \label{results}
 
-\pgfplotstableread[col sep=comma, header=true]{material/data/class_topic_bubble.dat}\forumDataTable
+\pgfplotstableread[col sep=comma, header=true]{material/data/class_topic_bubble.dat}\topicDataTable
 \def\forumCoordsFirst{}
-\createSymbolicCoords{\forumCoordsFirst}{\forumDataTable}{Category}
-\begin{figure}
+\createSymbolicCoords{\forumCoordsFirst}{\topicDataTable}{Category}
+\def\classCoordsFirst{}
+\createSymbolicCoords{\classCoordsFirst}{\topicDataTable}{Class}
+\begin{figure}[H]
+  \centering
   \begin{tikzpicture}
     \begin{axis}[
       only marks,
-      enlarge x limits=0.05,
-      enlarge y limits=0.02,
+      enlarge x limits=0.06,
+      enlarge y limits=0.05,
       width=12cm,
-      height=22cm,
+      height=20cm,
       bubbleplot={0.8ex},
       bubbleplot count/.style={font=\footnotesize},
-      xmin=2010,
-      xmax=2019,
       y tick label style={
           font=\tiny\linespread{0.8}\selectfont,
           text width=5cm,
@@ -753,11 +759,12 @@ emergent schema.
       symbolic y coords/.expand once={%
           \forumCoordsFirst
         },
+      symbolic x coords/.expand once={%
+        \classCoordsFirst
+        },
       x tick label style={
-          anchor=north,
-          /pgf/number format/1000 sep={},
-          only marks,
-          below=2mm
+        font=\tiny\linespread{0.8}\selectfont,
+        xshift=0cm,
         },
       scatter
       scatter/@pre marker code/.code={%
@@ -771,7 +778,7 @@ emergent schema.
           \node[/pgfplots/bubbleplot count,color=white]% 
           {\pgfmathprintnumber\pgfplotspointmeta};\endscope
         }]
-      \addplot[point meta=explicit] table[x={Class},y={Category},meta={Count},col sep=comma] {\forumDataTable};
+      \addplot[point meta=explicit] table[x={Class},y={Category},meta={Count},col sep=comma] {\topicDataTable};
     \end{axis}
   \end{tikzpicture}
   \caption{Bubble plot for article distribution between topics and article types}

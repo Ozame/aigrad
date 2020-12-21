@@ -16,38 +16,39 @@ from openpyxl import load_workbook
 from openpyxl.styles import Font
 
 # Wieringa classes: ER, VR, SP, PP, OP, PEP
-W_CLASSES = ["er", "vr", "sp", "pp", "op", "pep"]
-W_CLASSES_FULL = [
-    "Evaluation research",
-    "Validation research",
-    "Solution proposal",
-    "Philosophical paper",
-    "Opinion paper",
-    "Personal experience paper",
+W_CLASSES = [
+    ("er", "Evaluation research"),
+    ("vr", "Validation research"),
+    ("sp", "Solution proposal"),
+    ("pp", "Philosophical paper"),
+    ("op", "Opinion paper"),
+    ("pep", "Personal experience paper"),
 ]
-CAT_NAMES = [
-    "Cognitive architectures",
-    "AGI design",
-    "Reasoning and Inference",
-    "Planning and decision making",
-    "Probabilistic approaches",
-    "Category theory",
-    "Universal AI",
-    "Physical robots",
-    "Computer vision and perception",
-    "Nature-inspired approaches",
-    "Reinforcement learning",
-    "Recursive self-Improvement",
-    "Experiential learning",
-    "Agent environment",
-    "Multi-agent systems",
-    "Human-computer interaction",
-    "AI safety",
-    "Philosophical aspects",
-    "Human-like qualities",
-    "AGI research",
-    "AI evaluation",
-    "Game playing",
+
+CATS = [
+(1, "Cognitive architectures"),
+(2, "AGI design"),
+(3, "Reasoning and Inference"),
+(4, "Planning and decision making"),
+(5, "Probabilistic approaches"),
+(6, "Category theory"),
+(7, "Universal AI"),
+(8, "Physical robots"),
+(9, "Computer vision and perception"),
+(10, "Nature-inspired approaches"),
+(11, "Reinforcement learning"),
+(12, "Recursive self-Improvement"),
+(13, "Experiential learning"),
+(14, "Agent environment"),
+(15, "Multi-agent systems"),
+(16, "Human-computer interaction"),
+(17, "AI safety"),
+(18, "Philosophical aspects"),
+(19, "Human-like qualities"),
+(20, "AGI research"),
+(21, "AI evaluation"),
+(22, "Game playing"),
+
 ]
 
 
@@ -122,7 +123,7 @@ def load_papers_df(path: str = "../gradu/material/final_results.xlsx"):
         p = asdict(paper)
         w_classes = p["w_classes"]
         cats = p["categories"]
-        for c in W_CLASSES:
+        for c in (x[0] for x in W_CLASSES):
             if c in w_classes:
                 p[c] = 1
             else:
@@ -369,11 +370,11 @@ def finalize_categories(path: str = "../gradu/material/final_results.xlsx"):
 def draw_wieringa_plot(papers: pd.DataFrame):
     """"Draws the Wieringa classifications as a bar plot"""
     data = []
-    for c in W_CLASSES:
+    for c in (x[0] for x in W_CLASSES):
         data.append(sum(papers[c]))
 
     # ER, VR, SP, PP, OP, PEP
-    types = W_CLASSES_FULL
+    types = (x[1] for x in W_CLASSES)
     y_pos = np.arange(len(types))
     plt.bar(y_pos, data)
     plt.xticks(y_pos, types)
@@ -382,10 +383,12 @@ def draw_wieringa_plot(papers: pd.DataFrame):
 def get_wieringa_topic_bubble_data(papers: List[Paper]):
     """"Writes the data for Wieringa classifications and topics bubble chart"""
     data = {}
+    cat_dict = {k:v for k,v in CATS}
+    w_classes_dict = {k:v for k,v in W_CLASSES}
     for paper in papers:
         for cat in paper.categories:
             for w in paper.w_classes:
-                point = (cat, w)
+                point = (cat_dict[cat], w_classes_dict[w])
                 if point in data:
                     data[point] += 1
                 else:
@@ -397,14 +400,6 @@ def get_wieringa_topic_bubble_data(papers: List[Paper]):
     with open("../gradu/material/data/class_topic_bubble.dat", "w") as f:
         f.write("Category,Class,Count\n")
         f.writelines(data_lines)
-
-    # ER, VR, SP, PP, OP, PEP
-    # p = papers.loc[(papers["sp"] == 1)]
-
-    # y_pos = np.arange(len(W_CLASSES_FULL))
-    # plt.bar(y_pos, data)
-    # plt.xticks(y_pos, W_CLASSES_FULL)
-    # plt.yticks(data, CAT_NAMES)
 
 
 def main():
