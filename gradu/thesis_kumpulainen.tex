@@ -664,7 +664,7 @@ venues.
 
 - evaluation of search: test set of known papers, possible here?
 
-\section{Criteria for inclusion, exclusion}
+\section{Choosing papers for inclusion}
 
 The papers found on the initial material search were further narrowed down using
 the following criteria. All literature accepted for this thesis should be:
@@ -700,7 +700,7 @@ Springer Link) offered extensive filtering capabilities. These results were then
 inspected in two separate phases. In the first phase, the titles and abstracts
 of the articles were examined, and then the article was marked as either
 excluded or potential in a spreadsheet. After this initial inspection, 122
-papers were considered potential.
+papers were considered potential, and would be subject of further inspection.
 
 In the second phase, the potential papers were examined again, with the research
 questions and inclusion criteria considered more thoroughly, to further exclude
@@ -709,14 +709,75 @@ set of excluded and included papers was sent to the thesis councilor to confirm
 their categorization. During this phase it became apparent that without stricter
 inclusion criteria the amount of accepted papers would be excessively high. It
 was decided that to be included, the article would have to explicitly relate
-itself to general intelligence. In the end, 93 papers was included and would be
-used as the mapping sample.
+itself to general intelligence. In the end, 92 papers were included and would be
+used as the mapping sample. Table \ref*{table:forumtable} shows the number of accepted
+papers and their publication venues.
 
-TODO: Table showing exclusion criteria, accepted percentages etc? Or in the
-results chapter?
+
+
+  \clearpage
+  \begin{table}[h]
+    \centering
+    \begin{tabular}{|l|l|l|l|l|}
+      \hline
+      \textbf{Publication forum}  & \textbf{Total results} & \textbf{Potential results} & \textbf{Accepted results} & \textbf{Accepted results (\%)} \\ \hline
+      JAIR   & 5   & 3  & 2  & 40\%  \\ \hline
+      IJCAI  & 12  & 8  & 4  & 33.33\%  \\ \hline
+      AIJ    & 3   & 3  & 1   & 33.33\%  \\ \hline
+      JAGI   & 15  & 9  & 6   & 40\%  \\ \hline
+      ICAGI  & 152 & 99 & 79  & 51.97\%  \\ \hline
+      \textbf{All} & \textbf{187} & \textbf{122}  & \textbf{92}  & \textbf{49.20\%}  \\ \hline
+    \end{tabular}
+    \caption{Publication forums and their results}
+    \label{table:forumtable}
+  \end{table}
+
+  
+\begin{figure}[h]
+  \includegraphics[scale=0.75]{material/data/forum_pie.png}
+  \caption{Article distribution between the publication forums}
+  \label{fig:forumpie}
+\end{figure}
 
 \section{Keywording}
 Papers are further analyzed, keywords are extracted from abstracts and text.
+
+TODO: The emergent categories should be explained somewhere, either here, or in
+the actual results chapter. For now, here are the category descriptions.
+
+\begin{table}[h]
+  \footnotesize
+  \centering
+  \begin{tabular}{p{0.05\linewidth} p{0.30\linewidth} p{0.65\linewidth}}
+
+    \textbf{\#} & \textbf{Category}  & \textbf{Category description}  \\ \hline
+    1  & Cognitive architectures & Cognitive architectures and their descriptions.  \\ \hline
+    2  & AGI Design & General ideas on how AGI or its components could be designed and implemented. \\ \hline
+    3	 & Reasoning and Inference &  Approaches on temporal and causal reasoning and inference techniques. \\ \hline
+    4	 & Planning and decision making & Utilizing existing knowledge in planning and decisions. \\ \hline
+    5	 & Probabilistic approaches & Probabilistic approaches e.g. Bayesian techniques and uncertainty handling.\\ \hline
+    6	 & Category theory & Approaches relating to category theory.\\ \hline
+    7	 & Universal AI & Concepts relating to Universal AI (\cite{hutter2004}): universal induction, AIXI, compression.\\ \hline
+    8	 & Physical robots & Physical robots and interaction with physical environment. \\ \hline
+    9	 & Computer vision and perception & Topics concerning vision and perception systems of an agent.\\ \hline
+    10 & Nature-inspired approaches & Artificial animals, homeostatic agents and other bio-inspired topics.\\ \hline
+    11 & Reinforcement learning & Topics directly relating to reinforcement learning, e.g. Q-leaning, rewarding techniques.\\ \hline
+    12 & Recursive self-Improvement & Relates to fast self-improvement of an agent. \\ \hline
+    13 & Experiential learning & Cumulative learning, artificial pedagogy and other topics related to how agent builds on existing knowledge.\\ \hline
+    14 & Agent environment & Descriptions of environments and how agents interact within them.\\ \hline
+    15 & Multi-agent systems & Topics relating to agent-to-agent interaction and cooperation.\\ \hline
+    16 & Human-computer interaction & How human and agent interact and communicate and their relation to each other.\\ \hline
+    17 & AI safety & Approaches on how to safely create and interact with AGI, and what safety issues arise alongside general intelligence.\\ \hline
+    18 & Philosophical aspects & Philosophical questions relating to general agents, e.g. AI ethics and morality.\\ \hline
+    19 & Human-like qualities & Ideas with basis on human qualities like emotion and empathy.\\ \hline
+    20 & AGI research & Meta-level research about AGI research.\\ \hline
+    21 & AI evaluation & How to evaluate and measure AI intelligence and performance.\\ \hline
+    22 & Game playing  & Game playing as an tool in development and evaluation of general agents.\\ \hline
+
+  \end{tabular}
+  \caption{Emergent topic categories}
+  \label{table:topicdescription}
+\end{table}
 
 \section{Data extraction and mapping}
 keywords are used to create a mapping, working iteratively. Papers are
@@ -781,8 +842,8 @@ emergent schema.
       \addplot[point meta=explicit] table[x={Class},y={Category},meta={Count},col sep=comma] {\topicDataTable};
     \end{axis}
   \end{tikzpicture}
-  \caption{Bubble plot for article distribution between topics and article types}
-  \label{kuvaFoorumit1}
+  \caption{Bubble plot showing article distribution between topics and article types}
+  \label{topicbubble}
 \end{figure}
 
 The results of the thesis will be a clear overview of the recent research in the

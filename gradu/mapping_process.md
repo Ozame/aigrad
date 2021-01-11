@@ -336,7 +336,8 @@ Based on the first categorization of papers, it seems some minor work is needed:
 
 In the end, 22 noticeable categories/topics was found. As each paper could be
 classified to many categories, there is overlap among them. This enables the
-inspection of relation of categories, providing useful data.
+inspection of relation of categories, providing useful data. On the other hand
+this might cause confusion on visualization.
 
 ## Visualization
 
@@ -361,5 +362,9 @@ from the data?
   - Topics usually met together
 - Table describing each category
 - Publication forum frequency (most are from conference but still)
+  - Forum, additional limitations, total results, potential results, accepted results, accepted results(%)
 - Research groups?
   - Authors and their paper frequencies
+
+PGFPlots was used to create the bubble plot, proved to be difficult to achieve
+wanted results in matplotlib.

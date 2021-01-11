@@ -402,6 +402,29 @@ def get_wieringa_topic_bubble_data(papers: List[Paper]):
         f.writelines(data_lines)
 
 
+def save_forum_pie(papers):
+    """Creates a pie chart of publication venues and saves it to a file"""
+    venues = {}
+    for paper in papers:
+        if paper.venue not in venues:
+            venues[paper.venue] = 1
+        else:
+            venues[paper.venue] += 1
+    
+    labels = []
+    values = []
+    for k, v in venues.items():
+        freq = v/len(papers)
+        values.append(freq)
+        pct = f"{freq*100:.2f}%"
+        labels.append(f" {k} ({pct})")
+
+    plt.pie(values, labels=labels)
+    plt.savefig("../gradu/material/data/forum_pie.png", dpi=400)
+
+
+
+
 def main():
     # Initial keyword extraction is done and written to workbook
     # papers = load_papers()
@@ -432,14 +455,17 @@ def main():
     # Updates category numbers and writes them into workbook
     # finalize_categories()
 
-    papers = load_papers_df()
+    papers = load_papers()
 
     # pp = pprint.PrettyPrinter()
     # pp.pprint(papers)
 
     # Drawing the graphs
     # draw_wieringa_plot(papers)
-    get_wieringa_topic_bubble_data(load_papers())
+    # get_wieringa_topic_bubble_data(load_papers())
+
+    # Forums pie chart
+    save_forum_pie(papers)
 
     # plt.show()
 
