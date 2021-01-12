@@ -28,6 +28,8 @@
 % NOTE: This must be the last \usepackage in the whole document!
 \usepackage[bookmarksopen,bookmarksnumbered,linktocpage]{hyperref}
 
+\restylefloat{table}
+
 \addbibresource{thesisReferences.bib} % The file name of your bibliography database
 
 \pgfplotsset{
@@ -77,9 +79,7 @@
 \keywords{Master's Theses, AGI, AI, artificial intelligence, systematic
   literature mapping, mapping study}
 \tiivistelma{%
-
-  Tässä suunnitelmassa käydään läpi pro gradu -tutkielman mahdollista aihetta
-  ja tutkimustapaa. TODO: translate when abstract done
+  TODO: translate when abstract done
 }
 \abstract{%
   In this thesis, a systematic mapping study is performed on the field of
@@ -740,12 +740,17 @@ papers and their publication venues.
 \end{figure}
 
 \section{Keywording}
-Papers are further analyzed, keywords are extracted from abstracts and text.
+Once the articles were narrowed down to to those relevant to topic, they were
+inspected more thoroughly and the emergent concepts or keywords were extracted.
+These keywords were then further combined to topic categories until no further
+merging could be done without making them too general and losing too much
+information in the process. The resulting categorical scheme of 22 distinct
+topic categories is illustrated in Table \ref{table:topicdescription}.  
 
 TODO: The emergent categories should be explained somewhere, either here, or in
 the actual results chapter. For now, here are the category descriptions.
 
-\begin{table}[h]
+\begin{table}[H]
   \footnotesize
   \centering
   \begin{tabular}{p{0.05\linewidth} p{0.30\linewidth} p{0.65\linewidth}}
@@ -770,9 +775,9 @@ the actual results chapter. For now, here are the category descriptions.
     17 & AI safety & Approaches on how to safely create and interact with AGI, and what safety issues arise alongside general intelligence.\\ \hline
     18 & Philosophical aspects & Philosophical questions relating to general agents, e.g. AI ethics and morality.\\ \hline
     19 & Human-like qualities & Ideas with basis on human qualities like emotion and empathy.\\ \hline
-    20 & AGI research & Meta-level research about AGI research.\\ \hline
+    20 & AGI research & Secondary research about AGI research. \\ \hline
     21 & AI evaluation & How to evaluate and measure AI intelligence and performance.\\ \hline
-    22 & Game playing  & Game playing as an tool in development and evaluation of general agents.\\ \hline
+    22 & Game playing  & Game playing as a tool in development and evaluation of general agents.\\ \hline
 
   \end{tabular}
   \caption{Emergent topic categories}
@@ -780,16 +785,44 @@ the actual results chapter. For now, here are the category descriptions.
 \end{table}
 
 \section{Data extraction and mapping}
-keywords are used to create a mapping, working iteratively. Papers are
-categorized based on the emergent mapping. What about existing categorizations,
-like Kitchenham? Probably should use multiple facets, like kitchenham, and the
-emergent schema.
+
+In the actual data extraction phase, the included research articles were sorted
+into two different categorization schemes. First one was the topic
+categorization that emerged from the papers themselves, and the other one was
+the topic-independent categorization presented by Wieringa et al.
+(\cite*{wieringa2006}). The latter enables us to make comparisons with AGI and
+other fields of research that aren't necessarily related. It also provides
+information on the kind of research done, answering RQ1. Wieringa's scheme is presented in Table \ref{table:wieringa}.
+
+\begin{table}[H]
+  \footnotesize
+  \centering
+  \begin{tabular}{p{0.30\linewidth} p{0.70\linewidth}}
+
+    \textbf{Class}  & \textbf{Class description}  \\ \hline
+    Evaluation research & Investigates existing problem or technique in practice with sound research methods. \\ \hline
+    Validation research & Investigates a solution proposal not yet implemented in practice using sound research methods. Prototypes, simulations or mathematical proof are among possible methods. \\ \hline
+    Solution proposal & Paper proposes a new solution to a problem, with arguments for its relevance. Solutions must be novel or significantly improve existing ones. \\ \hline
+    Philosophical papers & Conceptual frameworks and new viewpoints on the topic. \\ \hline
+    Opinion papers & Papers presenting author's personal opinion on the topic. \\ \hline
+    Personal experience papers & Present author's experience on something that has been done in practice. Doesn't necessarily provide evidence. \\ \hline
+
+  \end{tabular}
+  \caption{Article classification by Wieringa et al. (\cite*{wieringa2006})}
+  \label{table:wieringa}
+\end{table}
+
+The papers could belong to multiple categories on both schemes. Although this
+decision makes some graphs slightly less accurate, provides it information on
+which topics and what kinds of papers are usually seen together. The results of
+this mapping process are presented in the following chapter.
 
 \section{Source material control}
-- How the papers were handled
-- How graphs etc. were made
-- Other meta level information
-- Excel, python, etc.
+
+TODO: Maybe don't make this its own subsection, just a paragraph should be fine.
+
+- How the papers were handled - How graphs etc. were made - Other meta level
+information - Excel, python, etc.
 
 \chapter{Results and analysis}
 \label{results}
