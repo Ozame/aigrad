@@ -732,13 +732,6 @@ papers and their publication venues.
     \label{table:forumtable}
   \end{table}
 
-  
-\begin{figure}[h]
-  \includegraphics[scale=0.75]{material/data/forum_pie.png}
-  \caption{Article distribution between the publication forums}
-  \label{fig:forumpie}
-\end{figure}
-
 \section{Keywording}
 Once the articles were narrowed down to to those relevant to topic, they were
 inspected more thoroughly and the emergent concepts or keywords were extracted.
@@ -773,7 +766,7 @@ the actual results chapter. For now, here are the category descriptions.
     15 & Multi-agent systems & Topics relating to agent-to-agent interaction and cooperation.\\ \hline
     16 & Human-computer interaction & How human and agent interact and communicate and their relation to each other.\\ \hline
     17 & AI safety & Approaches on how to safely create and interact with AGI, and what safety issues arise alongside general intelligence.\\ \hline
-    18 & Philosophical aspects & Philosophical questions relating to general agents, e.g. AI ethics and morality.\\ \hline
+    18 & Philosophical aspects & Philosophical questions relating to artificial intelligence, e.g. AI ethics and morality.\\ \hline
     19 & Human-like qualities & Ideas with basis on human qualities like emotion and empathy.\\ \hline
     20 & AGI research & Secondary research about AGI research. \\ \hline
     21 & AI evaluation & How to evaluate and measure AI intelligence and performance.\\ \hline
@@ -813,9 +806,9 @@ information on the kind of research done, answering RQ1. Wieringa's scheme is pr
 \end{table}
 
 The papers could belong to multiple categories on both schemes. Although this
-decision makes some graphs slightly less accurate, provides it information on
-which topics and what kinds of papers are usually seen together. The results of
-this mapping process are presented in the following chapter.
+decision makes some graphs slightly less accurate(??), provides it information
+on which topics and what kinds of papers are usually seen together. The results
+of this mapping process are presented in the following chapter.
 
 \section{Source material control}
 
@@ -824,8 +817,34 @@ TODO: Maybe don't make this its own subsection, just a paragraph should be fine.
 - How the papers were handled - How graphs etc. were made - Other meta level
 information - Excel, python, etc.
 
+%============== RESULTS ===============
+
 \chapter{Results and analysis}
 \label{results}
+
+ In this chapter the results of the literature mapping are presented. Each of the research questions is answered with the corresponding results, and observations made during the study are shown. 
+ TODO: SOmething better here
+
+ \section{Publications years and venues}
+
+ As the field of Artificial General Intelligence is relatively small when compared to other branches of AI research, it is very focused on specific publication forums. This can be seen evidently from the sample papers' publication venues. Figure \ref*{fig:forumpie} shows that almost 86\% of the 92 sample articles were published as the proceedings of the Internation Conference of Artificial General Intelligence. The second largest concentration of articles was on the Journal of Artificial General Intelligence. It needs to be also noted that even though Artificial Intelligence Journal and Journal of Artificial Intelligence Research are esteemed journals that contribute hundreds of AI articles every year, their articles only constituted less than four percent of this study's papers.
+
+
+ \begin{figure}[H]
+  \includegraphics[scale=0.70]{material/data/forum_pie.png}
+  \caption{Article distribution between the publication forums}
+  \label{fig:forumpie}
+\end{figure}
+
+Over the years this this has happened and so on and so on. 
+
+\begin{figure}[H]
+  \includegraphics[scale=0.60]{material/data/yearly_publications.png}
+  \caption{Yearly articles by publication forum}
+  \label{fig:yearlybar}
+\end{figure}
+
+Here is text telling about the topic categories and their relations to classes.
 
 \pgfplotstableread[col sep=comma, header=true]{material/data/class_topic_bubble.dat}\topicDataTable
 \def\forumCoordsFirst{}

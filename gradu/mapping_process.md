@@ -363,6 +363,7 @@ from the data?
 - Table describing each category
 - Publication forum frequency (most are from conference but still)
   - Forum, additional limitations, total results, potential results, accepted results, accepted results(%)
+- Publications per year per forum?
 - Research groups?
   - Authors and their paper frequencies
 

@@ -422,7 +422,28 @@ def save_forum_pie(papers):
     plt.pie(values, labels=labels)
     plt.savefig("../gradu/material/data/forum_pie.png", dpi=400)
 
+def save_yearly_publications(papers):
+    """Creates a chart of publications per year per venue and saves it to a file"""
+    years = [2015, 2016, 2017, 2018, 2019]
+    venues = ["JAIR","IJCAI","AIJ","JAGI","ICAGI"]
 
+    ys = {v:{year:0 for year in years} for v in venues}
+    for paper in papers:
+        ys[paper.venue][paper.year] += 1
+
+    y_jair = list(ys["JAIR"].values())
+    y_ijcai = list(ys["IJCAI"].values())
+    y_aij = list(ys["AIJ"].values())
+    y_jagi = list(ys["JAGI"].values())
+    y_icagi = list(ys["ICAGI"].values())
+
+    y_all = np.array([y_jair, y_ijcai, y_aij, y_jagi, y_icagi])
+
+    for i in range(len(y_all)):
+        plt.bar(years, y_all[i], bottom= np.sum(y_all[:i], axis=0))
+   
+    plt.legend(venues)
+    plt.savefig("../gradu/material/data/yearly_publications.png", dpi=400)
 
 
 def main():
@@ -465,7 +486,10 @@ def main():
     # get_wieringa_topic_bubble_data(load_papers())
 
     # Forums pie chart
-    save_forum_pie(papers)
+    # save_forum_pie(papers)
+
+    # Publication years
+    save_yearly_publications(papers)
 
     # plt.show()
 
