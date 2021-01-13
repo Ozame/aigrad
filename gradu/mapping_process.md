@@ -360,10 +360,10 @@ from the data?
 - Topics
   - Yearly most researched
   - Topics usually met together
-- Table describing each category
-- Publication forum frequency (most are from conference but still)
+- Table describing each category DONE
+- Publication forum frequency (most are from conference but still) DONE
   - Forum, additional limitations, total results, potential results, accepted results, accepted results(%)
-- Publications per year per forum?
+- Publications per year per forum? DONE
 - Research groups?
   - Authors and their paper frequencies
 

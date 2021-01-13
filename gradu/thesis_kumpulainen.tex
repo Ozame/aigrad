@@ -666,8 +666,9 @@ venues.
 
 \section{Choosing papers for inclusion}
 
-The papers found on the initial material search were further narrowed down using
-the following criteria. All literature accepted for this thesis should be:
+The initial material search was performed during October 2020. The papers found
+on the search were further narrowed down using the following criteria. All
+literature accepted for this thesis should be:
 
 \begin{itemize}
   \item presenting and/or relating to Artificial General Intelligence,
@@ -827,24 +828,50 @@ information - Excel, python, etc.
 
  \section{Publications years and venues}
 
- As the field of Artificial General Intelligence is relatively small when compared to other branches of AI research, it is very focused on specific publication forums. This can be seen evidently from the sample papers' publication venues. Figure \ref*{fig:forumpie} shows that almost 86\% of the 92 sample articles were published as the proceedings of the Internation Conference of Artificial General Intelligence. The second largest concentration of articles was on the Journal of Artificial General Intelligence. It needs to be also noted that even though Artificial Intelligence Journal and Journal of Artificial Intelligence Research are esteemed journals that contribute hundreds of AI articles every year, their articles only constituted less than four percent of this study's papers.
+ As the field of Artificial General Intelligence is relatively small when
+ compared to other branches of AI research, it is very focused on specific
+ publication forums. This can be seen evidently from the sample papers'
+ publication venues. Figure \ref*{fig:forumpie} shows that almost 86\% of the 92
+ sample articles were published as the proceedings of the Internation Conference
+ on Artificial General Intelligence. The second largest concentration of
+ articles was on the Journal of Artificial General Intelligence, as was expected
+ it being the only non-conference publication on the topic. It needs to be also
+ noted that even though Artificial Intelligence Journal and Journal of
+ Artificial Intelligence Research are esteemed journals that contribute hundreds
+ of AI articles every year, their articles only constituted less than four
+ percent of this study's papers. 
 
 
  \begin{figure}[H]
+  \centering
   \includegraphics[scale=0.70]{material/data/forum_pie.png}
   \caption{Article distribution between the publication forums}
   \label{fig:forumpie}
 \end{figure}
 
-Over the years this this has happened and so on and so on. 
+In Figure \ref{fig:yearlybar} the amount of yearly published articles and their venues
+are visualized in a bar plot. As the inspected time period on this thesis is
+short, only five years, predicting temporal trends accurately is not possible.
+However, it can be seen that every year there is steady publication pace of at
+least 13 articles, with the average being 18.4 a year. In year 2018 25
+different articles were published, which was the highest number during the
+inspection period.
+
+TODO: More text? Something about ICAGI?
+
+Therefore to answer research question RQ2, It can be said that while there are AGI studies being published in different publication forums, vast majority of the research is released as yearly conference proceedings of International Conference on Artificial General Intelligence. Research community is active but small, as only average of 18,4 articles are published yearly.
 
 \begin{figure}[H]
+  \centering
   \includegraphics[scale=0.60]{material/data/yearly_publications.png}
   \caption{Yearly articles by publication forum}
   \label{fig:yearlybar}
 \end{figure}
 
-Here is text telling about the topic categories and their relations to classes.
+\section{Common research topics}
+
+Here is text telling about the topic categories, observations about them and
+their relations to classes.
 
 \pgfplotstableread[col sep=comma, header=true]{material/data/class_topic_bubble.dat}\topicDataTable
 \def\forumCoordsFirst{}
