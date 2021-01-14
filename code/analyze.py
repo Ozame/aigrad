@@ -443,8 +443,26 @@ def save_yearly_publications(papers):
         plt.bar(years, y_all[i], bottom= np.sum(y_all[:i], axis=0))
    
     plt.legend(venues)
-    plt.savefig("../gradu/material/data/yearly_publications.png", dpi=400)
+    plt.savefig("../gradu/material/data/yearly_publications.png", dpi=600)
 
+def save_topic_frequencies():
+    cat_dict = calculate_category_count()
+    xs = []
+    ys = []
+    for k, v in sorted(cat_dict.items(), key=lambda x: x[0]):
+        xs.append(k)
+        ys.append(v)
+
+    
+    fig, ax = plt.subplots()
+    # fig.set_figheight(5)
+    # fig.set_figwidth(10)
+    plt.tight_layout()
+    ax.barh(xs, ys)
+    ax.set_yticks(xs)
+    ax.set_yticklabels([x[1] for x in CATS])
+    plt.savefig("../gradu/material/data/topic_frequencies.png", dpi=400, bbox_inches="tight")    
+    
 
 def main():
     # Initial keyword extraction is done and written to workbook
@@ -476,7 +494,7 @@ def main():
     # Updates category numbers and writes them into workbook
     # finalize_categories()
 
-    papers = load_papers()
+    # papers = load_papers()
 
     # pp = pprint.PrettyPrinter()
     # pp.pprint(papers)
@@ -489,7 +507,11 @@ def main():
     # save_forum_pie(papers)
 
     # Publication years
-    save_yearly_publications(papers)
+    # save_yearly_publications(papers)
+
+    # Topic frequensies
+    save_topic_frequencies()
+
 
     # plt.show()
 

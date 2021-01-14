@@ -739,44 +739,8 @@ inspected more thoroughly and the emergent concepts or keywords were extracted.
 These keywords were then further combined to topic categories until no further
 merging could be done without making them too general and losing too much
 information in the process. The resulting categorical scheme of 22 distinct
-topic categories is illustrated in Table \ref{table:topicdescription}.  
-
-TODO: The emergent categories should be explained somewhere, either here, or in
-the actual results chapter. For now, here are the category descriptions.
-
-\begin{table}[H]
-  \footnotesize
-  \centering
-  \begin{tabular}{p{0.05\linewidth} p{0.30\linewidth} p{0.65\linewidth}}
-
-    \textbf{\#} & \textbf{Category}  & \textbf{Category description}  \\ \hline
-    1  & Cognitive architectures & Cognitive architectures and their descriptions.  \\ \hline
-    2  & AGI Design & General ideas on how AGI or its components could be designed and implemented. \\ \hline
-    3	 & Reasoning and Inference &  Approaches on temporal and causal reasoning and inference techniques. \\ \hline
-    4	 & Planning and decision making & Utilizing existing knowledge in planning and decisions. \\ \hline
-    5	 & Probabilistic approaches & Probabilistic approaches e.g. Bayesian techniques and uncertainty handling.\\ \hline
-    6	 & Category theory & Approaches relating to category theory.\\ \hline
-    7	 & Universal AI & Concepts relating to Universal AI (\cite{hutter2004}): universal induction, AIXI, compression.\\ \hline
-    8	 & Physical robots & Physical robots and interaction with physical environment. \\ \hline
-    9	 & Computer vision and perception & Topics concerning vision and perception systems of an agent.\\ \hline
-    10 & Nature-inspired approaches & Artificial animals, homeostatic agents and other bio-inspired topics.\\ \hline
-    11 & Reinforcement learning & Topics directly relating to reinforcement learning, e.g. Q-leaning, rewarding techniques.\\ \hline
-    12 & Recursive self-Improvement & Relates to fast self-improvement of an agent. \\ \hline
-    13 & Experiential learning & Cumulative learning, artificial pedagogy and other topics related to how agent builds on existing knowledge.\\ \hline
-    14 & Agent environment & Descriptions of environments and how agents interact within them.\\ \hline
-    15 & Multi-agent systems & Topics relating to agent-to-agent interaction and cooperation.\\ \hline
-    16 & Human-computer interaction & How human and agent interact and communicate and their relation to each other.\\ \hline
-    17 & AI safety & Approaches on how to safely create and interact with AGI, and what safety issues arise alongside general intelligence.\\ \hline
-    18 & Philosophical aspects & Philosophical questions relating to artificial intelligence, e.g. AI ethics and morality.\\ \hline
-    19 & Human-like qualities & Ideas with basis on human qualities like emotion and empathy.\\ \hline
-    20 & AGI research & Secondary research about AGI research. \\ \hline
-    21 & AI evaluation & How to evaluate and measure AI intelligence and performance.\\ \hline
-    22 & Game playing  & Game playing as a tool in development and evaluation of general agents.\\ \hline
-
-  \end{tabular}
-  \caption{Emergent topic categories}
-  \label{table:topicdescription}
-\end{table}
+topic categories is illustrated in Table \ref{table:topicdescription} in the
+results chapter.  
 
 \section{Data extraction and mapping}
 
@@ -786,7 +750,8 @@ categorization that emerged from the papers themselves, and the other one was
 the topic-independent categorization presented by Wieringa et al.
 (\cite*{wieringa2006}). The latter enables us to make comparisons with AGI and
 other fields of research that aren't necessarily related. It also provides
-information on the kind of research done, answering RQ1. Wieringa's scheme is presented in Table \ref{table:wieringa}.
+information on the kind of research done, answering RQ1. Wieringa's scheme is
+presented in Table \ref{table:wieringa}.
 
 \begin{table}[H]
   \footnotesize
@@ -849,17 +814,24 @@ information - Excel, python, etc.
   \label{fig:forumpie}
 \end{figure}
 
-In Figure \ref{fig:yearlybar} the amount of yearly published articles and their venues
-are visualized in a bar plot. As the inspected time period on this thesis is
-short, only five years, predicting temporal trends accurately is not possible.
-However, it can be seen that every year there is steady publication pace of at
-least 13 articles, with the average being 18.4 a year. In year 2018 25
-different articles were published, which was the highest number during the
+In Figure \ref{fig:yearlybar} the amount of yearly published articles and their
+venues are visualized in a bar plot. As the inspected time period on this thesis
+is short, only five years, predicting temporal trends accurately is not
+possible. However, it can be seen that every year there is steady publication
+pace of at least 13 articles, with the average being 18.4 a year. In year 2018
+25 different articles were published, which was the highest number during the
 inspection period.
 
-TODO: More text? Something about ICAGI?
+ICAGI is the \emph{"only major conference series devoted wholly and specifically to
+the creation of AI systems possessing general intelligence at the human level
+and ultimately beyond"} (\cite{icagihome}). It has been organized yearly since
+2008.
 
-Therefore to answer research question RQ2, It can be said that while there are AGI studies being published in different publication forums, vast majority of the research is released as yearly conference proceedings of International Conference on Artificial General Intelligence. Research community is active but small, as only average of 18,4 articles are published yearly.
+Therefore to answer research question RQ2, it can be said that while there are
+AGI studies being published in different publication forums, vast majority of
+the research is released as yearly conference proceedings of International
+Conference on Artificial General Intelligence. Research community is active but
+small, as only average of 18,4 articles fitting this scope are published yearly.
 
 \begin{figure}[H]
   \centering
@@ -870,8 +842,79 @@ Therefore to answer research question RQ2, It can be said that while there are A
 
 \section{Common research topics}
 
-Here is text telling about the topic categories, observations about them and
-their relations to classes.
+The main goal of this thesis was to achieve an overview of the AGI field.
+Through the mapping process, 22 different topic categories were found, and they
+are presented in Table \ref{table:topicdescription}. A single paper can relate
+to multiple topics. These topics show us how the AGI research is focused on the
+top level. From the amount of different topics it can be seen that the research
+area is broad and different research groups have different foci. 
+
+From the sample articles, four different themes could be identified. These
+themes are just high-level observations by the author based on the found topic
+categories. \textbf{Building AGI systems} is of course naturally a very
+prominent one. These papers were more focused on the possible theory and
+implementations that could be used in building of an AGI system: How it reasons
+and plans, how capabilities like perception could be implemented, and how to
+handle issues like combinatorial explosion. One reoccurring theme was
+\textbf{Learning}. Different approaches to more common machine learning
+techniques like reinforcement learning and algorithms related to it like
+Q-learning and Deep Q-Networks are demonstrated. In additions to this, research
+on cumulative learning, lifelong learning, and episodic memory is very
+prominent. Third theme was \textbf{Agent interaction}, meaning topics such as
+multi-agent systems, environmental interaction, and human-computer interaction.
+Lastly there are \textbf{Less-technical topics}, such as philosophical
+questions, AI ethics, emotion in AI and meta-level research.
+
+\begin{table}[H]
+  \footnotesize
+  \centering
+  \begin{tabular}{p{0.05\linewidth} p{0.30\linewidth} p{0.65\linewidth}}
+
+    \textbf{\#} & \textbf{Category}  & \textbf{Category description}  \\ \hline
+    1  & Cognitive architectures & Cognitive architectures and their descriptions.  \\ \hline
+    2  & AGI Design & General ideas on how AGI or its components could be designed and implemented. \\ \hline
+    3	 & Reasoning and Inference &  Approaches on temporal and causal reasoning and inference techniques. \\ \hline
+    4	 & Planning and decision making & Utilizing existing knowledge in planning and decisions. \\ \hline
+    5	 & Probabilistic approaches & Probabilistic approaches e.g. Bayesian techniques and uncertainty handling.\\ \hline
+    6	 & Category theory & Approaches relating to category theory.\\ \hline
+    7	 & Universal AI & Concepts relating to Universal AI (\cite{hutter2004}): universal induction, AIXI, compression.\\ \hline
+    8	 & Physical robots & Physical robots and interaction with physical environment. \\ \hline
+    9	 & Computer vision and perception & Topics concerning vision and perception systems of an agent.\\ \hline
+    10 & Nature-inspired approaches & Artificial animals, homeostatic agents and other bio-inspired topics.\\ \hline
+    11 & Reinforcement learning & Topics directly relating to reinforcement learning, e.g. Q-leaning, rewarding techniques.\\ \hline
+    12 & Recursive self-Improvement & Relates to fast self-improvement of an agent. \\ \hline
+    13 & Experiential learning & Cumulative learning, artificial pedagogy and other topics related to how agent builds on existing knowledge.\\ \hline
+    14 & Agent environment & Descriptions of environments and how agents interact within them.\\ \hline
+    15 & Multi-agent systems & Topics relating to agent-to-agent interaction and cooperation.\\ \hline
+    16 & Human-computer interaction & How human and agent interact and communicate and their relation to each other.\\ \hline
+    17 & AI safety & Approaches on how to safely create and interact with AGI, and what safety issues arise alongside general intelligence.\\ \hline
+    18 & Philosophical aspects & Philosophical questions relating to artificial intelligence, e.g. AI ethics and morality.\\ \hline
+    19 & Human-like qualities & Approaches with basis on human qualities like emotion and empathy.\\ \hline
+    20 & AGI research & Secondary research about AGI research. \\ \hline
+    21 & AI evaluation & How to evaluate and measure AI intelligence and performance.\\ \hline
+    22 & Game playing  & Game playing as a tool in development and evaluation of general agents.\\ \hline
+
+  \end{tabular}
+  \caption{Emergent topic categories}
+  \label{table:topicdescription}
+\end{table}
+
+
+
+Here is text telling about the topic categories, observations about them and so
+on.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.75]{material/data/topic_frequencies.png}
+  \caption{Topic category frequencies}
+  \label{fig:topicbar}
+\end{figure}
+
+
+
+Here is text telling about the bubble plot and how the classes and topics relate
+to each other.
 
 \pgfplotstableread[col sep=comma, header=true]{material/data/class_topic_bubble.dat}\topicDataTable
 \def\forumCoordsFirst{}
@@ -938,10 +981,6 @@ time.
 how rigor is achieved, repeatability,
 
 Good source on reliability \cite{wohlin2013}
-
-\section{Results of literature mapping}
-- Graphs and other visualization, bubble graphs are useful.
-- Key topics should be described shortly?
 
 \section{Possible continuation research}
 
