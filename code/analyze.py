@@ -367,17 +367,20 @@ def finalize_categories(path: str = "../gradu/material/final_results.xlsx"):
     wb.save(path)
 
 
-def draw_wieringa_plot(papers: pd.DataFrame):
-    """"Draws the Wieringa classifications as a bar plot"""
+def save_wieringa_plot(papers: pd.DataFrame):
+    """"Draws the Wieringa classifications as a bar plot and saves it to a file"""
     data = []
     for c in (x[0] for x in W_CLASSES):
         data.append(sum(papers[c]))
 
     # ER, VR, SP, PP, OP, PEP
-    types = (x[1] for x in W_CLASSES)
+    types = [x[1] for x in W_CLASSES]
+    print(types)
     y_pos = np.arange(len(types))
-    plt.bar(y_pos, data)
-    plt.xticks(y_pos, types)
+    plt.barh(y_pos, data)
+    plt.yticks(y_pos, types)
+    plt.tight_layout()
+    plt.savefig("../gradu/material/data/wierienga_bar.png", dpi=400)
 
 
 def get_wieringa_topic_bubble_data(papers: List[Paper]):
@@ -494,13 +497,13 @@ def main():
     # Updates category numbers and writes them into workbook
     # finalize_categories()
 
-    # papers = load_papers()
+    papers = load_papers_df()
 
     # pp = pprint.PrettyPrinter()
     # pp.pprint(papers)
 
     # Drawing the graphs
-    # draw_wieringa_plot(papers)
+    save_wieringa_plot(papers)
     # get_wieringa_topic_bubble_data(load_papers())
 
     # Forums pie chart
@@ -510,7 +513,8 @@ def main():
     # save_yearly_publications(papers)
 
     # Topic frequensies
-    save_topic_frequencies()
+    # save_topic_frequencies()
+
 
 
     # plt.show()

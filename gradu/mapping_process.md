@@ -353,9 +353,9 @@ What are the useful visualizations, numbers and such that should be found out
 from the data? 
 
 - Major themes can be mentioned on the text, but as they are very vague, not
-  sure if they are useful as graph.
+  sure if they are useful as graph. DONE
 - Type of research: 
-  - Frequencies (bar plot)
+  - Frequencies (bar plot) 
   - Relations between research types and topics (bubble/heatmap)
 - Topics
   - Yearly most researched
