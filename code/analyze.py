@@ -26,29 +26,28 @@ W_CLASSES = [
 ]
 
 CATS = [
-(1, "Cognitive architectures"),
-(2, "AGI design"),
-(3, "Reasoning and Inference"),
-(4, "Planning and decision making"),
-(5, "Probabilistic approaches"),
-(6, "Category theory"),
-(7, "Universal AI"),
-(8, "Physical robots"),
-(9, "Computer vision and perception"),
-(10, "Nature-inspired approaches"),
-(11, "Reinforcement learning"),
-(12, "Recursive self-Improvement"),
-(13, "Experiential learning"),
-(14, "Agent environment"),
-(15, "Multi-agent systems"),
-(16, "Human-computer interaction"),
-(17, "AI safety"),
-(18, "Philosophical aspects"),
-(19, "Human-like qualities"),
-(20, "AGI research"),
-(21, "AI evaluation"),
-(22, "Game playing"),
-
+    (1, "Cognitive architectures"),
+    (2, "AGI design"),
+    (3, "Reasoning and Inference"),
+    (4, "Planning and decision making"),
+    (5, "Probabilistic approaches"),
+    (6, "Category theory"),
+    (7, "Universal AI"),
+    (8, "Physical robots"),
+    (9, "Computer vision and perception"),
+    (10, "Nature-inspired approaches"),
+    (11, "Reinforcement learning"),
+    (12, "Recursive self-Improvement"),
+    (13, "Experiential learning"),
+    (14, "Agent environment"),
+    (15, "Multi-agent systems"),
+    (16, "Human-computer interaction"),
+    (17, "AI safety"),
+    (18, "Philosophical aspects"),
+    (19, "Human-like qualities"),
+    (20, "AGI research"),
+    (21, "AI evaluation"),
+    (22, "Game playing"),
 ]
 
 
@@ -386,8 +385,8 @@ def save_wieringa_plot(papers: pd.DataFrame):
 def get_wieringa_topic_bubble_data(papers: List[Paper]):
     """"Writes the data for Wieringa classifications and topics bubble chart"""
     data = {}
-    cat_dict = {k:v for k,v in CATS}
-    w_classes_dict = {k:v for k,v in W_CLASSES}
+    cat_dict = {k: v for k, v in CATS}
+    w_classes_dict = {k: v for k, v in W_CLASSES}
     for paper in papers:
         for cat in paper.categories:
             for w in paper.w_classes:
@@ -413,11 +412,11 @@ def save_forum_pie(papers):
             venues[paper.venue] = 1
         else:
             venues[paper.venue] += 1
-    
+
     labels = []
     values = []
     for k, v in venues.items():
-        freq = v/len(papers)
+        freq = v / len(papers)
         values.append(freq)
         pct = f"{freq*100:.2f}%"
         labels.append(f" {k} ({pct})")
@@ -425,12 +424,13 @@ def save_forum_pie(papers):
     plt.pie(values, labels=labels)
     plt.savefig("../gradu/material/data/forum_pie.png", dpi=400)
 
+
 def save_yearly_publications(papers):
     """Creates a chart of publications per year per venue and saves it to a file"""
     years = [2015, 2016, 2017, 2018, 2019]
-    venues = ["JAIR","IJCAI","AIJ","JAGI","ICAGI"]
+    venues = ["JAIR", "IJCAI", "AIJ", "JAGI", "ICAGI"]
 
-    ys = {v:{year:0 for year in years} for v in venues}
+    ys = {v: {year: 0 for year in years} for v in venues}
     for paper in papers:
         ys[paper.venue][paper.year] += 1
 
@@ -443,10 +443,45 @@ def save_yearly_publications(papers):
     y_all = np.array([y_jair, y_ijcai, y_aij, y_jagi, y_icagi])
 
     for i in range(len(y_all)):
-        plt.bar(years, y_all[i], bottom= np.sum(y_all[:i], axis=0))
-   
+        plt.bar(years, y_all[i], bottom=np.sum(y_all[:i], axis=0))
+
     plt.legend(venues)
     plt.savefig("../gradu/material/data/yearly_publications.png", dpi=600)
+
+
+def save_topic_frequencies_by_year(papers):
+    """Creates horizontal bar plot of topics with their yearly stacked frequencies"""
+    years = [2015, 2016, 2017, 2018, 2019]
+
+    category_names = [x[0] for x in CATS]
+    ys = {year: {c: 0 for c in category_names} for year in years}
+
+    for paper in papers:
+        for cat in paper.categories:
+            ys[paper.year][cat] += 1
+
+    y2015 = list(ys[2015].values())
+    y2016 = list(ys[2016].values())
+    y2017 = list(ys[2017].values())
+    y2018 = list(ys[2018].values())
+    y2019 = list(ys[2019].values())
+
+    y_all = np.array([y2015, y2016, y2017, y2018, y2019])
+
+    fig, ax = plt.subplots()
+
+    for i in range(len(y_all)):
+        ax.barh(category_names, y_all[i], left=np.sum(y_all[:i], axis=0))
+
+    ax.set_yticks(range(1, len(category_names) + 1))
+    ax.set_yticklabels([x[1] for x in CATS])
+
+    plt.legend(years)
+    plt.tight_layout() # TODO: Figure size could be customized instead of this
+
+    plt.savefig(
+        "../gradu/material/data/topic_frequencies_by_year.png", dpi=400)
+
 
 def save_topic_frequencies():
     cat_dict = calculate_category_count()
@@ -456,7 +491,6 @@ def save_topic_frequencies():
         xs.append(k)
         ys.append(v)
 
-    
     fig, ax = plt.subplots()
     # fig.set_figheight(5)
     # fig.set_figwidth(10)
@@ -464,8 +498,10 @@ def save_topic_frequencies():
     ax.barh(xs, ys)
     ax.set_yticks(xs)
     ax.set_yticklabels([x[1] for x in CATS])
-    plt.savefig("../gradu/material/data/topic_frequencies.png", dpi=400, bbox_inches="tight")    
-    
+    plt.savefig(
+        "../gradu/material/data/topic_frequencies.png", dpi=400, bbox_inches="tight"
+    )
+
 
 def main():
     # Initial keyword extraction is done and written to workbook
@@ -497,13 +533,13 @@ def main():
     # Updates category numbers and writes them into workbook
     # finalize_categories()
 
-    papers = load_papers_df()
+    papers = load_papers()
 
     # pp = pprint.PrettyPrinter()
     # pp.pprint(papers)
 
     # Drawing the graphs
-    save_wieringa_plot(papers)
+    # save_wieringa_plot(papers)
     # get_wieringa_topic_bubble_data(load_papers())
 
     # Forums pie chart
@@ -513,9 +549,7 @@ def main():
     # save_yearly_publications(papers)
 
     # Topic frequensies
-    # save_topic_frequencies()
-
-
+    save_topic_frequencies_by_year(papers)
 
     # plt.show()
 
