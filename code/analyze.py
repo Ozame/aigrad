@@ -425,7 +425,7 @@ def save_forum_pie(papers):
     plt.savefig("../gradu/material/data/forum_pie.png", dpi=400)
 
 
-def save_yearly_publications(papers):
+def save_yearly_publications(papers : List[Paper]):
     """Creates a chart of publications per year per venue and saves it to a file"""
     years = [2015, 2016, 2017, 2018, 2019]
     venues = ["JAIR", "IJCAI", "AIJ", "JAGI", "ICAGI"]
@@ -449,7 +449,7 @@ def save_yearly_publications(papers):
     plt.savefig("../gradu/material/data/yearly_publications.png", dpi=600)
 
 
-def save_topic_frequencies_by_year(papers):
+def save_topic_frequencies_by_year(papers : List[Paper]):
     """Creates horizontal bar plot of topics with their yearly stacked frequencies"""
     years = [2015, 2016, 2017, 2018, 2019]
 
@@ -502,6 +502,50 @@ def save_topic_frequencies():
         "../gradu/material/data/topic_frequencies.png", dpi=400, bbox_inches="tight"
     )
 
+def  save_topic_heatmap(papers : List[Paper]):
+    """Creates a square matrix heatmap from the topic categories and saves it."""
+    category_names = [x[1] for x in CATS]
+    data = np.zeros(shape=(23, 23))
+    # cols = ['c' + str(x) for x in range(1, 23)]
+
+    for paper in papers:
+        combs = ((a, b) for a in paper.categories for b in paper.categories)
+        for comb in combs:
+            data[comb] += 1
+
+    d = data[1:, 1:]
+
+    fig, ax = plt.subplots()
+    im = ax.imshow(d, cmap="hot")
+
+    # Create colorbar
+    cbar = ax.figure.colorbar(im, ax=ax)
+    cbar.ax.set_ylabel("No of articles", rotation=-90, va="bottom")
+
+    ax.set_xticks(np.arange(len(category_names)))
+    ax.set_yticks(np.arange(len(category_names)))
+    ax.set_xticklabels(category_names)
+    ax.set_yticklabels(category_names)
+    plt.setp(ax.get_xticklabels(), rotation=45, ha="right",
+         rotation_mode="anchor")
+        
+    textcolors = ("black", "white")
+    kw = dict(horizontalalignment="center",
+              verticalalignment="center")
+    threshold = im.norm(d.max())/2.
+
+    # Loop over data dimensions and create text annotations.
+    texts = []
+    for i in range(len(category_names)):
+        for j in range(len(category_names)):
+            kw.update(color=textcolors[int(im.norm(d[i, j]) < threshold)])
+            text = im.axes.text(j, i, f"{d[i, j]:.0f}", **kw)
+            texts.append(text)
+    
+    plt.tight_layout()
+    plt.savefig(
+        "../gradu/material/data/topic_heatmap.png", dpi=400)
+
 
 def main():
     # Initial keyword extraction is done and written to workbook
@@ -534,6 +578,7 @@ def main():
     # finalize_categories()
 
     papers = load_papers()
+    papers_df = load_papers_df()
 
     # pp = pprint.PrettyPrinter()
     # pp.pprint(papers)
@@ -549,7 +594,11 @@ def main():
     # save_yearly_publications(papers)
 
     # Topic frequensies
-    save_topic_frequencies_by_year(papers)
+    # save_topic_frequencies_by_year(papers)
+
+    # Topic heatmap/square matrix
+    save_topic_heatmap(papers)
+
 
     # plt.show()
 
