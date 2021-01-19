@@ -9,6 +9,7 @@ from typing import Dict, List
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib.gridspec as gridspec
 from pandas.core.frame import DataFrame
 import seaborn as sns
 from nltk.probability import FreqDist
@@ -515,13 +516,20 @@ def save_topic_heatmap(papers: List[Paper]):
 
     data = matrix[1:, 1:]
 
-    # Plot the matrix
-    fig, ax = plt.subplots(figsize=(9, 9))
+    # Plot the heatmap figure 
+    # Here, Gridspec is used to define the grid where the plots are drawn.
+    # The colorbar is a separate subplot so it can be more easily be moved
+    fig = plt.figure(figsize=(9, 9))
+    gs = gridspec.GridSpec(nrows=2, ncols=8, height_ratios=[0.05, 1])
+    ax = fig.add_subplot(gs[1, :])
+    cax = fig.add_subplot(gs[0, 1:7])
+
+    # Create image from data matrix
     im = ax.imshow(data, cmap="hot")
 
-    # Create colorbar
-    cbar = ax.figure.colorbar(im, ax=ax, shrink=0.5)
-    cbar.ax.set_ylabel("No of articles", rotation=-90, va="bottom")
+    # Create colorbar and its title
+    cbar = fig.colorbar(im, cax=cax, shrink=0.5, orientation="horizontal")
+    cbar.ax.set_title("No. of articles")
 
     # Set ticks and labels
     ax.set_xticks(np.arange(len(category_names)))
@@ -531,11 +539,12 @@ def save_topic_heatmap(papers: List[Paper]):
 
     plt.setp(ax.get_xticklabels(), rotation=30, ha="right", rotation_mode="anchor")
 
+    # Text annotation colors and their threshold, alignment
     textcolors = ("black", "white")
     kw = dict(horizontalalignment="center", verticalalignment="center")
     threshold = im.norm(data.max()) / 2.0
 
-    # Loop over data dimensions and create text annotations.
+    # Loop over data dimensions and create text annotations for cells.
     texts = []
     for i in range(len(category_names)):
         for j in range(len(category_names)):
@@ -544,7 +553,9 @@ def save_topic_heatmap(papers: List[Paper]):
             texts.append(text)
 
     plt.tight_layout()
-    plt.savefig("../gradu/material/data/topic_heatmap.png", dpi=400, bbox_inches='tight')
+    plt.savefig(
+        "../gradu/material/data/topic_heatmap.png", dpi=400, bbox_inches="tight"
+    )
 
 
 def main():
