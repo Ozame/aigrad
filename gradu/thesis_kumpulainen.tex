@@ -270,6 +270,7 @@ thesis.
 
 
 \section{Definition}
+\label{definition}
 
 % Definition of intelligence?
 In order to be able to define AGI, or artificial intelligence in general, one
@@ -847,13 +848,13 @@ Through the mapping process, 22 different topic categories were found, and they
 are presented in Table \ref{table:topicdescription}. A single paper can relate
 to multiple topics. These topics show us how the AGI research is focused on the
 top level. From the amount of different topics it can be seen that the research
-area is broad and different research groups have different foci. 
+area is broad and not focused on a single style of solutions. 
 
 From the sample articles, four different themes could be identified. These
 themes are just high-level observations by the author based on the found topic
 categories. \textbf{Building AGI systems} is of course naturally a very
 prominent one. These papers were more focused on the possible theory and
-implementations that could be used in building of an AGI system: How it reasons
+implementations that could be used in building of an AGI system: how it reasons
 and plans, how capabilities like perception could be implemented, and how to
 handle issues like combinatorial explosion. One reoccurring theme was
 \textbf{Learning}. Different approaches to more common machine learning
@@ -862,7 +863,7 @@ Q-learning and Deep Q-Networks are demonstrated. In additions to this, research
 on cumulative learning, lifelong learning, and episodic memory is very
 prominent. Third theme was \textbf{Agent interaction}, meaning topics such as
 multi-agent systems, environmental interaction, and human-computer interaction.
-Lastly there are \textbf{Less-technical topics}, such as philosophical
+Lastly there are \textbf{Non-technical topics}, such as philosophical
 questions, AI ethics, emotion in AI and meta-level research.
 
 \begin{table}[H]
@@ -880,9 +881,9 @@ questions, AI ethics, emotion in AI and meta-level research.
     7	 & Universal AI & Concepts relating to Universal AI (\cite{hutter2004}): universal induction, AIXI, compression.\\ \hline
     8	 & Physical robots & Physical robots and interaction with physical environment. \\ \hline
     9	 & Computer vision and perception & Topics concerning vision and perception systems of an agent.\\ \hline
-    10 & Nature-inspired approaches & Artificial animals, homeostatic agents and other bio-inspired topics.\\ \hline
+    10 & Nature-inspired approaches & Artificial animals, homeostatic agents and other nature-inspired ideas.\\ \hline
     11 & Reinforcement learning & Topics directly relating to reinforcement learning, e.g. Q-leaning, rewarding techniques.\\ \hline
-    12 & Recursive self-Improvement & Relates to fast self-improvement of an agent. \\ \hline
+    12 & Recursive self-Improvement & Relating to fast self-improvement of an agent and intelligence explosion. \\ \hline
     13 & Experiential learning & Cumulative learning, artificial pedagogy and other topics related to how agent builds on existing knowledge.\\ \hline
     14 & Agent environment & Descriptions of environments and how agents interact within them.\\ \hline
     15 & Multi-agent systems & Topics relating to agent-to-agent interaction and cooperation.\\ \hline
@@ -899,10 +900,53 @@ questions, AI ethics, emotion in AI and meta-level research.
   \label{table:topicdescription}
 \end{table}
 
+% Most researched ones explained. RQ3
+
+In Figure \ref*{fig:topicbar}, the frequencies of research topics is presented
+over the years. The most researched topic is \textbf{Cognitive architectures}.
+Cognitive architecture means an abstract model of cognition as well as its
+software implementation, which aims to be a system showing intelligent
+behaviour, artificial intelligence (\cite{lieto2018}). In AGI research there are
+few cognitive architectures that are standing out in the field. Goertzel's
+OpenCog framework (See section \ref*{definition}) was seen in 8 different
+papers, e.g Goertzel's idea of bridging the gap between theory and practice in
+AGI design (\cite{goertzel2017agents}) and Potanov's attempt to create semantic
+vision system by combining OpenCog with YOLOv2 object detection system
+(\cite{potapov2018}). In addition to OpenCog, Non-Axiomatic Reasoning System
+(NARS), developed by Pei Wang, was part of many articles. For example, besides
+the introduction of its implementation (\cite{hammer2016opennars}), papers
+describing its approach to emotion (\cite{wang2016emotional}) and inferential
+learning (\cite{wang2016learning}). While many of these cognitive architecture
+articles were mainly focused on presenting authors' system's implementation,
+some were offering ideas that could be used in any other approaches to AGI.
+These articles, among other papers focusing on not-implementation-specific
+ideas, were categorized also to \textbf{AGI design} category that included 6
+papers.
+
+The second largest topic category was \textbf{Universal AI}. The theory of
+universal AI was created by Marcus Hutter (\cite*{hutter2004}) and it describes
+a complete mathematical model for general artificial intelligence, named AIXI
+(\cite{hutter2012decade}). Although incomputable, this theory and topics related
+to it are target of vigorous research. In this category there is 14 articles
+concerning AIXI, Solomonoff's universal induction, functional programming and
+compression. For example in 2019 paper by Franz, Gogulya and Löffler
+(\cite*{franz2019william}), a monolithic inductive approach to AGI was
+presented, taking advantage of AIXI and incremental compression techniques. In
+(\cite{martin2016death}), death was formally defined to generally intelligent
+agents like AIXI and discoveries were made regarding agents' behaviour in such
+situations.
+
+Use susumu's paper to link aixi to rl, fp etc. MAgichaskeller?
 
 
-Here is text telling about the topic categories, observations about them and so
-on. With color added to fig \ref{fig:topicbar}, short term trends can be described.
+CA, 
+universal ai, 
+reinforcement learning, 
+experiential learning, 
+ai safety, 
+philosophical asps
+
+
 
 \begin{figure}[H]
   \centering
@@ -910,6 +954,13 @@ on. With color added to fig \ref{fig:topicbar}, short term trends can be describ
   \caption{Topic category frequencies}
   \label{fig:topicbar}
 \end{figure}
+
+% Short time trends
+
+Here's something about the short time trends that can be seen from graphs.
+
+
+% Relation to other topics
 
 Here more text about the topics, and a heatmap about the topic categories.
 
@@ -921,7 +972,10 @@ Here more text about the topics, and a heatmap about the topic categories.
 \end{figure}
 
 
+\section{Types of AGI research}
 
+% Types explained a bit more and observations made from the bubble plot.
+% It is very important to describe the focus and gaps here! RQ1
 Here is text telling about the bubble plot and how the classes and topics relate
 to each other.
 
@@ -977,21 +1031,16 @@ to each other.
   \label{topicbubble}
 \end{figure}
 
-The results of the thesis will be a clear overview of the recent research in the
-field of artificial general intelligence in form of classification data, visual
-graphs and further synthesis. As mentioned earlier, if an interesting topic
-presents itself during the process of mapping, it may be further examined in a
-more focused way, such as literature review. This will be considered at that
-time.
 
-\section{Validity threats?}
+
+\section{TODO: Where to put this: Validity threats?}
 
 - performed alone, researcher bias etc (multiple people not possible here),
 how rigor is achieved, repeatability,
 
 Good source on reliability \cite{wohlin2013}
 
-\section{Possible continuation research}
+\section{TODO: Where to put this: Possible continuation research}
 
 - List of most prominent topics for further research
 
