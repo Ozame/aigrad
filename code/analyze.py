@@ -587,7 +587,8 @@ def main():
     # pp = pprint.PrettyPrinter()
     # pp.pprint(papers)
 
-    # Drawing the graphs
+    # === Drawing the graphs ===
+
     # save_wieringa_plot(papers)
     # get_wieringa_topic_bubble_data(load_papers())
 
