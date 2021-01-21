@@ -278,7 +278,7 @@ def get_category_papers(
     name_col = "B"
     keywords_col = "M"
     w_classes_col = "N"
-    category_column = "P"
+    category_column = "Q"
     papers = []
 
     if not cat_numbers:
@@ -578,13 +578,6 @@ def main():
     # cat_count = calculate_category_count()
     # print(cat_count)
 
-    # Shows the papers that are included in given categories
-    # cat_numbers = sys.argv[1:] if 1 < len(sys.argv) else []
-    # cat_numbers = list(map(int, cat_numbers))
-    # papers = get_category_papers(cat_numbers)
-    # pp = pprint.PrettyPrinter()
-    # pp.pprint(papers)
-
     # Updates category numbers and writes them into workbook
     # finalize_categories()
 
@@ -608,9 +601,16 @@ def main():
     # save_topic_frequencies_by_year(papers)
 
     # Topic heatmap/square matrix
-    save_topic_heatmap(papers)
+    # save_topic_heatmap(papers)
 
-    # plt.show()
+    # Shows the papers that are included in given categories
+    if 1 < len(sys.argv):
+        cat_numbers = sys.argv[1:]
+        cat_numbers = list(map(int, cat_numbers))
+        papers = get_category_papers(cat_numbers)
+        pp = pprint.PrettyPrinter()
+        pp.pprint(papers)
+
 
 
 if __name__ == "__main__":

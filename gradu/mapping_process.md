@@ -355,17 +355,18 @@ from the data?
 - Major themes can be mentioned on the text, but as they are very vague, not
   sure if they are useful as graph. DONE
 - Type of research: 
-  - Frequencies (bar plot) 
-  - Relations between research types and topics (bubble/heatmap)
+  - Frequencies (bar plot) DONE
+  - Relations between research types and topics (bubble/heatmap) DONE
 - Topics
-  - Yearly most researched
-  - Topics usually met together
+  - Yearly most researched DONE
+  - Topics usually met together DONE
 - Table describing each category DONE
 - Publication forum frequency (most are from conference but still) DONE
   - Forum, additional limitations, total results, potential results, accepted results, accepted results(%)
 - Publications per year per forum? DONE
 - Research groups?
   - Authors and their paper frequencies
+  - Affiliations and geographical locations?
 
 PGFPlots was used to create the bubble plot, proved to be difficult to achieve
 wanted results in matplotlib.
