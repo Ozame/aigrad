@@ -370,3 +370,9 @@ from the data?
 
 PGFPlots was used to create the bubble plot, proved to be difficult to achieve
 wanted results in matplotlib.
+
+
+### Possible additions
+- Authors -> Countries -> Bubble map
+  - Interesting to see where the research is actually done and published.
+- ArXiv comparison: Compare research results to the actual publications in arxiv, where often studies are published directly.

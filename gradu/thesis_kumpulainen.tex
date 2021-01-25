@@ -936,14 +936,14 @@ presented, taking advantage of AIXI and incremental compression techniques. In
 agents like AIXI and discoveries were made regarding agents' behaviour in such
 situations.
 
-Reinforcement learning (RL) is the third largest category with 11 articles
+\textbf{Reinforcement learning} (RL) is the third largest category with 11 articles
 relating to it directly. As can be seen from the topic heatmap in figure
 \ref{fig:topicheat}, it is technique with wide range of applications. In 2016
 paper Susumu Katayama presents a new RL algorithm idea with similarity to AIXI
 (\cite{katayama2016ideas}). It involves usage of MAGICHASKELLER, research
 group's inductive programming system.
 
-Experiential or cumulative learning means that an agent utilizes it's previous
+\textbf{Experiential learning} means that an agent utilizes it's previous
 experiences in its actions, incrementally increasing its knowledge
 (\cite{thorisson2019cumulative}). This type of learning enables agent to
 generalize its abilities continuosly, making it one of the necessary
@@ -987,16 +987,62 @@ titled \emph{Open-Ended Intelligence}, is introduced as a novel approach to AGI.
 
 % Short time trends
 
-Here's something about the short time trends that can be seen from graphs.
+Due to the limited observed time span, it is difficult to observe long term
+trends in AGI research. However, some short time observations can be made from
+the yearly publications in figure \ref{fig:topicbar}. 
+
+Year 2019, the last one included in the study, had a major drop in published
+articles in comparison with the previous year, from 25 to 13. In 2019, many
+topics that were prominent on the previous years, e.g. universal AI, agent
+environment, and human-computer interaction, dropped to only one or zero
+articles published. Suprisingly there are some topics that don't have any
+relating papers published in recent years, but each have one on 2019. This is
+the case of recursive self-improvement, physical robots, and reasoning and
+inference, each have only one paper published since 2016.
+
+Few of the most common topics like AI safety, philosophical aspects, and
+cognitive architectures have a regular publication pace, with approximately same
+number of articles published every year, even in the slower years of 2017 and
+2019. Other popular topics such as experiential learning and universal AI show
+much more fluctuation in the yearly number of articles published.
+
+Interestingly articles about probabilistic approaches have not been published
+since 2016, which suggests that interest towards that particular approach is
+decreasing.
 
 
 % Relation to other topics
 
-Here more text about the topics, and a heatmap about the topic categories.
+Figure \ref{fig:topicheat} shows the relations between the topic categories. As
+could be expected, cognitive architectures can be associated with as many as 15
+other categories. As the aim of cognitive architecture is often to create a
+versatile general agent, it is reflected on the way the research is done.
+Interestingly nature-inspired approaches is often associated with agent
+environment and reinforcement learning topics. One explaining factor is the
+subject of artificial animals, animats, that were discussed in three articles.
+Animats are homeostatic reinforcement learning agents that interact with their
+environment. 
+
+The relation between AI evaluation and universal AI can also be observed, with
+three related articles. As universal AI deals with computability and similar
+subjects, their mathematical evaluation might be more viable than other
+approaches. Two of the three articles were authored by Ond\v rej
+Vadinsk\'y (\cite{vadinsky2018lessons,vadinsky2018sema}), and were focused on the
+Algorithmic Intelligence Quotient test, designed for intelligent agent
+evaluation.
+
+One clearly visible focus area on the topic relations is the area with topics
+15-20. The heatmap shows close connections between less technical topics such as
+human-computer interaction, AI safety, philosophical aspects, and human-like
+qualities, but also multi-agent systems and AGI research. 
+==> And???
+
+
+
 
 \begin{figure}[H]
   \centering
-  \includegraphics[scale=0.65]{material/data/topic_heatmap.png}
+  \includegraphics[scale=0.65]{material/data/topic_heatmap_no_zeroes.png}
   \caption{Topic's relations to each other}
   \label{fig:topicheat}
 \end{figure}

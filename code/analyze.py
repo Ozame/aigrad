@@ -549,12 +549,13 @@ def save_topic_heatmap(papers: List[Paper]):
     for i in range(len(category_names)):
         for j in range(len(category_names)):
             kw.update(color=textcolors[int(im.norm(data[i, j]) < threshold)])
-            text = im.axes.text(j, i, f"{data[i, j]:.0f}", **kw)
+            txt = f"{data[i, j]:.0f}" if data[i, j] != 0 else ""
+            text = im.axes.text(j, i, txt, **kw)
             texts.append(text)
 
     plt.tight_layout()
     plt.savefig(
-        "../gradu/material/data/topic_heatmap.png", dpi=400, bbox_inches="tight"
+        "../gradu/material/data/topic_heatmap_no_zeroes.png", dpi=400, bbox_inches="tight"
     )
 
 
