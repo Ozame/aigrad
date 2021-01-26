@@ -59,6 +59,7 @@ class Paper:
     keywords: List[str]
     w_classes: List[str]
     categories: List[str] = field(default_factory=list)
+    countries: List[str] = field(default_factory=list)
     year: int = None
     venue: str = None
     abstract: str = None
@@ -91,6 +92,7 @@ def load_papers(path: str = "../gradu/material/final_results.xlsx") -> List[Pape
     venue_col = "E"
     abstract_col = "F"
     cat_column = "Q"
+    countries_col = "S"
     papers = []
 
     wb = load_workbook(path)
@@ -103,6 +105,7 @@ def load_papers(path: str = "../gradu/material/final_results.xlsx") -> List[Pape
             keywords=parse_words(sheet[keywords_col + row].value),
             w_classes=parse_words(sheet[w_classes_col + row].value),
             categories=parse_cat_numbers(sheet[cat_column + row].value),
+            countries=parse_words(sheet[countries_col + row].value),
             year=sheet[year_col + row].value,
             venue=sheet[venue_col + row].value,
             abstract=sheet[abstract_col + row].value,
@@ -279,6 +282,7 @@ def get_category_papers(
     keywords_col = "M"
     w_classes_col = "N"
     category_column = "Q"
+    countries_col = "S"
     papers = []
 
     if not cat_numbers:
@@ -302,6 +306,7 @@ def get_category_papers(
                     keywords=parse_words(sheet[keywords_col + row].value),
                     w_classes=parse_words(sheet[w_classes_col + row].value),
                     categories=list((map(str, cats))),
+                    countries=parse_words(sheet[countries_col + row].value)
                 )
             )
 
@@ -583,7 +588,7 @@ def main():
     # finalize_categories()
 
     papers = load_papers()
-    papers_df = load_papers_df()
+    # papers_df = load_papers_df()
 
     # pp = pprint.PrettyPrinter()
     # pp.pprint(papers)
