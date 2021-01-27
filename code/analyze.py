@@ -1,20 +1,21 @@
 import pprint
 import sys
+import csv
 from collections import OrderedDict
-from dataclasses import dataclass, field, fields, asdict
-from os import sep
-from sys import argv, prefix
+from dataclasses import asdict, dataclass, field
 from typing import Dict, List
 
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
-from pandas.core.frame import DataFrame
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+import plotly.graph_objects as go
 import seaborn as sns
 from nltk.probability import FreqDist
 from openpyxl import load_workbook
 from openpyxl.styles import Font
+from pandas.core.frame import DataFrame
+from geopy.geocoders import Nominatim
 
 # Wieringa classes: ER, VR, SP, PP, OP, PEP
 W_CLASSES = [
@@ -306,7 +307,7 @@ def get_category_papers(
                     keywords=parse_words(sheet[keywords_col + row].value),
                     w_classes=parse_words(sheet[w_classes_col + row].value),
                     categories=list((map(str, cats))),
-                    countries=parse_words(sheet[countries_col + row].value)
+                    countries=parse_words(sheet[countries_col + row].value),
                 )
             )
 
@@ -521,7 +522,7 @@ def save_topic_heatmap(papers: List[Paper]):
 
     data = matrix[1:, 1:]
 
-    # Plot the heatmap figure 
+    # Plot the heatmap figure
     # Here, Gridspec is used to define the grid where the plots are drawn.
     # The colorbar is a separate subplot so it can be more easily be moved
     fig = plt.figure(figsize=(9, 9))
@@ -560,9 +561,66 @@ def save_topic_heatmap(papers: List[Paper]):
 
     plt.tight_layout()
     plt.savefig(
-        "../gradu/material/data/topic_heatmap_no_zeroes.png", dpi=400, bbox_inches="tight"
+        "../gradu/material/data/topic_heatmap_no_zeroes.png",
+        dpi=400,
+        bbox_inches="tight",
     )
 
+
+def calculate_country_frequencies(papers: List[Paper]) -> Dict[str, int]:
+    """ Calculates frequencies of the countries in papers, and returns results as a dict"""
+    results = {}
+    for paper in papers:
+        for country in paper.countries:
+            if country in results:
+                results[country] += 1
+            else:
+                results[country] = 1
+    return results
+
+def find_country_data(papers: List[Paper]):
+    """Find location data of countries and save all necessary data to csv file"""
+    country_dict = calculate_country_frequencies(papers)
+    del country_dict["none"]
+    app = Nominatim(user_agent="ai-thesis-mapping")
+    
+    header = "country,count,lat,lon".split(sep=',')
+    rows = []
+    for k, v in country_dict.items():
+        location = app.geocode(k)
+        row = [k, v, location.latitude, location.longitude]
+        rows.append(row)
+
+    with open("../gradu/material/data/country_data.csv", 'w', newline='') as f:
+        csvwriter = csv.writer(f)
+        csvwriter.writerow(header)
+        csvwriter.writerows(rows)
+
+
+def draw_map(papers: List[Paper]):
+
+    sizeref = 2 * 36 / (50 ** 2)
+    df = pd.read_csv("../gradu/material/data/country_data.csv")
+    df['text'] = df['count'].astype(str)
+    fig = go.Figure(data=go.Scattergeo(
+        lon = df['lon'],
+        lat = df['lat'],
+        text = df['text'],
+        mode = 'markers+text',
+        marker = dict(
+            color = df['country'].index,
+            size = df['count'],
+            sizemode = 'area',
+            sizeref = sizeref,
+        ),
+        textfont=dict(
+        family="sans serif",
+        color= "white"
+    )
+        
+    ))
+
+    fig.show()
 
 def main():
     # Initial keyword extraction is done and written to workbook
@@ -610,6 +668,15 @@ def main():
     # Topic heatmap/square matrix
     # save_topic_heatmap(papers)
 
+    # Calculate countries
+    # calculate_country_frequencies(papers)
+
+    # Find and save country data to csv file
+    # find_country_data(papers)
+
+
+    draw_map(papers)
+
     # Shows the papers that are included in given categories
     if 1 < len(sys.argv):
         cat_numbers = sys.argv[1:]
@@ -617,7 +684,6 @@ def main():
         papers = get_category_papers(cat_numbers)
         pp = pprint.PrettyPrinter()
         pp.pprint(papers)
-
 
 
 if __name__ == "__main__":
