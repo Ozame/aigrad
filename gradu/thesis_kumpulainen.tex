@@ -1056,10 +1056,51 @@ these topics.
 
 \section{Types of AGI research}
 
-% Types explained a bit more and observations made from the bubble plot.
-% It is very important to describe the focus and gaps here! RQ1
-Here is text telling about the bubble plot and how the classes and topics relate
-to each other.
+The bubble graph in Figure \ref{fig:topicbubble} shows us the relation of the
+articles' topics and the Wieringa classification. Here we can observe the
+specific foci of the field in two different facets.
+
+It can be clearly seen that most of the research in the field is solution
+proposals. This means that the research consists predominantly of new approaches
+to different problems. This focus on the new ideas combined with the almost
+complete lack of evaluation research shows that the field is still very young,
+as there is not much practical applications to investigate. It is also possible
+that often this kind of evaluation research could be very valuable and therefore
+kept private and unpublished, but as the sample articles are mostly from
+academia, that should not be the case here. 
+
+There is some validation research, which means investigation of
+not-yet-implemented solution proposals. Often solution proposal articles
+provided some proof in form of methodological analysis, prototype or
+experiments, making them also validation research papers.
+
+Also common were philosophical papers, meaning papers that sketch a new way of
+looking at the subject, or that present a conceptual framework to be used in
+future research. Especially on the topics of philosophical aspects and AI safety
+this was a dominating research type, with multiple ethical frameworks and safety
+guidelines presented in the articles. Especially on these topics the lack of
+practical applications makes evaluation and validation research difficult, as no
+competent AGI exists yet.
+
+Suprisingly there were few opinion articles found. AND???
+
+To answer the second part of research question RQ1, it can be said that the
+research in the AGI field is mostly proposals of new solutions and approaches,
+and philosophical papers discussing new conceptual frameworks and views. The
+absence of evaluation research shows that the research of existing practical
+solutions is nominal, probably due to the fact that the field is challenging and
+still focused more on the theoretical side. TODO: refactor this.
+
+
+- More evaluation research is needed! is the lack because of
+lack of practical applications? time to take sps to test!
+
+- Future research?
+  - More details on CAs
+  - 
+
+
+
 
 \pgfplotstableread[col sep=comma, header=true]{material/data/class_topic_bubble.dat}\topicDataTable
 \def\forumCoordsFirst{}
@@ -1109,15 +1150,15 @@ to each other.
       \addplot[point meta=explicit] table[x={Class},y={Category},meta={Count},col sep=comma] {\topicDataTable};
     \end{axis}
   \end{tikzpicture}
-  \caption{Bubble plot showing article distribution between topics and article types}
-  \label{topicbubble}
+  \caption{Article distribution between topics and article types}
+  \label{fig:topicbubble}
 \end{figure}
 
 
 \section{Research locations}
 
-Here some text about the countries that publish agi research. Put the map to the
-appendix? At least the table with countries and no of papers should be in the appendix (with ms)
+Here some text about the countries that publish agi research. The table with
+countries and no of papers should be in the appendix (with ms). Here the map should be present.
 
 \begin{sidewaysfigure}[hbtp]
   \includegraphics[scale=0.60]{material/data/research_map_delta_count.png}
