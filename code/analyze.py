@@ -578,49 +578,54 @@ def calculate_country_frequencies(papers: List[Paper]) -> Dict[str, int]:
                 results[country] = 1
     return results
 
+
 def find_country_data(papers: List[Paper]):
     """Find location data of countries and save all necessary data to csv file"""
     country_dict = calculate_country_frequencies(papers)
     del country_dict["none"]
     app = Nominatim(user_agent="ai-thesis-mapping")
-    
-    header = "country,count,lat,lon".split(sep=',')
+
+    header = "country,count,lat,lon".split(sep=",")
     rows = []
     for k, v in country_dict.items():
         location = app.geocode(k)
         row = [k, v, location.latitude, location.longitude]
         rows.append(row)
 
-    with open("../gradu/material/data/country_data.csv", 'w', newline='') as f:
+    rows = sorted(rows, key=lambda x: x[1])
+
+    with open("../gradu/material/data/country_data.csv", "w", newline="") as f:
         csvwriter = csv.writer(f)
         csvwriter.writerow(header)
         csvwriter.writerows(rows)
 
 
 def draw_map(papers: List[Paper]):
+    """" Draw a bubble map with countries' papers showing"""
 
-    sizeref = 2 * 36 / (50 ** 2)
+    sizeref = 2 * 36 / (70 ** 2)
     df = pd.read_csv("../gradu/material/data/country_data.csv")
-    df['text'] = df['count'].astype(str)
-    fig = go.Figure(data=go.Scattergeo(
-        lon = df['lon'],
-        lat = df['lat'],
-        text = df['text'],
-        mode = 'markers+text',
-        marker = dict(
-            color = df['country'].index,
-            size = df['count'],
-            sizemode = 'area',
-            sizeref = sizeref,
-        ),
-        textfont=dict(
-        family="sans serif",
-        color= "white"
+    df["text"] = df["count"].astype(str)
+    fig = go.Figure(
+        data=go.Scattergeo(
+            lon=df["lon"],
+            lat=df["lat"],
+            text=df["text"],
+            mode="markers+text",
+            marker=dict(
+                color=df["count"],
+                colorscale="Delta",
+                size=df["count"],
+                sizemode="area",
+                sizeref=sizeref,
+                sizemin=7,
+            ),
+            textfont=dict(family="sans serif", color="white"),
+        )
     )
-        
-    ))
-
+    fig.update_geos(projection_type="natural earth")
     fig.show()
+
 
 def main():
     # Initial keyword extraction is done and written to workbook
@@ -673,7 +678,6 @@ def main():
 
     # Find and save country data to csv file
     # find_country_data(papers)
-
 
     draw_map(papers)
 
