@@ -579,7 +579,11 @@ def calculate_country_frequencies(papers: List[Paper]) -> Dict[str, int]:
     return results
 
 
-def find_country_data(papers: List[Paper]):
+def find_country_data(
+    papers: List[Paper],
+    path: str = "../gradu/material/data/country_data.csv",
+    count_desc: bool = True,
+):
     """Find location data of countries and save all necessary data to csv file"""
     country_dict = calculate_country_frequencies(papers)
     del country_dict["none"]
@@ -589,16 +593,19 @@ def find_country_data(papers: List[Paper]):
     rows = []
     for k, v in country_dict.items():
         location = app.geocode(k)
-        row = [k, v, location.latitude, location.longitude]
+        country = k.title() if len(k) > 3 else k.upper()
+        row = [country, v, location.latitude, location.longitude]
         rows.append(row)
 
-    rows = sorted(rows, key=lambda x: x[1])
+    rows = sorted(rows, key=lambda x: x[1], reverse=count_desc)
 
-    with open("../gradu/material/data/country_data.csv", "w", newline="") as f:
+    with open(path, "w", newline='') as f:
         csvwriter = csv.writer(f)
         csvwriter.writerow(header)
         csvwriter.writerows(rows)
-
+        # The non-country paper is added back
+        f.write("None (Microsoft),1,0,0")
+        
 
 def draw_map(papers: List[Paper]):
     """" Draw a bubble map with countries' papers showing"""
@@ -674,12 +681,13 @@ def main():
     # save_topic_heatmap(papers)
 
     # Calculate countries
-    # calculate_country_frequencies(papers)
+    # print(calculate_country_frequencies(papers))
 
     # Find and save country data to csv file
-    # find_country_data(papers)
+    # find_country_data(papers, "../gradu/material/data/country_data_desc.csv")
 
-    draw_map(papers)
+    # Draw the geographic map with article counts per country
+    # draw_map(papers)
 
     # Shows the papers that are included in given categories
     if 1 < len(sys.argv):

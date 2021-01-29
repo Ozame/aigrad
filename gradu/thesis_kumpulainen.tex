@@ -1180,5 +1180,21 @@ artificial general intelligence. Results of the study showed that ....
 
 \printbibliography
 
+\appendix
+% material/data/country_data_desc.csv
+\section{Paper count per country}
+
+\begin{table}[H]
+\footnotesize  
+\begin{tabular}{|l|c|}
+ \hline
+ \textbf{Country} & \textbf{Article count}\\\hline\hline
+ \csvreader[late after line=\\\hline]%
+ {material/data/country_data_desc.csv}{country=\country,count=\count}%
+ {\country & \count}%
+\end{tabular}
+\label{tab:countrypapers}
+\end{table}
+  
 
 \end{document}
