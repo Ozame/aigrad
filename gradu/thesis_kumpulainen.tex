@@ -354,8 +354,7 @@ suggestions have actually had any effect in the direction the AGI research has g
 
 \chapter{Systematic literature mapping process}
 
-
-\label{method}
+\label{chap:method}
 
 Systematic literature mapping is a secondary study method that helps to identify
 the focal points and research gaps in the subject area, providing an overview of
@@ -542,9 +541,18 @@ classification scheme presented by Wieringa et al. (\cite{wieringa2006}), as it
 provides an useful and straightforward research facet to the categorization
 phase of the process.
 
-\chapter{Conducting the literature mapping}
+To minimize the possible validity threats in this thesis and to try to prove its
+rigor, the research method and it's execution is described in detail in chapters
+\ref{chap:method} and \ref{chap:conducting}. However, as the study was was
+conducted by one Master's student with limited time, the complete negation of
+researcher bias especially in the material search and article exclusion phases
+is not possible. As pointed out by Wohlin et al. (\cite*{wohlin2013}), the
+reliability of secondary studies such as this mapping should not be taken for
+granted.
 
-\textbf{The following text is very raw, will be edited properly later}
+
+\chapter{Conducting the literature mapping}
+\label{chap:conducting}
 
 In this chapter the systematic literature mapping is conducted. To ensure that
 the study is conducted with rigor, documenting it in detail is essential. This
@@ -884,7 +892,7 @@ questions, AI ethics, emotion in AI and meta-level research.
     8	 & Physical robots & Physical robots and interaction with physical environment. \\ \hline
     9	 & Computer vision and perception & Topics concerning vision and perception systems of an agent.\\ \hline
     10 & Nature-inspired approaches & Artificial animals, homeostatic agents and other nature-inspired ideas.\\ \hline
-    11 & Reinforcement learning & Topics directly relating to reinforcement learning, e.g. Q-leaning, rewarding techniques.\\ \hline
+    11 & Reinforcement learning & Topics directly relating to reinforcement learning, e.g. Q-learning, rewarding techniques.\\ \hline
     12 & Recursive self-Improvement & Relating to fast self-improvement of an agent and intelligence explosion. \\ \hline
     13 & Experiential learning & Cumulative learning, artificial pedagogy and other topics related to how agent builds on existing knowledge.\\ \hline
     14 & Agent environment & Descriptions of environments and how agents interact within them.\\ \hline
@@ -938,12 +946,12 @@ presented, taking advantage of AIXI and incremental compression techniques. In
 agents like AIXI and discoveries were made regarding agents' behaviour in such
 situations.
 
-\textbf{Reinforcement learning} (RL) is the third largest category with 11 articles
-relating to it directly. As can be seen from the topic heatmap in figure
-\ref{fig:topicheat}, it is technique with wide range of applications. In 2016
-paper Susumu Katayama presents a new RL algorithm idea with similarity to AIXI
-(\cite{katayama2016ideas}). It involves usage of MAGICHASKELLER, research
-group's inductive programming system.
+\textbf{Reinforcement learning} (RL) is the third largest category with 11
+articles relating to it directly. As can be seen from the topic heatmap in
+figure \ref{fig:topicheat}, it is technique associated with wide range of other
+topics. In 2016 paper Susumu Katayama presents a new RL algorithm idea with
+similarity to AIXI (\cite{katayama2016ideas}). It involves usage of
+MAGICHASKELLER, research group's inductive programming system.
 
 \textbf{Experiential learning} means that an agent utilizes it's previous
 experiences in its actions, incrementally increasing its knowledge
@@ -988,6 +996,7 @@ titled \emph{Open-Ended Intelligence}, is introduced as a novel approach to AGI.
 \end{figure}
 
 % Short time trends
+\section{Short time trends in topics}
 
 Due to the limited time span, it is difficult to observe long term trends in AGI
 research. However, some short time observations can be made from the yearly
@@ -1014,6 +1023,7 @@ decreasing.
 
 
 % Relation to other topics
+\section{Connections between different topics}
 
 Figure \ref{fig:topicheat} shows the relations between the topic categories. As
 could be expected, cognitive architectures can be associated with as many as 15
@@ -1097,6 +1107,8 @@ be an interesting way to survey the state of the field in more detail.
 Especially the usage of cognitive architectures in real-world situations could
 be a good subject for a more focused systematic literature review. 
 
+TODO: More on future research!
+
 
 \pgfplotstableread[col sep=comma, header=true]{material/data/class_topic_bubble.dat}\topicDataTable
 \def\forumCoordsFirst{}
@@ -1153,26 +1165,26 @@ be a good subject for a more focused systematic literature review.
 
 \section{Research locations}
 
-Here some text about the countries that publish agi research. The table with
-countries and no of papers should be in the appendix (with ms). Here the map should be present.
+Although not the main focus of this thesis, the affiliations of studied
+article's were also mapped geographically, and presented in figure
+\ref{fig:researchmap}. The figure shows how the research of artificial general
+intelligence is focused around the world in different countries. With 59 papers
+published, most of the articles are affiliated with researchers in European
+countries. The largest single country in AGI research is USA, with 36 published
+articles. Suprisingly, Iceland and Netherlands are the runner-ups with 10
+articles each. It can be seen that economic powers like China, Russia and Japan
+are still in the 10 largest countries in the field, with 7, 6, and 5 papers
+respectively. The complete list of countries can be found in appendix
+\ref*{tab:countrypapers}.
+
+TODO: Something about the researchers that show up often? Thorisson, goertzel,
+wang?
 
 \begin{sidewaysfigure}[hbtp]
   \includegraphics[scale=0.60]{material/data/research_map_delta_count.png}
   \caption{Article affiliation map}
   \label{fig:researchmap}
 \end{sidewaysfigure}
-
-\section{TODO: Where to put this: Validity threats?}
-
-- performed alone, researcher bias etc (multiple people not possible here),
-how rigor is achieved, repeatability,
-
-Good source on reliability \cite{wohlin2013}
-
-\section{TODO: Where to put this: Possible continuation research}
-
-- To the bubble plot section?
-- List of most prominent topics for further research
 
 \chapter{Conclusion}
 In this thesis, a systematic literature mapping was conducted on the field of

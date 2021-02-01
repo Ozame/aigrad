@@ -374,5 +374,16 @@ wanted results in matplotlib.
 
 ### Possible additions
 - Authors -> Countries -> Bubble map
-  - Interesting to see where the research is actually done and published.
+  - Interesting to see where the research is actually done and published. DONE
 - ArXiv comparison: Compare research results to the actual publications in arxiv, where often studies are published directly.
+
+
+## Finalization
+
+- Appendices:
+  - Accepted papers (maybe potential as well?)
+- Missing text:
+  - Conclusion
+  - Abstract
+  - TODOs
+  - Chapter introduction paragraphs
