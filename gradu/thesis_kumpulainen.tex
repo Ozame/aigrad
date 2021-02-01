@@ -104,33 +104,42 @@
 
 %Remember to use chapters in the thesis itself
 \chapter{Introduction}
-The thesis will be a systematic research mapping on the field of
-Artificial General Intelligence (AGI). The goal of the thesis is to identify
-the themes and subfields of AGI research in recent years, what is being
-researched recently, and what kind of gaps exist on the field. For a while the
-AGI field was not so active and the more specific approaches, 'narrow AI',
-grew in popularity. Recently, however, the wider, more general artificial
-intelligence has been regaining interest. This kind of mapping study would
-be needed as the research field is complex and there is no clear presentation
-of the current trends and focal points. Creating this king of overview would
-be a valuable asset for future research, as it would enable focusing the
-research on areas less ventured. Furthermore, if an interesting subtopic
-comes up during the process of mapping, more focus may be directed towards
-that in form of more traditional systematic literature review. This option
-is left for further consideration.
+The thesis will be a systematic research mapping on the field of Artificial
+General Intelligence (AGI). The goal of the thesis is to identify the themes and
+topics researched in the AGI field in recent years and find out what kind of
+research gaps exist on the field. While developing a system that displays
+general, human-like intelligence was the original goal of artificial
+intelligence research, it has not been very popular approach to AI in the
+mainstream research since the 1980s. Instead, the more contextually targeted
+intelligent solutions, known as 'narrow AI', have grown in popularity. Recently,
+however, the wider and more general approach to artificial intelligence has been
+regaining interest. This kind of systematic mapping study would be needed as the
+research field is complex and there exists no clear presentation of the current
+trends and focal points. Creating this kind of overview would be a valuable
+asset for future research, as it would enable focusing the research on areas
+less ventured. It could also be useful in introducing the study field to new
+researchers.
 
-What each chapter is about, how the thesis is structured etc.
-
+This thesis is structured as follows: chapter \ref{chap:agi} introduces the
+Artificial General Intelligence, focusing on the history of AI and its
+definition. Chapter \ref*{chap:method} describes the research method of this
+thesis, systematic literature mapping. In chapter \ref*{chap:conducting}, the
+conducted mapping process is reported, with the results being presented in
+chapter \ref*{chap:results}. Chapter \ref{chap:conclusion} summarizes and
+concludes the thesis.
 
 \chapter{Artificial General Intelligence}
+\label{chap:agi}
 
-TODO: Here some chapter introducing text
+In this chapter, the history of artificial intelligence is shortly described.
+Then, the definition of Artificial General Intelligence is introduced and its
+background presented.
 
 \section{History of Artificial Intelligence}
 \label{history}
 
 Even though the idea of autonomous machinery has been around since the ancient
-Greek (\cite{}), AI's origins are set around in the 1940s. At the time,
+Greek (\cite{bramer2009artificial}), AI's origins are set around in the 1940s. At the time,
 American science fiction author Isaac Asimov wrote numerous novels and
 short stories about conscious robots and technology's relation to humankind.
 His work has inspired countless people in the field's of AI and computer science
@@ -234,8 +243,6 @@ methods (\cite{goertzel2007}).
 
 %Large datasets? maybe just mention somewhere else if needed
 
-%TODO: Is the history too much? Feels like it could/should be more topic focused, now it might seem a bit overkill...
-
 %TODO: agents ? 
 
 In the 21st century artificial intelligence research has been steadily growing.
@@ -302,35 +309,38 @@ encompasses the common traits in intelligence definitions.
 
 Artificial General Intelligence, sometimes referred as "strong ai", according to
 Goertzel and Pennachin (\cite*{goertzel2007}) means \emph{"AI systems that
-  possess a reasonable degree of self-understanding and autonomous self-control,
-  and have the ability to solve a variety of complex problems in a variety of
-  contexts, and to learn to solve new problems that they didn't know about at the
-  time of their creation."}. It can be seen that an agent fulfilling this
+possess a reasonable degree of self-understanding and autonomous self-control,
+and have the ability to solve a variety of complex problems in a variety of
+contexts, and to learn to solve new problems that they didn't know about at the
+time of their creation."}. It can be seen that an agent fulfilling this
 definition also possesses the intelligence defined in the previous chapter. In
 this thesis terms artificial general intelligence and human-level artificial
 intelligence are treated as synonyms, as they pursue more or less the same goal
 of general intelligence. Goertzel and Pennachin (\cite*{goertzel2007}) suggest
-that the term AGI is more fitting to the area than HLAI as it human-like
-approaches are not necessarily used.
+that the term AGI is more fitting to the area than HLAI as human-like approaches
+are not necessarily used.
 
 The reason general intelligence is specified instead of plain intelligence is
 that there is a need to differentiate it from the domain specific artificial
 intelligence, also known as "narrow AI" or "weak AI", that has become prevalent
-in AI research in recent past. Terms strong AI and weak AI were coined by John
-Searle in 1980 (\cite{searle1980}). Narrow AI means smart solutions that may
-learn and improve their performance through training, but they are only focused
-on specific type of problems in a specific context. Examples of such AI include
-chess engines, autonomous vehicles, and natural language processing. These
-solutions may outperform human capabilities, but only in their limited tasks.
-When presented a problem outside their domain, they usually perform poorly. As
-the above definition by Goertzel and Pennachin describes, AGI is able to
-function on different context and tasks without separate human intervention and
-reconfiguration.
+in AI research in recent past. Terms weak AI and strong AI were coined by John
+Searle in 1980 (\cite{searle1980}). Searle makes a difference with AI being a
+powerful tool, and being an actually intelligent system, respectively. Narrow AI
+means smart solutions that may learn and improve their performance through
+training, but they are only focused on specific type of problems in a specific
+context. Examples of such AI include chess engines, autonomous vehicles, and
+natural language processing. These solutions may outperform human capabilities,
+but only in their limited tasks. When presented a problem outside their domain,
+they usually perform poorly. The strong AI instead is able to perform well in
+every type of scenario, displaying true intelligence and understanding. However,
+this does not necessarily mean, that the AI would possess what we would
+consciousness (\cite{searle1980}). As the above definition by Goertzel and
+Pennachin describes, AGI is able to function on different context and tasks
+without separate human intervention and reconfiguration.
 
-TODO: check strong ai definition by searle
 
 %TODO: should this roadmap be placed somewhere else? now seems a bit disconnected
-As The AGI community is diverse and there are multitude of opinions on the best
+As the AGI community is diverse and there are multitude of opinions on the best
 approaches and the goals that should be pursued in the research, several
 possible roadmaps have been presented in an attempt to create a common basis for
 the discussion and research of human-level artificial general intelligence. In
@@ -349,7 +359,9 @@ framework for artificial general intelligence
 (\cite{opencogwiki,goertzel2012cog}).
 
 One motivation behind this thesis is to find out if these roadmaps and their
-suggestions have actually had any effect in the direction the AGI research has gone, or have they been ineffective in their attempt.
+suggestions have actually had any effect in the direction the AGI research has
+gone, or have they been ineffective in their attempt to organize the complex
+path to AGI.
 
 
 \chapter{Systematic literature mapping process}
@@ -393,8 +405,8 @@ focus points in the target area.
 
 
 %TODO: SVG picture? now bad quality...
-\begin{figure}[h]
-  \includegraphics[width=\linewidth]{images/method_graph_L.png}
+\begin{figure}[H]
+  \includegraphics[width=\linewidth]{images/petersen_model.png}
   \caption{Process model (\cite{petersen2008})}
   \label{fig:mapping}
 \end{figure}
@@ -554,12 +566,13 @@ granted.
 \chapter{Conducting the literature mapping}
 \label{chap:conducting}
 
-In this chapter the systematic literature mapping is conducted. To ensure that
-the study is conducted with rigor, documenting it in detail is essential. This
-chapter only describes the process, the actual results of the mapping are
-presented in chapter \ref{results}. Following the guidelines mentioned in
-section \ref{method_description}, the following sections focus on each of the
-phases of the study.
+In this chapter the systematic literature mapping is conducted following the
+process described in section \ref{method_description}. To ensure that the study is
+conducted with rigor, documenting it in detail is essential. This chapter only
+describes the process, the actual results of the mapping are presented in
+chapter \ref{chap:results}. Following the guidelines mentioned in section
+\ref{method_description}, the following sections focus on each of the phases of
+the study.
 
 A search for similar literature studies was performed on University of
 Jyväskylä's thesis archive JYX, Google Scholar, and Scopus, and no results were
@@ -567,11 +580,10 @@ found. Studies that were found were mostly conventional SLRs with much more
 narrow scope. It was concluded that there exists no similar mapping study on the
 topic.
 
-TODO: mention each subsection in more detail?
-
 \section{Research questions}
 
-The following research questions aim to cover the goal of the study, to create an overview of the scientific research performed on the field of AGI.
+The following research questions aim to cover the goal of the study, to create
+an overview of the scientific research performed on the field of AGI.
 
 \begin{itemize}
   \item[RQ1:] How much, and what kind of research is done in the field of AGI?
@@ -583,10 +595,9 @@ The following research questions aim to cover the goal of the study, to create a
 The first question focuses on the type and volume of the published AGI related
 research. The second question focuses on the publication venue and time of the
 articles, showing temporal trends and popular forums for the topic. Research
-question three aims to find out the most popular subtopics and their change in the
-study's time frame.
-
-TODO: how these are answered, does it need to be addressed here or only later?
+question three aims to find out the most popular subtopics and their change in
+the study's time frame. The answers to these questions will be presented in
+chapter \ref*{chap:results}.
 
 
 \section{The material search}
@@ -626,8 +637,6 @@ the same reason, International Joint Conference on Artificial Intelligence
 many papers as the topic-specific publications, but can show the relative
 popularity of the field within the AI research.
 
-TODO: more basis?
-
 % Why journals were chosen, information about them, reliability, area coverage,
 % jufo rankings etc. Reasoning behind choosing specific journals instead of just
 % all-covering database searches? More text about publication forum and
@@ -648,38 +657,16 @@ frame was not viable considering this is only a master's thesis.
 %PICO-style needed?
 The search phrases for the automatic search were derived from the research
 questions, following the aim of this study. Included were the close concepts
-similar to AGI, such as HLAI and superintelligence. The logical search terms
-used are listed on table \ref{table:search_terms}. Search term 1 is very broad
-and non-restricting, but this helps it yield results even in more general
-venues.
-
-%separate search term, search term usage tables?
-
-
-\begin{table}[h]
-  \caption{Search phrases}
-  \centering
-  \begin{tabular}{| c | p{12cm} |}
-    \hline\hline
-    \textbf{\#} & \textbf{Logical search term}                                         \\
-    \hline
-    \#1         & "artificial general intelligence" OR agi OR "human-level ai" OR HLAI
-    OR superintelligence                                                               \\
-    \hline
-    \#TODO      & If no more than one row is needed, maybe remove this table?          \\
-    \hline
-  \end{tabular}
-  \label{table:search_terms}
-\end{table}
-
-
-- evaluation of search: test set of known papers, possible here?
+similar to AGI, such as HLAI and superintelligence. The logical search phrase
+used was " \emph{"artificial general intelligence" OR agi OR "human-level ai" OR
+HLAI OR superintelligence} ". The phrase is very broad and non-restricting, but
+this helps it yield results even in more general venues.
 
 \section{Choosing papers for inclusion}
 
 The initial material search was performed during October 2020. The papers found
 on the search were further narrowed down using the following criteria. All
-literature accepted for this thesis should be:
+literature accepted for this thesis needed to be:
 
 \begin{itemize}
   \item presenting and/or relating to Artificial General Intelligence,
@@ -690,7 +677,7 @@ literature accepted for this thesis should be:
   \item available digitally free or as a member of University of Jyväskylä.
 \end{itemize}
 
-Piece of literature should be excluded if it is:
+Piece of literature would be excluded if it was:
 
 \begin{itemize}
   \item a book, a thesis, or lecture notes,
@@ -717,18 +704,16 @@ papers were considered potential, and would be subject of further inspection.
 In the second phase, the potential papers were examined again, with the research
 questions and inclusion criteria considered more thoroughly, to further exclude
 papers that were not relevant to the topic. During this phase, a small example
-set of excluded and included papers was sent to the thesis councilor to confirm
+set of excluded and included papers was sent to the thesis supervisor to confirm
 their categorization. During this phase it became apparent that without stricter
 inclusion criteria the amount of accepted papers would be excessively high. It
 was decided that to be included, the article would have to explicitly relate
 itself to general intelligence. In the end, 92 papers were included and would be
-used as the mapping sample. Table \ref*{table:forumtable} shows the number of accepted
-papers and their publication venues.
+used as the mapping sample. Table \ref*{table:forumtable} shows the number of
+accepted papers and their publication venues.
 
-
-
-  \clearpage
-  \begin{table}[h]
+  \begin{table}[H]
+    \footnotesize
     \centering
     \begin{tabular}{|l|l|l|l|l|}
       \hline
@@ -782,25 +767,26 @@ presented in Table \ref{table:wieringa}.
   \label{table:wieringa}
 \end{table}
 
-The papers could belong to multiple categories on both schemes. Although this
-decision makes some graphs slightly less accurate(??), provides it information
-on which topics and what kinds of papers are usually seen together. The results
-of this mapping process are presented in the following chapter.
+The papers could belong to multiple categories on both schemes. This enables
+inspection of connections between the topics that are often met together. The
+results of this mapping process are presented in the following chapter.
 
 \section{Source material control}
 
-TODO: Maybe don't make this its own subsection, just a paragraph should be fine.
-
-- How the papers were handled - How graphs etc. were made - Other meta level
-information - Excel, python, etc.
+The initial inspection of articles was performed online. Once the paper
+inclusion process was complete, the final set of articles was downloaded for
+further local inspection. The data about the articles was kept in a spreadsheet
+document. Graphs in this thesis were plotted with either \LaTeX or with Python
+scripts, using libraries such as Matplotlib and Plotly.
 
 %============== RESULTS ===============
 
 \chapter{Results and analysis}
-\label{results}
+\label{chap:results}
 
- In this chapter the results of the literature mapping are presented. Each of the research questions is answered with the corresponding results, and observations made during the study are shown. 
- TODO: SOmething better here
+ In this chapter the results of the literature mapping are presented. Answers to
+ research questions are discussed, and observations made during the study are
+ shown. 
 
  \section{Publications years and venues}
 
@@ -1187,6 +1173,8 @@ wang?
 \end{sidewaysfigure}
 
 \chapter{Conclusion}
+\label{chap:conclusion}
+
 In this thesis, a systematic literature mapping was conducted on the field of
 artificial general intelligence. Results of the study showed that ....
 

@@ -10,7 +10,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import plotly.graph_objects as go
-import seaborn as sns
 from nltk.probability import FreqDist
 from openpyxl import load_workbook
 from openpyxl.styles import Font
