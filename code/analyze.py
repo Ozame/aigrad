@@ -60,6 +60,7 @@ class Paper:
     w_classes: List[str]
     categories: List[str] = field(default_factory=list)
     countries: List[str] = field(default_factory=list)
+    authors: List[str] = field(default_factory=list)
     year: int = None
     venue: str = None
     abstract: str = None
@@ -307,6 +308,50 @@ def get_category_papers(
                     w_classes=parse_words(sheet[w_classes_col + row].value),
                     categories=list((map(str, cats))),
                     countries=parse_words(sheet[countries_col + row].value),
+                )
+            )
+
+    sorted_list = sorted(papers, key=lambda x: x.number, reverse=True)
+    return sorted_list
+
+
+def get_country_papers(
+    countries: List[str],
+    path: str = "../gradu/material/final_results.xlsx",
+) -> Dict[int, int]:
+    """Returns the list of papers in given countries. Paper must belong to every given country"""
+    number_col = "A"
+    name_col = "B"
+    keywords_col = "M"
+    w_classes_col = "N"
+    category_column = "Q"
+    countries_col = "S"
+    authors_col = "C"
+    papers = []
+
+    if not countries:
+        return None
+
+    wb = load_workbook(path)
+    sheet = wb["Accepted Papers"]
+    for i in range(3, 95):
+        row = str(i)
+        country_string = sheet[countries_col + row].value
+        paper_countries = parse_words(country_string)
+        match_counter = 0
+        for number in countries:
+            if number in paper_countries:
+                match_counter += 1
+        if match_counter == len(countries):
+            papers.append(
+                Paper(
+                    number=sheet[number_col + row].value,
+                    name=sheet[name_col + row].value,
+                    keywords=parse_words(sheet[keywords_col + row].value),
+                    w_classes=parse_words(sheet[w_classes_col + row].value),
+                    categories=parse_cat_numbers(sheet[category_column + row].value),
+                    countries=parse_words(sheet[countries_col + row].value),
+                    authors=parse_words(sheet[authors_col + row].value)
                 )
             )
 
@@ -689,10 +734,18 @@ def main():
     # draw_map(papers)
 
     # Shows the papers that are included in given categories
+    # if 1 < len(sys.argv):
+    #     cat_numbers = sys.argv[1:]
+    #     cat_numbers = list(map(int, cat_numbers))
+    #     papers = get_category_papers(cat_numbers)
+    #     pp = pprint.PrettyPrinter()
+    #     pp.pprint(papers)
+
+     # Shows the papers that are included in given countries
     if 1 < len(sys.argv):
-        cat_numbers = sys.argv[1:]
-        cat_numbers = list(map(int, cat_numbers))
-        papers = get_category_papers(cat_numbers)
+        countries = sys.argv[1:]
+        papers = get_country_papers(countries)
+        # authors = [x.authors for x in papers]
         pp = pprint.PrettyPrinter()
         pp.pprint(papers)
 
