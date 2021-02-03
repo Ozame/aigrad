@@ -94,6 +94,7 @@ def load_papers(path: str = "../gradu/material/final_results.xlsx") -> List[Pape
     abstract_col = "F"
     cat_column = "Q"
     countries_col = "S"
+    authors_col = "C"
     papers = []
 
     wb = load_workbook(path)
@@ -107,6 +108,7 @@ def load_papers(path: str = "../gradu/material/final_results.xlsx") -> List[Pape
             w_classes=parse_words(sheet[w_classes_col + row].value),
             categories=parse_cat_numbers(sheet[cat_column + row].value),
             countries=parse_words(sheet[countries_col + row].value),
+            authors=parse_words(sheet[authors_col + row].value),
             year=sheet[year_col + row].value,
             venue=sheet[venue_col + row].value,
             abstract=sheet[abstract_col + row].value,
@@ -145,6 +147,25 @@ def load_papers_df(path: str = "../gradu/material/final_results.xlsx"):
         del p["categories"]
         df = df.append(pd.Series(p), ignore_index=True)
     return df
+
+
+def create_article_csv(
+    papers: List[Paper], path="../gradu/material/data/accepted_papers.csv"):
+    
+    header = "number,authors,title,class".split(sep=",")
+    rows = []
+    
+    for paper in papers:
+        authors = ", ".join(map(lambda x: x.title(), paper.authors))
+        classes = ", ".join(map(lambda x: dict(W_CLASSES)[x], paper.w_classes))
+        row = [paper.number, authors, paper.name, classes]
+        rows.append(row)
+    rows = sorted(rows, key=lambda x: x[0])
+
+    with open(path, "w", newline="", encoding="utf-8") as f:
+        csvwriter = csv.writer(f)
+        csvwriter.writerow(header)
+        csvwriter.writerows(rows)
 
 
 def load_categories(
@@ -351,7 +372,7 @@ def get_country_papers(
                     w_classes=parse_words(sheet[w_classes_col + row].value),
                     categories=parse_cat_numbers(sheet[category_column + row].value),
                     countries=parse_words(sheet[countries_col + row].value),
-                    authors=parse_words(sheet[authors_col + row].value)
+                    authors=parse_words(sheet[authors_col + row].value),
                 )
             )
 
@@ -643,13 +664,13 @@ def find_country_data(
 
     rows = sorted(rows, key=lambda x: x[1], reverse=count_desc)
 
-    with open(path, "w", newline='') as f:
+    with open(path, "w", newline="", encoding="utf-8") as f:
         csvwriter = csv.writer(f)
         csvwriter.writerow(header)
         csvwriter.writerows(rows)
         # The non-country paper is added back
         f.write("None (Microsoft),1,0,0")
-        
+
 
 def draw_map(papers: List[Paper]):
     """" Draw a bubble map with countries' papers showing"""
@@ -733,6 +754,9 @@ def main():
     # Draw the geographic map with article counts per country
     # draw_map(papers)
 
+    # Create csv of accepted papers
+    create_article_csv(papers)
+
     # Shows the papers that are included in given categories
     # if 1 < len(sys.argv):
     #     cat_numbers = sys.argv[1:]
@@ -741,7 +765,7 @@ def main():
     #     pp = pprint.PrettyPrinter()
     #     pp.pprint(papers)
 
-     # Shows the papers that are included in given countries
+    # Shows the papers that are included in given countries
     if 1 < len(sys.argv):
         countries = sys.argv[1:]
         papers = get_country_papers(countries)

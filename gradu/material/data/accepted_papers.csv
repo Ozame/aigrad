@@ -1,0 +1,93 @@
+number,authors,title,class
+1,"Schofield M., Thielscher M.",General game playing with imperfect information,"Solution proposal, Validation research"
+5,"Machado M.C., Bellemare M.G., Talvitie E., Veness J., Hausknecht M., Bowling M.",Revisiting the arcade learning environment: Evaluation protocols and open problems for general agents,"Solution proposal, Validation research"
+6,"Everitt T., Lea G., Hutter M.",AGI safety literature review,Philosophical paper
+8,"Yu H., Shen Z., Miao C., Leung C., Lesser V.R., Yang Q.",Building ethics into artificial intelligence,Philosophical paper
+14,"Johnson M., Hofmann K., Hutton T., Bignell D.",The malmo platform for artificial intelligence experimentation,Solution proposal
+17,Sampat S.,"Technical, hard and explainable question answering (the-QA)",Solution proposal
+19,Davis E.,Ethical guidelines for a superintelligence,Opinion paper
+24,Ondřej Vadinský,Towards General Evaluation of Intelligent Systems: Lessons Learned from Reproducing AIQ Test Results,Validation research
+25,"Claes Strannegård, Nils Svangård, David Lindström, Joscha Bach, Bas Steunebrink",Learning and decision-making in artificial animals,"Solution proposal, Validation research"
+26,Naoto Yoshida,Homeostatic Agent for General Environment,"Solution proposal, Validation research"
+27,"Claes Strannegård, Abdul Rahim Nizamani, Jonas Juel, Ulf Persson",Learning and Reasoning in Unknown Domains,Solution proposal
+28,"Paul S. Rosenbloom, Abram Demski, Volkan Ustun",The Sigma Cognitive Architecture and System: Towards Functionally Elegant Grand Unification,Solution proposal
+34,"Thomas Manzini, Simon Ellis, James Hendler",A Play on Words: Using Cognitive Computing as a Basis for AI Solvers in Word Puzzles ,Solution proposal
+36,Mohammadreza Alidoust,AGI Brain: A Learning and Decision Making Framework for Artificial General Intelligence Systems Based on Modern Control Theory,"Solution proposal, Validation research"
+37,"Vitaly Khudobakhshov, Andrey Pitko, Denis Zotov",Programming Languages and Artificial General Intelligence,Solution proposal
+38,"Zoltán Tősér, András Lőrincz",The Cyber-Physical System Approach Towards Artificial General Intelligence: The Problem of Verification,Solution proposal
+39,"Andreas M. Hein, Hélène Condat",Can Machines Design? An Artificial General Intelligence Approach,Solution proposal
+40,"Jordi Bieger, Kristinn R. Thórisson, Pei Wang",Safe Baby AGI,Opinion paper
+41,Eray Özkural,The Foundations of Deep Learning with a Path Towards General Intelligence,Philosophical paper
+42,"John Licato, Maxwell Fowler",Embracing Inference as Action: A Step Towards Human-Level Reasoning,Solution proposal
+43,Roman V. Yampolskiy,On the Limits of Recursively Self-Improving AGI,Philosophical paper
+44,Marcus Abundis,A Priori Modeling of Information and Intelligence,Philosophical paper
+45,David Kremelberg,Embodiment as a Necessary a Priori of General Intelligence,Philosophical paper
+46,"Christian Rodriguez, Giselle Marston, William Goolkasian, Ashley Rosenberg, Andrew Nuxoll",The MaRz Algorithm: Towards an Artificial General Episodic Learner,Solution proposal
+47,"Nadisha-Marie Aliman, Leon Kester",Hybrid Strategies Towards Safe “Self-Aware” Superintelligent Systems,"Solution proposal, Philosophical paper"
+48,Steven Phillips,A General (Category Theory) Principle for General Intelligence: Duality (Adjointness),Solution proposal
+49,Ben Goertzel,Probabilistic Growth and Mining of Combinations: A Unifying Meta-Algorithm for Practical General Intelligence,Solution proposal
+50,"Nadisha-Marie Aliman, Leon Kester",Augmented Utilitarianism for AGI Safety,Philosophical paper
+51,Roman V. Yampolskiy,Analysis of Types of Self-Improving Software,Philosophical paper
+52,Nadisha-Marie Aliman,Malevolent Cyborgization,Philosophical paper
+54,"Pei Wang, Patrick Hammer",Assumptions of Decision-Making Models in AGI,Opinion paper
+55,"Ross Gruetzemacher, David Paradice",Toward Mapping the Paths to AGI,Solution proposal
+56,"Jeremy O. Turner, Steve Dipaola",Transforming Kantian Aesthetic Principles into Qualitative Hermeneutics for Contemplative AGI Agents,Philosophical paper
+57,Arthur Franz,Toward Tractable Universal Induction Through Recursive Program Learning,Solution proposal
+58,Can Eren Sezener,Inferring Human Values for Safe AGI Design,Philosophical paper
+59,Anton Kolonin,Resource-Constrained Social Evidence Based Cognitive Model for Empathy-Driven Artificial Intelligence,Solution proposal
+61,Ben Goertzel,From Abstract Agents Models to Real-World AGI Architectures: Bridging the Gap,"Solution proposal, Philosophical paper"
+62,Sean Markan,System Induction Games and Cognitive Modeling as an AGI Methodology,Solution proposal
+63,"Kristinn R. Thórisson, Jordi Bieger, Xiang Li, Pei Wang",Cumulative Learning,Philosophical paper
+64,"James Babcock, János Kramár, Roman Yampolskiy",The AGI Containment Problem,Philosophical paper
+65,"Alexey Potapov, Sergey Rodionov, Maxim Peterson, Oleg Scherbakov, Innokentii Zhdanov, Nikolai Skorobogatko",Vision System for AGI: Problems and Directions,Solution proposal
+67,"Pei Wang, Patrick Hammer",Issues in Temporal and Causal Inference,"Philosophical paper, Solution proposal"
+68,"Arthur Franz, Victoria Gogulya, Michael Löffler",WILLIAM: A Monolithic Approach to AGI,Solution proposal
+69,"Pei Wang, Patrick Hammer",Perception from an AGI Perspective,Solution proposal
+71,Giacomo Spigler,The Temporal Singularity: Time-Accelerated Simulated Civilizations and Their Implications,Philosophical paper
+72,"Jarryd Martin, Tom Everitt, Marcus Hutter",Death and Suicide in Universal Artificial Intelligence,Philosophical paper
+73,"Ute Schmid, Marco Ragni",Comparing Computer Models Solving Number Series Problems,Evaluation research
+75,"Timothy Van Gelder, Richard De Rozario",Pursuing Fundamental Advances in Human Reasoning,Philosophical paper
+78,"Ben Goertzel, Misgana Bayetta Belachew, Matthew Ikle, Gino Yu",Controlling Combinatorial Explosion in Inference via Synergy with Nonlinear-Dynamical Attention Allocation,Validation research
+80,"Kristinn R. Thórisson, Arthur Talbot",Cumulative Learning with Causal-Relational Models,Solution proposal
+81,"Kristinn R. Thórisson, David Kremelberg",Understanding and Common Sense: Two Sides of the Same Coin?,Philosophical paper
+82,Andrew Macfie,Analysis of Algorithms and Partial Algorithms,Solution proposal
+85,"Kristinn R. Thórisson, Jordi Bieger, Stephan Schiffel, Deon Garrett",Towards Flexible Task Environments for Comprehensive Evaluation of Artificial Intelligent Systems and Automatic Learners,Philosophical paper
+86,"Nutchanon Yongsatianchot, Stacy Marsella",Integrating Model-Based Prediction and Facial Expressions in the Perception of Emotion,Solution proposal
+87,Andrej Dameski,A Comprehensive Ethical Framework for AI Entities: Foundations,Solution proposal
+88,"Ben Goertzel, Nil Geisweiller, Eddie Monroe, Mike Duncan, Selamawit Yilma, Meseret Dastaw, Misgana Bayetta, Amen Belayneh, Matthew Ikle, Gino Yu",Speculative Scientific Inference via Synergetic Combination of Probabilistic Logic and Evolutionary Pattern Recognition,Evaluation research
+89,Susumu Katayama,Towards Human-Level Inductive Functional Programming,Solution proposal
+90,"David Weaver Weinbaum, Viktoras Veitas",Open-Ended Intelligence,Philosophical paper
+91,Ondřej Vadinský,Towards General Evaluation of Intelligent Systems: Using Semantic Analysis to Improve Environments in the AIQ Test,Evaluation research
+92,"Patrick Andersson, Anton Strandman, Claes Strannegård",Exploration Strategies for Homeostatic Agents,Solution proposal
+94,"Kristinn R. Thórisson, David Kremelberg, Bas R. Steunebrink, Eric Nivel",About Understanding,"Philosophical paper, Solution proposal"
+97,"Qiong Huang, Doya Kenji",An Experimental Study of Emergence of Communication of Reinforcement Learning Agents,Solution proposal
+98,"Xiang Li, Patrick Hammer, Pei Wang, Hongling Xie",Functionalist Emotion Model in NARS,Solution proposal
+99,"Jordi E. Bieger, Kristinn R. Thórisson",Task Analysis for Teaching Cumulative Learners,"Solution proposal, Philosophical paper"
+100,Ben Goertzel,A Formal Model of Cognitive Synergy,Solution proposal
+101,Rafik Hadfi,Solving Tree Problems with Category Theory,Philosophical paper
+103,"Garrett Katz, Di-Wei Huang, Rodolphe Gentili, James Reggia",Imitation Learning as Cause-Effect Reasoning,"Solution proposal, Validation research"
+104,"Claes Strannegård, Abdul Rahim Nizamani",Integrating Symbolic and Sub-symbolic Reasoning,Solution proposal
+105,"Frédéric Alexandre, Maxime Carrere",Modeling Neuromodulation as a Framework to Integrate Uncertainty in General Cognitive Architectures,Solution proposal
+106,"Craig Sherstan, Adam White, Marlos C. Machado, Patrick M. Pilarski",Introspective Agents: Confidence Measures for General Value Functions,Solution proposal
+107,Susumu Katayama,Ideas for a Reinforcement Learning Algorithm that Learns Programs,Solution proposal
+112,"Alexey Potapov, Innokentii Zhdanov, Oleg Scherbakov, Nikolai Skorobogatko, Hugo Latapie, Enzo Fenoglio",Semantic Image Retrieval by Uniting Deep Neural Networks and Cognitive Architectures,Solution proposal
+114,"Pei Wang, Max Talanov, Patrick Hammer",The Emotional Mechanisms in NARS,Solution proposal
+115,"Pei Wang, Xiang Li",Different Conceptions of Learning: Function Approximation vs. Self-Organization,Solution proposal
+117,"Nil Geisweiller, Ben Goertzel",An Inferential Approach to Mining Surprising Patterns in Hypergraphs,"Solution proposal, Validation research"
+118,"Jordi Bieger, Kristinn R. Thórisson, Bas R. Steunebrink",The Pedagogical Pentagon: A Conceptual Framework for Artificial Pedagogy,Philosophical paper
+121,"Tobias Wängberg, Mikael Böörs, Elliot Catt, Tom Everitt, Marcus Hutter",A Game-Theoretic Analysis of the Off-Switch Game,Philosophical paper
+124,"Claes Strannegård, Nils Svangård, Joscha Bach, Bas Steunebrink",Generic Animats,Solution proposal
+127,"Patrick Hammer, Tony Lofthouse",Goal-Directed Procedure Learning,Solution proposal
+128,"Eric Nivel, Kristinn R. Thórisson, Bas Steunebrink, Jürgen Schmidhuber",Anytime Bounded Rationality,Solution proposal
+131,"Benja Fallenstein, Nate Soares, Jessica Taylor",Reflective Variants of Solomonoff Induction and AIXI,Solution proposal
+132,"Pei Wang, Xiang Li, Patrick Hammer",Self-awareness and Self-control in NARS,Solution proposal
+134,"Alex Glushchenko, Andres Suarez, Anton Kolonin, Ben Goertzel, Claudia Castillo, Man Hin Leung, Oleg Baskov",Unsupervised Language Learning in OpenCog,Solution proposal
+138,"Alexey Potapov, Sergey Rodionov, Vita Potapova",Real-Time GA-Based Probabilistic Programming in Application to Robot Control,Solution proposal
+139,"Bill Power, Xiang Li, Pei Wang",Generalized Diagnostics with the Non-Axiomatic Reasoning System (NARS),Solution proposal
+141,"Khin Hua Ng, Zhiyuan Du, Gee Wah Ng",DSO Cognitive Architecture: Implementation and Validation of the Global Workspace Enhancement,Validation research
+144,Robert Wünsche,Adaptive Compressed Search,Solution proposal
+145,"Patrick Hammer, Tony Lofthouse, Pei Wang",The OpenNARS Implementation of the Non-Axiomatic Reasoning System,Solution proposal
+147,Arthur Franz,Some Theorems on Incremental Compression,"Solution proposal, Validation research"
+164,"Nadisha-Marie Aliman, Leon Kester, Peter Werkhoven, Roman Yampolskiy",Orthogonality-Based Disentanglement of Responsibilities for Ethical Intelligent Systems,"Solution proposal, Philosophical paper"
+174,Arthur Franz,On Hierarchical Compression and Power Laws in Nature,"Solution proposal, Validation research"
+185,"Tom Everitt, Marcus Hutter",Avoiding Wireheading with Value Reinforcement Learning,Solution proposal
