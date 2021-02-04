@@ -152,18 +152,18 @@ def load_papers_df(path: str = "../gradu/material/final_results.xlsx"):
 def create_article_csv(
     papers: List[Paper], path="../gradu/material/data/accepted_papers.csv"):
     
-    header = "number,authors,title,class".split(sep=",")
+    header = "year,authors,title,class".split(sep=",")
     rows = []
     
     for paper in papers:
         authors = ", ".join(map(lambda x: x.title(), paper.authors))
         classes = ", ".join(map(lambda x: dict(W_CLASSES)[x], paper.w_classes))
-        row = [paper.number, authors, paper.name, classes]
+        row = [paper.year, authors, paper.name, classes]
         rows.append(row)
     rows = sorted(rows, key=lambda x: x[0])
 
     with open(path, "w", newline="", encoding="utf-8") as f:
-        csvwriter = csv.writer(f)
+        csvwriter = csv.writer(f, delimiter=";")
         csvwriter.writerow(header)
         csvwriter.writerows(rows)
 

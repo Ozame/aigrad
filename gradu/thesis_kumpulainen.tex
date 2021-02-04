@@ -1242,8 +1242,20 @@ between man and a machine are clearly things that require discussion.
 \printbibliography
 
 \appendix
-% material/data/country_data_desc.csv
-\section{Paper count per country}
+
+\section{Accepted papers}
+\label{tab:acceptedpapers}
+\begin{longtable}{|>{\scriptsize}l|>{\scriptsize}p{3cm}|>{\scriptsize}p{8cm}|>{\scriptsize}p{2.4cm}|} 
+ \hline
+ \textbf{Year} & \textbf{Authors} & \textbf{Title} & \textbf{Class} \\\hline\hline
+ \csvreader[separator=semicolon,late after line=\\\hline]%
+ {material/data/accepted_papers.csv}{year=\yeari,authors=\authorsi,title=\titlei,class=\classi}%
+ {\yeari & \authorsi & \titlei & \classi}%
+\end{longtable}
+
+
+\section{Article count per country}
+\label{tab:countrypapers}
 
 \begin{table}[H]
 \footnotesize  
@@ -1254,7 +1266,6 @@ between man and a machine are clearly things that require discussion.
  {material/data/country_data_desc.csv}{country=\country,count=\count}%
  {\country & \count}%
 \end{tabular}
-\label{tab:countrypapers}
 \end{table}
   
 
