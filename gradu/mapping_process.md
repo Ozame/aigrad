@@ -381,9 +381,9 @@ wanted results in matplotlib.
 ## Finalization
 
 - Appendices:
-  - Accepted papers (maybe potential as well?)
+  - Accepted papers (maybe potential as well?) DONE
 - Missing text:
   - Conclusion
   - Abstract
   - TODOs
-  - Chapter introduction paragraphs
+  - Chapter introduction paragraphs?

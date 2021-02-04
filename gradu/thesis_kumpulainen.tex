@@ -771,8 +771,6 @@ The papers could belong to multiple categories on both schemes. This enables
 inspection of connections between the topics that are often met together. The
 results of this mapping process are presented in the following chapter.
 
-\section{Source material control}
-
 The initial inspection of articles was performed online. Once the paper
 inclusion process was complete, the final set of articles was downloaded for
 further local inspection. The data about the articles was kept in a spreadsheet
@@ -1090,10 +1088,18 @@ The research gap in evaluation research could be target for future research.
 Finding examples of AGI solutions used in practice, and investigating their
 effectiveness against traditional approaches or more narrow AI solutions would
 be an interesting way to survey the state of the field in more detail.
-Especially the usage of cognitive architectures in real-world situations could
-be a good subject for a more focused systematic literature review. 
+Especially the usage of popular cognitive architectures in real-world situations
+could be a good subject for a more focused systematic literature review. 
 
-TODO: More on future research!
+Topic-wise, physical robots and category theory are the least researched ones.
+This is interesting especially when considering the wide usage of robots in
+manufacturing and many other industries. There are also recent suggestions that
+AGI will never be realized as it cannot experience world as humans can,
+attaining tacit knowledge (\cite{fjelland2020why}). Considering this, it would
+make sense to invest in a future research that would aim to enable AIs to
+experience physical world through robotics. This was also suggested by David
+Kremelberg in one of the studied articles (\cite{kremelberg2019embodiment}),
+where he argues that embodiment is a necessity for general intelligence.
 
 
 \pgfplotstableread[col sep=comma, header=true]{material/data/class_topic_bubble.dat}\topicDataTable
@@ -1223,20 +1229,28 @@ researched topics in the field of AGI.
 When viewed through scientific paper classification by Wieringa et al.
 (\cite{wieringa2006}), the current AGI research is mostly solution proposals,
 presenting new ideas and approaches to problems. The lack of evaluation research
-shows that there is not yet much practical applications to evaluate. Although
-the ultimate goal of AGI is not yet realized, the complete absence of industry
+shows that there is not yet much practical applications to evaluate. The
+ultimate goal of AGI is not yet realized and the complete absence of industry
 applications is a worrying sign of slow progress.
 
 Philosophical papers presenting conceptual frameworks and new views are also
 common in the field. AI safety, meaning how to control and contain
 superintelligent agent, and ethical questions about values and the relationship
-between man and a machine are clearly things that require discussion.
+between the man and the machine are clearly things that require discussion.
+
+When placing the AGI research on the geographic map, it is apparent that most of
+the explorations in the field is performed by researchers in Europe and United
+States of America. In Europe, nations standing out are Iceland and Netherlands,
+both publishing more articles on the subject than Russia, China and Japan. This
+may not however reflect the amount of other AI research.
+
+
 
 
 - why 
-- geograph stuff
 - future research
 - what is the future of agi
+
 - What could have been done better
 
 \printbibliography
@@ -1245,12 +1259,12 @@ between man and a machine are clearly things that require discussion.
 
 \section{Accepted papers}
 \label{tab:acceptedpapers}
-\begin{longtable}{|>{\scriptsize}l|>{\scriptsize}p{3cm}|>{\scriptsize}p{8cm}|>{\scriptsize}p{2.4cm}|} 
+\begin{longtable}{|>{\scriptsize}l|>{\scriptsize}p{3cm}|>{\scriptsize}p{5.5cm}|>{\scriptsize}p{2.4cm}|>{\scriptsize}p{2.4cm}|} 
  \hline
- \textbf{Year} & \textbf{Authors} & \textbf{Title} & \textbf{Class} \\\hline\hline
+ \textbf{Year} & \textbf{Authors} & \textbf{Title} & \textbf{Class} & \textbf{Categories} \\\hline\hline
  \csvreader[separator=semicolon,late after line=\\\hline]%
- {material/data/accepted_papers.csv}{year=\yeari,authors=\authorsi,title=\titlei,class=\classi}%
- {\yeari & \authorsi & \titlei & \classi}%
+ {material/data/accepted_papers.csv}{year=\yeari,authors=\authorsi,title=\titlei,class=\classi,categories=\categoriesi}%
+ {\yeari & \authorsi & \titlei & \classi & \categoriesi}%
 \end{longtable}
 
 

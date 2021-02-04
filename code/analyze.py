@@ -152,13 +152,14 @@ def load_papers_df(path: str = "../gradu/material/final_results.xlsx"):
 def create_article_csv(
     papers: List[Paper], path="../gradu/material/data/accepted_papers.csv"):
     
-    header = "year,authors,title,class".split(sep=",")
+    header = "year,authors,title,class,categories".split(sep=",")
     rows = []
     
     for paper in papers:
         authors = ", ".join(map(lambda x: x.title(), paper.authors))
         classes = ", ".join(map(lambda x: dict(W_CLASSES)[x], paper.w_classes))
-        row = [paper.year, authors, paper.name, classes]
+        categories = ", ".join(map(lambda x: dict(CATS)[x], paper.categories))
+        row = [paper.year, authors, paper.name, classes, categories]
         rows.append(row)
     rows = sorted(rows, key=lambda x: x[0])
 
@@ -758,20 +759,20 @@ def main():
     create_article_csv(papers)
 
     # Shows the papers that are included in given categories
-    # if 1 < len(sys.argv):
-    #     cat_numbers = sys.argv[1:]
-    #     cat_numbers = list(map(int, cat_numbers))
-    #     papers = get_category_papers(cat_numbers)
-    #     pp = pprint.PrettyPrinter()
-    #     pp.pprint(papers)
-
-    # Shows the papers that are included in given countries
     if 1 < len(sys.argv):
-        countries = sys.argv[1:]
-        papers = get_country_papers(countries)
-        # authors = [x.authors for x in papers]
+        cat_numbers = sys.argv[1:]
+        cat_numbers = list(map(int, cat_numbers))
+        papers = get_category_papers(cat_numbers)
         pp = pprint.PrettyPrinter()
         pp.pprint(papers)
+
+    # Shows the papers that are included in given countries
+    # if 1 < len(sys.argv):
+    #     countries = sys.argv[1:]
+    #     papers = get_country_papers(countries)
+    #     # authors = [x.authors for x in papers]
+    #     pp = pprint.PrettyPrinter()
+    #     pp.pprint(papers)
 
 
 if __name__ == "__main__":
