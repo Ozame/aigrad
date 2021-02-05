@@ -386,4 +386,5 @@ wanted results in matplotlib.
   - Conclusion
   - Abstract
   - TODOs
-  - Chapter introduction paragraphs?
+  - Chapter introduction paragraphs? DO THIS!!!
+  - CHECK THAT RQS ARE ANSWERED!!!
