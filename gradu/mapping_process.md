@@ -383,8 +383,15 @@ wanted results in matplotlib.
 - Appendices:
   - Accepted papers (maybe potential as well?) DONE
 - Missing text:
-  - Conclusion
-  - Abstract
-  - TODOs
-  - Chapter introduction paragraphs? DO THIS!!!
-  - CHECK THAT RQS ARE ANSWERED!!!
+  - Conclusion DONE
+  - Abstract DONE
+- TODOs DONE
+- Chapter introduction paragraphs? DO THIS!!!
+- CHECK THAT RQS ARE ANSWERED!!!
+- Paper inclusion constraints (comments)
+- JUFO forum etc paragraph edit
+- search space volume numbers?
+- clarify themes' connections to topics
+- Fix topic/category term in table (and elsewhere)
+- clarify reason for just numbering topics
+- bubble graph data order to same as elsewhere!!
