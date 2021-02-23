@@ -390,7 +390,7 @@ wanted results in matplotlib.
 - CHECK THAT RQS ARE ANSWERED!!!
 - Paper inclusion constraints (comments)
 - JUFO forum etc paragraph edit
-- search space volume numbers?
+- search space volume numbers? DONE
 - clarify themes' connections to topics DONE?
 - Fix topic/category term in table (and elsewhere) DONE
 - clarify reason for just numbering topics DONE?
