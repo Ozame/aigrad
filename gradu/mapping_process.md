@@ -391,7 +391,7 @@ wanted results in matplotlib.
 - Paper inclusion constraints (comments)
 - JUFO forum etc paragraph edit
 - search space volume numbers?
-- clarify themes' connections to topics
-- Fix topic/category term in table (and elsewhere)
-- clarify reason for just numbering topics
-- bubble graph data order to same as elsewhere!!
+- clarify themes' connections to topics DONE?
+- Fix topic/category term in table (and elsewhere) DONE
+- clarify reason for just numbering topics DONE?
+- bubble graph data order to same as elsewhere DONE
