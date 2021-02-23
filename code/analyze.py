@@ -52,6 +52,14 @@ CATS = [
 ]
 
 
+def find_cat_number(cat_name: str) -> int:
+    """Helper function for category numbers"""
+    for cat in CATS:
+        if cat[1] == cat_name:
+            return cat[0]
+    return None
+
+
 @dataclass
 class Paper:
     number: int
@@ -150,11 +158,12 @@ def load_papers_df(path: str = "../gradu/material/final_results.xlsx"):
 
 
 def create_article_csv(
-    papers: List[Paper], path="../gradu/material/data/accepted_papers.csv"):
-    
+    papers: List[Paper], path="../gradu/material/data/accepted_papers.csv"
+):
+
     header = "year,authors,title,class,categories".split(sep=",")
     rows = []
-    
+
     for paper in papers:
         authors = ", ".join(map(lambda x: x.title(), paper.authors))
         classes = ", ".join(map(lambda x: dict(W_CLASSES)[x], paper.w_classes))
@@ -470,7 +479,9 @@ def get_wieringa_topic_bubble_data(papers: List[Paper]):
                     data[point] = 1
     data_lines = (
         f"{key[0]},{key[1]},{count}\n"
-        for key, count in sorted(data.items(), key=lambda x: x[0])
+        for key, count in sorted(
+            data.items(), key=lambda x: find_cat_number(x[0][0]), reverse=True
+        )
     )
     with open("../gradu/material/data/class_topic_bubble.dat", "w") as f:
         f.write("Category,Class,Count\n")
@@ -756,7 +767,7 @@ def main():
     # draw_map(papers)
 
     # Create csv of accepted papers
-    create_article_csv(papers)
+    # create_article_csv(papers)
 
     # Shows the papers that are included in given categories
     if 1 < len(sys.argv):

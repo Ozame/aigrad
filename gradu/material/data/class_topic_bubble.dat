@@ -1,63 +1,63 @@
 Category,Class,Count
-AGI design,Philosophical paper,1
-AGI design,Solution proposal,6
-AGI research,Philosophical paper,3
-AGI research,Solution proposal,1
-AI evaluation,Evaluation research,2
-AI evaluation,Philosophical paper,1
-AI evaluation,Solution proposal,4
-AI evaluation,Validation research,3
-AI safety,Opinion paper,2
-AI safety,Philosophical paper,10
-AI safety,Solution proposal,2
-Agent environment,Philosophical paper,1
-Agent environment,Solution proposal,6
-Agent environment,Validation research,3
-Category theory,Philosophical paper,1
-Category theory,Solution proposal,2
-Cognitive architectures,Evaluation research,1
-Cognitive architectures,Opinion paper,1
-Cognitive architectures,Philosophical paper,4
-Cognitive architectures,Solution proposal,21
-Cognitive architectures,Validation research,3
-Computer vision and perception,Solution proposal,5
-Experiential learning,Opinion paper,1
-Experiential learning,Philosophical paper,3
-Experiential learning,Solution proposal,8
-Experiential learning,Validation research,1
 Game playing,Solution proposal,4
 Game playing,Validation research,2
-Human-computer interaction,Philosophical paper,5
-Human-computer interaction,Solution proposal,4
+AI evaluation,Solution proposal,4
+AI evaluation,Validation research,3
+AI evaluation,Evaluation research,2
+AI evaluation,Philosophical paper,2
+AGI research,Philosophical paper,3
+AGI research,Solution proposal,1
 Human-like qualities,Solution proposal,6
 Human-like qualities,Validation research,2
-Multi-agent systems,Philosophical paper,2
+Philosophical aspects,Philosophical paper,8
+Philosophical aspects,Opinion paper,1
+Philosophical aspects,Solution proposal,4
+AI safety,Philosophical paper,9
+AI safety,Opinion paper,2
+AI safety,Solution proposal,2
+Human-computer interaction,Philosophical paper,5
+Human-computer interaction,Solution proposal,4
 Multi-agent systems,Solution proposal,3
 Multi-agent systems,Validation research,1
-Nature-inspired approaches,Philosophical paper,1
+Multi-agent systems,Philosophical paper,2
+Agent environment,Solution proposal,6
+Agent environment,Validation research,3
+Agent environment,Philosophical paper,1
+Experiential learning,Opinion paper,1
+Experiential learning,Solution proposal,8
+Experiential learning,Philosophical paper,3
+Experiential learning,Validation research,1
+Recursive self-Improvement,Philosophical paper,2
+Recursive self-Improvement,Solution proposal,2
+Reinforcement learning,Solution proposal,10
+Reinforcement learning,Validation research,2
+Reinforcement learning,Philosophical paper,1
 Nature-inspired approaches,Solution proposal,7
 Nature-inspired approaches,Validation research,3
-Philosophical aspects,Opinion paper,1
-Philosophical aspects,Philosophical paper,8
-Philosophical aspects,Solution proposal,4
+Nature-inspired approaches,Philosophical paper,1
+Computer vision and perception,Solution proposal,5
 Physical robots,Philosophical paper,1
 Physical robots,Solution proposal,2
 Physical robots,Validation research,1
-Planning and decision making,Opinion paper,1
-Planning and decision making,Solution proposal,4
-Planning and decision making,Validation research,1
-Probabilistic approaches,Evaluation research,1
-Probabilistic approaches,Solution proposal,4
-Reasoning and Inference,Evaluation research,1
-Reasoning and Inference,Philosophical paper,1
-Reasoning and Inference,Solution proposal,6
-Reasoning and Inference,Validation research,3
-Recursive self-Improvement,Philosophical paper,2
-Recursive self-Improvement,Solution proposal,2
-Reinforcement learning,Philosophical paper,1
-Reinforcement learning,Solution proposal,10
-Reinforcement learning,Validation research,2
-Universal AI,Evaluation research,2
+Universal AI,Validation research,3
 Universal AI,Philosophical paper,3
 Universal AI,Solution proposal,8
-Universal AI,Validation research,3
+Universal AI,Evaluation research,2
+Category theory,Solution proposal,2
+Category theory,Philosophical paper,1
+Probabilistic approaches,Solution proposal,4
+Probabilistic approaches,Evaluation research,1
+Planning and decision making,Solution proposal,4
+Planning and decision making,Validation research,1
+Planning and decision making,Opinion paper,1
+Reasoning and Inference,Solution proposal,6
+Reasoning and Inference,Philosophical paper,1
+Reasoning and Inference,Evaluation research,1
+Reasoning and Inference,Validation research,3
+AGI design,Solution proposal,6
+AGI design,Philosophical paper,1
+Cognitive architectures,Solution proposal,21
+Cognitive architectures,Opinion paper,1
+Cognitive architectures,Philosophical paper,4
+Cognitive architectures,Validation research,3
+Cognitive architectures,Evaluation research,1
