@@ -396,3 +396,5 @@ wanted results in matplotlib.
 - Fix topic/category term in table (and elsewhere) DONE
 - clarify reason for just numbering topics DONE?
 - bubble graph data order to same as elsewhere DONE
+- Add subsection about the technical background of the thesis, git, plotting
+  etc.
