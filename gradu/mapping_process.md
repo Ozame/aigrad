@@ -388,8 +388,9 @@ wanted results in matplotlib.
 - TODOs DONE
 - Chapter introduction paragraphs? DO THIS!!!
 - CHECK THAT RQS ARE ANSWERED!!!
-- Paper inclusion constraints (comments)
-- JUFO forum etc paragraph edit
+- method in software engineering, how about AI? DONE
+- Paper inclusion constraints (comments) DONE
+- JUFO forum etc paragraph edit DONE
 - search space volume numbers? DONE
 - clarify themes' connections to topics DONE?
 - Fix topic/category term in table (and elsewhere) DONE

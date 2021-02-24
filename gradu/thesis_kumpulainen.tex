@@ -408,9 +408,13 @@ engineering (\cite{petersen2008}). Kitchenham, Dybå, and Jorgensen
 software engineering research might benefit the industry by ensuring approaches
 used are backed by evidence. Aggregating evidence is done by systematic
 literature reviews and similar secondary studies, such as mapping studies
-(\cite{kitchenham2010}). As researcher bias is one the weak points of secondary
-studies, adhering to strict protocol and guidelines is required to minimize it
-(\cite{brereton2007}).
+(\cite{kitchenham2010}). Although the study field of artificial intelligence is
+not directly part of software engineering research, this evidence-based approach
+can also be utilized in AI research. Some example articles that employ mapping
+studies in AI are: the study on possibilities of AI and big data analytics in
+healthcare by Mehta, Pandit and Shukla (\cite*{mehta2019aimapping}), which even
+uses Petersen's aforementioned guidelines, and the study by Wiafe et al.
+(\cite*{wiafe2020aimapping}), which studies AI approaches in cybersecurity.
 
 
 The systematic literature mapping in this thesis is following the method
@@ -423,7 +427,9 @@ subresult to be used in the next one. This process results in a systematic map
 of the area. This can and should be further visualized using for example bubble
 graphs, as it is a powerful way to achieve a quick overview of the field.
 (\cite{petersen2008}). This also enables easier recognition of research gaps and
-focus points in the target area.
+focus points in the target area. As researcher bias is one the weak points of
+secondary studies, adhering to strict protocol and guidelines is required to
+minimize it (\cite{brereton2007}).
 
 
 %TODO: SVG picture? now bad quality...
@@ -640,24 +646,29 @@ content-wise. The following venues are used in this thesis:
 \end{itemize}
 
 %TODO: publication forum guidelines should be looked through
-One basis for the selection of publications was the Finnish Publication Forum
-(\cite{jufo}) ranking. In this thesis Publication Forum is referred as JUFO.
-Publication Forum ranks peer-reviewed scientific publication venues on grades
-1-3, with 1 being the standard level, and 3 being the highest.
+The inspected publications were selected based on their relatedness to AGI, as
+well as their perceived popularity and quality. One basis for the selection of
+publications was the Finnish Publication Forum (\cite{jufo}) ranking. In this
+thesis Publication Forum is referred as JUFO. Publication Forum ranks
+peer-reviewed scientific publication venues on grades 1-3, with 1 being the
+standard level, and 3 being the highest.
 
 The reasoning behind venue choices were as follows: Journal of Artificial
-general intelligence (JAGI) (JUFO rank 1) and International Conference on
+general intelligence (JAGI) and International Conference on
 Artificial General Intelligence (ICAGI) are very topic specific, and therefore
-should contain the most relevant information within the field. These main forums
-are likely to contain most of the research articles. Artificial Intelligence
-journal (AIJ) and Journal of Artificial Intelligence Research (JAIR) were chosen
-because they have the highest JUFO ranking and therefore are leading
-publications of the AI field. Both also have high citescore (7.7 and 6.4
-respectively) considering they do not focus on any specific subfield of AI. For
-the same reason, International Joint Conference on Artificial Intelligence
-(IJCAI) was included (JUFO rank 2). These more general sources may not contain
-many papers as the topic-specific publications, but can show the relative
-popularity of the field within the AI research.
+should provide the most relevant information within the field. These main forums
+are likely to contain most of the research articles. 
+
+Artificial Intelligence journal (AIJ) and Journal of Artificial Intelligence
+Research (JAIR) were chosen because they are considered the leading publications
+of the AI field by Finnish experts, having the highest JUFO rank. Both also have
+high citescore (7.7 and 6.4 respectively) considering they do not focus on any
+specific subfield of AI. International Joint Conference on Artificial
+Intelligence (IJCAI) was included because it is a popular conference that
+produces large amount of articles, and it is also ranked high by JUFO (rank 2).
+These more general sources may not contain many papers as the topic-specific
+publications, but can show the relative popularity of the field within the AI
+research.
 
 % Why journals were chosen, information about them, reliability, area coverage,
 % jufo rankings etc. Reasoning behind choosing specific journals instead of just
@@ -699,7 +710,7 @@ literature accepted for this thesis needed to be:
 Piece of literature would be excluded if it was:
 
 \begin{itemize}
-  \item a book, a thesis, or lecture notes,
+  \item an editorial,
   \item not wholly available digitally or
   \item a duplicate of already included paper.
 \end{itemize}
@@ -714,11 +725,13 @@ only the latest one is included in the study.
 
 The initial search yielded total of 187 papers. Almost all of the initial
 results fulfilled the meta-level criteria as the used search engines (Scopus and
-Springer Link) offered extensive filtering capabilities. These results were then
-inspected in two separate phases. In the first phase, the titles and abstracts
-of the articles were examined, and then the article was marked as either
-excluded or potential in a spreadsheet. After this initial inspection, 122
-papers were considered potential, and would be subject of further inspection.
+Springer Link) offered extensive filtering capabilities. The preselection of
+venues ensured the articles were peer-reviewed and accessible, but for greater
+clarity these criteria were also listed above. These results were then inspected
+in two separate phases. In the first phase, the titles and abstracts of the
+articles were examined, and then the article was marked as either excluded or
+potential in a spreadsheet. After this initial inspection, 122 papers were
+considered potential, and would be subject of further inspection.
 
 In the second phase, the potential papers were examined again, with the research
 questions and inclusion criteria considered more thoroughly, to further exclude
@@ -875,10 +888,10 @@ From the studied articles, four different themes could be identified. These
 themes are just high-level observations by the author based on the found topics,
 and therefore a single topic doesn't necessarily directly belong to only one
 theme. Their purpose is merely to further abstract the research field.
-\textbf{Building AGI systems} is of course naturally a very prominent one. These
-papers were more focused on the possible theory and implementations that could
-be used in building of an AGI system: how it reasons and plans, how capabilities
-like perception could be implemented, and how to handle issues like
+\textbf{Building AGI systems} is of course naturally a very prominent theme.
+These papers were more focused on the possible theory and implementations that
+could be used in building of an AGI system: how it reasons and plans, how
+capabilities like perception could be implemented, and how to handle issues like
 combinatorial explosion. One other reoccurring theme was \textbf{Learning}.
 Different approaches to more common machine learning techniques like
 reinforcement learning and algorithms related to it like Q-learning and Deep
