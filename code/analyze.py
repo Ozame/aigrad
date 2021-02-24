@@ -535,35 +535,38 @@ def save_yearly_publications(papers: List[Paper]):
 
 def save_topic_frequencies_by_year(papers: List[Paper]):
     """Creates horizontal bar plot of topics with their yearly stacked frequencies"""
+    # Prepare categories and years
     years = [2015, 2016, 2017, 2018, 2019]
-
-    category_names = [x[0] for x in CATS]
-    ys = {year: {c: 0 for c in category_names} for year in years}
+    category_numbers = [x[0] for x in CATS]
+    rev_category_names = [x[1] for x in CATS]
+    rev_category_names.reverse()
+    
+    ys = {year: {c: 0 for c in category_numbers} for year in years}
 
     for paper in papers:
         for cat in paper.categories:
             ys[paper.year][cat] += 1
 
-    y2015 = list(ys[2015].values())
-    y2016 = list(ys[2016].values())
-    y2017 = list(ys[2017].values())
-    y2018 = list(ys[2018].values())
-    y2019 = list(ys[2019].values())
-
-    y_all = np.array([y2015, y2016, y2017, y2018, y2019])
-
+    # prepare yearly data to numpy array for plotting
+    y_all_temp = []
+    for year in years:
+        one_year = list(ys[year].values())
+        one_year.reverse() # required to present cats in same numbered order
+        y_all_temp.append(one_year)
+    y_all = np.array(y_all_temp)
+    
     fig, ax = plt.subplots()
 
     for i in range(len(y_all)):
-        ax.barh(category_names, y_all[i], left=np.sum(y_all[:i], axis=0))
+        ax.barh(category_numbers, y_all[i], left=np.sum(y_all[:i], axis=0))
 
-    ax.set_yticks(range(1, len(category_names) + 1))
-    ax.set_yticklabels([x[1] for x in CATS])
+    ax.set_yticks(range(1, len(category_numbers) + 1))
+    ax.set_yticklabels(rev_category_names)
 
     plt.legend(years)
     plt.tight_layout()  # TODO: Figure size could be customized instead of this
 
-    plt.savefig("../gradu/material/data/topic_frequencies_by_year.png", dpi=400)
+    plt.savefig("../gradu/material/data/topic_frequencies_by_year_asc.png", dpi=400)
 
 
 def save_topic_frequencies():
@@ -775,6 +778,7 @@ def main():
         cat_numbers = list(map(int, cat_numbers))
         papers = get_category_papers(cat_numbers)
         pp = pprint.PrettyPrinter()
+        pp.pprint(len(papers))
         pp.pprint(papers)
 
     # Shows the papers that are included in given countries
