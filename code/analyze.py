@@ -1,3 +1,8 @@
+""" 
+Module for analysis and plotting of article data
+@author Samu Kumpulainen
+@version 2021-02-25
+"""
 import pprint
 import sys
 import csv
@@ -16,7 +21,7 @@ from openpyxl.styles import Font
 from pandas.core.frame import DataFrame
 from geopy.geocoders import Nominatim
 
-# Wieringa classes: ER, VR, SP, PP, OP, PEP
+# Wieringa classes
 W_CLASSES = [
     ("er", "Evaluation research"),
     ("vr", "Validation research"),
@@ -26,6 +31,7 @@ W_CLASSES = [
     ("pep", "Personal experience paper"),
 ]
 
+# Topic categories
 CATS = [
     (1, "Cognitive architectures"),
     (2, "AGI design"),
@@ -53,7 +59,7 @@ CATS = [
 
 
 def find_cat_number(cat_name: str) -> int:
-    """Helper function for category numbers"""
+    """Helper function for finding category numbers"""
     for cat in CATS:
         if cat[1] == cat_name:
             return cat[0]
@@ -62,6 +68,8 @@ def find_cat_number(cat_name: str) -> int:
 
 @dataclass
 class Paper:
+    """Class for keeping data of a single paper"""
+
     number: int
     name: str
     keywords: List[str]
@@ -75,6 +83,7 @@ class Paper:
 
 
 def parse_cat_numbers(s):
+    """Helper function for parsing category numbers from a string"""
     if type(s) == int:
         return [s]
     cats = filter(lambda x: len(x.strip()), s.split(sep=","))
@@ -82,6 +91,7 @@ def parse_cat_numbers(s):
 
 
 def parse_words(s: str):
+    """Helper function for parsing separate words from a string"""
     words = s.split(sep=",")
     return list(
         filter(
@@ -160,6 +170,7 @@ def load_papers_df(path: str = "../gradu/material/final_results.xlsx"):
 def create_article_csv(
     papers: List[Paper], path="../gradu/material/data/accepted_papers.csv"
 ):
+    """Creates a csv file containing info of all the accepted articles"""
 
     header = "year,authors,title,class,categories".split(sep=",")
     rows = []
@@ -465,7 +476,7 @@ def save_wieringa_plot(papers: pd.DataFrame):
 
 
 def get_wieringa_topic_bubble_data(papers: List[Paper]):
-    """"Writes the data for Wieringa classifications and topics bubble chart"""
+    """"Writes the data for Wieringa classifications and topics bubble chart to a file"""
     data = {}
     cat_dict = {k: v for k, v in CATS}
     w_classes_dict = {k: v for k, v in W_CLASSES}
@@ -540,7 +551,7 @@ def save_topic_frequencies_by_year(papers: List[Paper]):
     category_numbers = [x[0] for x in CATS]
     rev_category_names = [x[1] for x in CATS]
     rev_category_names.reverse()
-    
+
     ys = {year: {c: 0 for c in category_numbers} for year in years}
 
     for paper in papers:
@@ -551,10 +562,10 @@ def save_topic_frequencies_by_year(papers: List[Paper]):
     y_all_temp = []
     for year in years:
         one_year = list(ys[year].values())
-        one_year.reverse() # required to present cats in same numbered order
+        one_year.reverse()  # required to present cats in same numbered order
         y_all_temp.append(one_year)
     y_all = np.array(y_all_temp)
-    
+
     fig, ax = plt.subplots()
 
     for i in range(len(y_all)):
@@ -570,6 +581,7 @@ def save_topic_frequencies_by_year(papers: List[Paper]):
 
 
 def save_topic_frequencies():
+    """Creates a horizontal bar plot from the topics' total frequencies"""
     cat_dict = calculate_category_count()
     xs = []
     ys = []
@@ -688,7 +700,7 @@ def find_country_data(
 
 
 def draw_map(papers: List[Paper]):
-    """" Draw a bubble map with countries' papers showing"""
+    """" Draw a bubble map with countries' paper amount showing"""
 
     sizeref = 2 * 36 / (70 ** 2)
     df = pd.read_csv("../gradu/material/data/country_data.csv")
@@ -743,7 +755,7 @@ def main():
     # pp = pprint.PrettyPrinter()
     # pp.pprint(papers)
 
-    # === Drawing the graphs ===
+    # ========== Drawing the graphs ==========
 
     # save_wieringa_plot(papers)
     # get_wieringa_topic_bubble_data(load_papers())
@@ -754,13 +766,13 @@ def main():
     # Publication years
     # save_yearly_publications(papers)
 
-    # Topic frequensies
+    # Topics' yearly frequencies
     # save_topic_frequencies_by_year(papers)
 
     # Topic heatmap/square matrix
     # save_topic_heatmap(papers)
 
-    # Calculate countries
+    # Calculate country frequencies
     # print(calculate_country_frequencies(papers))
 
     # Find and save country data to csv file
@@ -778,8 +790,8 @@ def main():
         cat_numbers = list(map(int, cat_numbers))
         papers = get_category_papers(cat_numbers)
         pp = pprint.PrettyPrinter()
-        pp.pprint(len(papers))
         pp.pprint(papers)
+        pp.pprint(len(papers))
 
     # Shows the papers that are included in given countries
     # if 1 < len(sys.argv):
