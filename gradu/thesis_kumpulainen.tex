@@ -1,3 +1,27 @@
+% This ensures that the metadata is PDF/A compliant
+\begin{filecontents*}[overwrite]{\jobname.xmpdata}
+  \Title{Artificial General Intelligence - a systematic mapping study}
+  \Author{Samu Kumpulainen}
+  \Language{en}
+  \Subject{The research field of artificial general intelligence is growing more popular
+  in recent years, but it is complex and fragmented, and therefore difficult to
+  enter for the new researchers. In this thesis, a systematic mapping study was
+  conducted on the field of artificial general intelligence. The goal of the
+  study was to gain insight about the recent developments in the study field,
+  and achieve an overview of the area. In the study there were 92 accepted
+  articles from years 2015-2019 from five different publication forums. Key
+  findings show small but steady amount of researched being published yearly,
+  with focus on novel solution proposals and philosophical papers. Most popular
+  research topics are cognitive architectures, theory of universal AI, AI safety and
+  ethics, and different types of learning methods. Most of the AGI research is
+  conducted in European countries but USA is, by considerable margin, the most
+  active country in the research.}
+  \Keywords{AGI\sep AI\sep artificial intelligence\sep artificial general intelligence\sep systematic literature mapping\sep mapping study}
+\end{filecontents*}
+
+
+
+
 \documentclass[utf8,english]{gradu3}
 
 \usepackage{graphicx} % for including pictures
@@ -26,16 +50,19 @@
 \usepackage{float}
 \usepackage{paralist}
 \usepackage{csvsimple}
+\usepackage{colorprofiles}
+\usepackage[a-2b,mathxmp]{pdfx}[2018/12/22]
 
 \usepackage[authordate,backend=biber,noibid]{biblatex-chicago}
 
-% NOTE: This must be the last \usepackage in the whole document!
-\usepackage[bookmarksopen,bookmarksnumbered,linktocpage]{hyperref}
+% Hyperref package comes from pdfx
+\hypersetup{bookmarksopen,bookmarksnumbered,linktocpage}
 
 \restylefloat{table}
 
 \addbibresource{thesisReferences.bib} % The file name of your bibliography database
 
+% Required for the bubble plots
 \pgfplotsset{
         bubbleplot count/.style={},
         bubbleplot/.style={
